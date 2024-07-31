@@ -1,0 +1,67 @@
+{
+  "general": {
+    "social": {
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Continuer mes achats"
+  },
+  "accessibility": {
+    "skip_to_text": "Passer au contenu",
+    "loading": "Chargement",
+    "close": "Fermer",
+    "link_messages": {
+      "new_window": "Ouvrir dans une nouvelle fenêtre"
+    }
+  },
+  "products": {
+    "product": {
+      "quantity": {
+        "label": "Quantité",
+        "input_label": "Quantité pour {{ product }}",
+        "increase": "Augmenter la quantité pour {{ product }}",
+        "decrease": "Réduire la quantité pour {{ product }}"
+      },
+      "price": {
+        "regular_price": "Prix",
+        "sale_price": "Prix réduit",
+        "from_price_html": "À partir de {{ min_price }}",
+        "unit_price": "Prix unitaire"
+      },
+      "add_to_cart": "Ajouter au panier",
+      "sold_out": "Épuisé",
+      "unavailable": "Non disponible",
+      "product_variants": "Variantes du produit"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "404 Page non trouvée",
+      "subtext": "La page que vous avez demandée n'existe pas"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Voici votre carte cadeau d'une valeur de {{ value }} pour {{ shop }}!",
+      "subtext": "Votre carte cadeau",
+      "gift_card_code": "Code de la carte cadeau",
+      "shop_link": "Continuer mes achats",
+      "remaining_html": "Il reste {{ balance }}",
+      "add_to_apple_wallet": "Ajouter à Apple Wallet",
+      "qr_image_alt": "QR Code - scanner pour échanger la carte cadeau",
+      "copy_code": "Copier le code",
+      "expired": "Expiré",
+      "copy_code_success": "Code copié avec succès",
+      "print_gift_card": "Imprimer"
+    }
+  }
+}
