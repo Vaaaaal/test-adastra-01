@@ -1,0 +1,24 @@
+{% comment %}
+  Renders a full page header with image background and an optional content (TODO).
+
+  Accepts:
+    - cover: {object} Img object (required)
+    - link: {url} Card link (optional)
+
+  Usage:
+    {% render 'hero-full' cover: block.settings.cover %}
+{% endcomment %}
+
+{% if cover or cover != empty %}
+  <div>
+    {% comment %} {{ image_cover = cover | image_url: width: 1920 }} {% endcomment %}
+    {{ cover 
+      | asset_url
+      class: 'w-full h-full object-cover object-center',
+      {% comment %} widths: '165, 360, 500, 720, 960, 1066, 1280, 1500, 1800', {% endcomment %}
+      loading: lazyload, preload: preload
+    }}
+
+    <h2>test hero full</h2>
+  </div>
+{% endif %}

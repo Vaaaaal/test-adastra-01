@@ -2,9 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("{{ 'BricolageGrotesque-Variable.woff' | asset_url }}") format("woff");
+}
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  src: url("{{ 'InterTight-Variable.woff' | asset_url }}") format("woff");
+}
+@font-face {
+  font-family: "Inter Tight";
+  font-style: italic;
+  src: url("{{ 'InterTight-Italic-Variable.woff' | asset_url }}") format("woff");
+}
+
 @layer base {
   html {
-    @apply h-full antialiased font-body text-base text-accent bg-surface;
+    @apply h-full antialiased font-body text-base text-accent;
   }
 
   model-viewer {
@@ -12,8 +27,12 @@
   }
 
   h1,
-  h2 {
-    @apply font-heading font-semibold;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
   }
 
   p > span {
@@ -41,5 +60,16 @@
 
   .card:is(:hover, :focus-within) {
     background-position: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "wdth" 80, "wght" 800;
+    text-transform: uppercase;
   }
 }

@@ -4,23 +4,29 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: '32em',
-        md: '48em',
-        lg: '64em',
-        xl: '80em',
-        'sm-max': { max: '48em' },
-        'sm-only': { min: '32em', max: '48em' },
-        'md-only': { min: '48em', max: '64em' },
-        'lg-only': { min: '64em', max: '80em' },
-        'xl-only': { min: '80em', max: '96em' }
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+
+        '2xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
       },
       fontFamily: {
-        heading: 'var(--font-heading-family)',
-        body: 'var(--font-body-family)'
+        heading: ['Bricolage Grotesque', 'sans-serif'],
+        'display': ['Bricolage Grotesque', 'sans-serif'],
+        'body': ['Inter Tight', 'sans-serif'],
       },
       fontSize: {
         sm: ['var(--font-size-sm)', '1.428'],
-        base: ['var(--font-size-base)', '1.5'],
+        base: '18px',
         lg: ['var(--font-size-lg)', '1.555'],
         xl: ['var(--font-size-xl)', '1.4']
       },
@@ -33,7 +39,11 @@ module.exports = {
       },
       transitionTimingFunction: {
         wiggle: 'cubic-bezier(0.22, 1, 0.36, 1)'
-      }
-    }
+      },
+      container: {
+        center: true,
+        padding: 'min(5%, 2rem)',
+      },
+    },
   }
 }
