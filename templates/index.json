@@ -1,51 +1,22 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "home",
-      // "blocks": {
-      //   "3186bfda-2b68-40dd-bdc4-fa6868f87a8b": {
-      //     "type": "card-block",
-      //     "settings": {
-      //       "heading": "Documentation",
-      //       "description": "Find in-depth infos about Adastra features and how to use it.",
-      //       "link": "https://github.com/blanklob/adastra#documentation"
-      //     }
-      //   },
-      //   "a22569eb-f893-42d9-8751-b40c8df557f3": {
-      //     "type": "card-block",
-      //     "settings": {
-      //       "heading": "Chat",
-      //       "description": "Come say hey to our amazing Discord community 💚",
-      //       "link": "https://help.blanklob.com?utm_source=create-adastra&amp;utm_medium=basic-example&amp;utm_campaign=create-adastra"
-      //     }
-      //   },
-      //   "cfe4f931-6e00-4854-8052-8600ec0e4208": {
-      //     "type": "card-block",
-      //     "settings": {
-      //       "heading": "Sections",
-      //       "description": "Explore a galaxy of paid and community-built theme sections.",
-      //       "link": ""
-      //     }
-      //   },
-      //   "642a61a2-0152-4cd4-8009-8ae93bbed1af": {
-      //     "type": "card-block",
-      //     "settings": {
-      //       "heading": "Aurora",
-      //       "description": "Instantly build a production-ready Shopify storefronts.",
-      //       "link": ""
-      //     }
-      //   }
-      // },
-      // "block_order": [
-      //   "3186bfda-2b68-40dd-bdc4-fa6868f87a8b",
-      //   "a22569eb-f893-42d9-8751-b40c8df557f3",
-      //   "cfe4f931-6e00-4854-8052-8600ec0e4208",
-      //   "642a61a2-0152-4cd4-8009-8ae93bbed1af"
-      // ],
       "settings": {
-        // "heading": "Welcome to Adastra ✨",
+        "unique_link": "shopify:\/\/products\/gift-card"
       }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
