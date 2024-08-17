@@ -19,7 +19,7 @@
 
 @layer base {
   html {
-    @apply h-full antialiased font-body text-base text-accent;
+    @apply h-full antialiased font-body text-base text-accent bg-white;
   }
 
   model-viewer {
@@ -32,7 +32,7 @@
   h4,
   h5,
   h6 {
-    @apply font-heading font-bold;
+    @apply font-heading font-bold text-black;
   }
 
   p > span {
@@ -43,11 +43,11 @@
 @layer components {
   .button,
   button {
-    @apply inline-flex items-center justify-center text-center align-middle py-3 px-6 appearance-none select-none no-underline rounded-lg font-bold tracking-tight shadow-sm hover:shadow-md transition-shadow;
+    @apply inline-flex items-center justify-center text-center align-middle py-2 px-4 appearance-none select-none no-underline rounded-md shadow-sm hover:shadow-md transition-shadow;
   }
 
   .button-primary {
-    @apply button bg-contrast text-primary;
+    @apply button bg-black text-white;
   }
 
   .card {
@@ -71,5 +71,32 @@
     font-family: "Bricolage Grotesque", sans-serif;
     font-variation-settings: "wdth" 80, "wght" 800;
     text-transform: uppercase;
+    line-height: 110%;
+    text-wrap: balance;
   }
+
+  h2 {
+    font-size: 56px;
+  }
+}
+
+#ecology_wrapper {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+#ecology_overlay {
+  z-index: -1;
+  background: linear-gradient(-169.519deg, rgba(0, 0, 0, 0%) 45%, rgba(0, 0, 0, 75%) 100%);
+}
+
+.ecology_title {
+  text-transform: uppercase;
+  line-height: 0.8;
+  font-variation-settings: "wdth" 80, "wght" 800;
+  font-size: 250px;
+  font-family: "Bricolage Grotesque", sans-serif;
 }

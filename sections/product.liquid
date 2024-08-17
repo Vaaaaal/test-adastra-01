@@ -1,0 +1,80 @@
+{% comment %}
+    Contenu de la page produit
+
+{% endcomment %}
+ 
+<div>
+    <section id="product_hero">
+        <div class="flex flex-nowrap overflow-scroll">
+            {% for image in product.images %}
+                <div class="flex-shrink-0 max-h-[700px]">
+                    <img src="{{ image | image_url: height: 700 }}"/>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <div class="container">
+        <section id="product_info" class="pt-10 pb-24 grid grid-cols-12">
+            <div class="col-start-1 col-end-8 flex flex-col gap-y-8">
+                <div class="flex flex-col gap-y-7">
+                    <h1 class="text-[82px] text-balance leading-[0.9]">{{ product.title }}</h1>
+
+                    <div>
+                        {{ product.description }}
+                    </div>
+                </div>
+            </div>
+    
+            {% form 'product' %}
+                <!-- form content -->
+                <div class="col-start-9 col-end-13 flex flex-col gap-y-6">
+                    {% render 'price' %}
+
+                    {% if product.has_only_default_variant == false %}
+                        <div class="flex flex-col gap-y-3">
+
+                            {% for option in product.options_with_values %}
+                                <div>
+                                    <p class="font-semibold">{{ option.name }}</p>
+
+                                    <div class="flex flex-wrap gap-x-4">
+                                        {% for value in option.values %}
+                                            <a href="{{ value.variant.url }}">
+                                                {{ value.name }}
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <div>
+                        <input type="submit" value="Add to cart">
+                    </div>
+                </div>
+            {% endform %}
+        </section>
+        
+        <section id="product_plus">
+            Product plus section
+        </section>
+    </div>
+    
+    <section id="product_warranty">
+        Product warranty section
+    </section>
+</div>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product"
+    }
+  ]
+}
+{% endschema %}

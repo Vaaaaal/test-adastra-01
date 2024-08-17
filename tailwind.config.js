@@ -31,6 +31,7 @@ module.exports = {
         xl: ['var(--font-size-xl)', '1.4']
       },
       colors: {
+        black: "#161616",
         accent: 'hsla(var(--color-accent) / <alpha-value>)',
         surface: 'hsla(var(--color-surface) / <alpha-value>)',
         primary: 'hsla(var(--color-primary) / <alpha-value>)',
@@ -42,7 +43,19 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: 'min(5%, 2rem)',
+        padding: 'max(5%, 4rem)',
+      },
+      backgroundImage: {
+        'dark-gradient': "linear-gradient(160deg, #161616 0%, #212121 51%, #0C0C0C 100%)",
+      }
+    },
+    container: {
+      screens: {
+        'sm': 'max(100%, 768px)',
+        'md': 'max(100%, 992px)',
+        'lg': 'max(100%, 1100px)',
+        'xl': 'max(100%, 1280px)',
+        '2xl': 'max(100%, 1440px)',
       },
     },
   }
