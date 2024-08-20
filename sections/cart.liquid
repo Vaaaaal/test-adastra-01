@@ -1,0 +1,111 @@
+{% form 'cart', cart %}
+    {% render 'header.template' cover: "home-cover.jpg" title: "Mon panier" %}
+
+    <div class="container">
+        <div class="pb-20">
+            {% if cart.empty? %}
+                <p>Votre panier est vide.</p>
+            {% else %}
+                <div class="flex justify-between items-start gap-x-10">
+                    <div id="cart_list" class="max-w-[830px] w-full flex flex-col gap-y-10">
+                        {% for item in cart.items %}
+                            <div class="flex justify-between gap-x-6">
+                                <img class="max-w-40 h-auto rounded object-contain" src="{{ item.image | image_url: width: 250 }}" />
+    
+                                <div class="flex flex-col justify-between w-full">
+                                    <div>
+                                        <p class="product_title">{{ item.product.title }}</p>
+                                        {% if item.variant.title != blank %}
+                                            <p class="product_variant">{{ item.variant.title }}</p>
+                                        {% endif %}
+                                        <p class="">
+                                            {{ item.quantity }} x {{ item.original_price | money }} 
+                                            {% if item.original_price > item.final_price %}
+                                                <strong class="line-through">({{ item.original_price | money }})</strong>
+                                            {% endif %}
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex">
+                                            <div class="update_quantity flex items-center gap-x-4">
+                                                {% comment %} Quantity input with plus / minus buttons {% endcomment %}
+                                                <div class="flex">
+                                                    <button type="button" id="sub" class="sub border-[0.5px] border-black border-opacity-10 text-[16px] h-6 p-0 rounded aspect-square">-</button>
+                                                    <span class="w-8 text-center item_quantity_display">
+                                                        <span class="text-[16px]">{{ item.quantity }}</span>
+                                                        <input type="hidden" class="item_quantity" name="updates[]" value="{{ item.quantity }}" />
+                                                    </span>
+                                                    <button type="button" id="add" class="add border-[0.5px] border-black border-opacity-10 text-[16px] h-6 p-0 rounded aspect-square">+</button>
+                                                </div>
+
+                                                <button class="shadow-none hover:shadow-none text-[16px] underline p-0" type="submit">Modifier la quantité</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col justify-between">
+                                    <p>{{ item.price | money }}</p>
+                                    
+                                    {% comment %} Do not move this element 👇 further in the incrementation because it will not working anymore {% endcomment %}
+                                    <a href="{{ item.url_to_remove }}" class="text-[16px] underline">Supprimer</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+    
+                    <div id="cart_total" class="shrink-0 w-full max-w-[350px] flex flex-col gap-y-6 sticky top-28">
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-[36px]">Total</h2>
+                            <p class="cart-price">{{ cart.items_subtotal_price | money }}</p>
+                        </div>
+    
+                        <div class="flex flex-col gap-y-2">
+                            <small class="text-[#373737] text-[12px]">Les frais de livraison seront calculés lors de la prochaine étape</small>
+                            <button class="button-primary is-heading-font" type="submit" name="checkout" value="checkout">Valider mon panier</button>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <div>
+            Éléments de réassurances ici
+        </div>
+    </div>
+{% endform %}
+
+{% stylesheet %}
+    .cart-price {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-variation-settings: "wdth" 80, "wght" 800;
+        text-transform: uppercase;
+        line-height: 110%;
+        font-size: 28px;
+    }
+{% endstylesheet %}
+
+{% javascript %}
+    document.querySelectorAll('.add').forEach(item => {
+        item.addEventListener('click', event => {
+            const quantityDisplay = item.previousElementSibling.querySelector('span');
+            const quantity = item.previousElementSibling.querySelector('.item_quantity');
+
+            quantityDisplay.textContent = parseInt(quantityDisplay.textContent) + 1;
+            quantity.value = parseInt(quantityDisplay.textContent);
+        });
+    });
+
+    document.querySelectorAll('.sub').forEach(item => {
+        item.addEventListener('click', event => {
+            const quantityDisplay = item.nextElementSibling.querySelector('span');
+            const quantity = item.nextElementSibling.querySelector('.item_quantity');
+
+            if (parseInt(quantityDisplay.textContent) > 1) {
+                quantityDisplay.textContent = parseInt(quantityDisplay.textContent) - 1;
+                quantity.value = parseInt(quantityDisplay.textContent);
+            }
+        });
+    });
+{% endjavascript %}

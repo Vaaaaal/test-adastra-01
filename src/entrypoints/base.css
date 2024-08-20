@@ -50,6 +50,14 @@
     @apply button bg-black text-white;
   }
 
+  .button-primary.is-heading-font {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-variation-settings: "wdth" 80, "wght" 800;
+    text-transform: uppercase;
+    line-height: 110%;
+    padding: 12px 24px;
+  }
+
   .card {
     background-image: var(--gradient);
     background-size: 500%;
@@ -77,6 +85,18 @@
 
   h2 {
     font-size: 56px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 18px;
   }
 }
 

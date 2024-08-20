@@ -1,0 +1,43 @@
+{% comment %}
+  Renders a header for template page (lambda).
+
+  Accepts:
+    - title: {string} Title (required)
+    - content: {string} Content (required)
+    - image_1: {image} Image 1 (optional)
+    - image_2: {image} Image 2 (optional)
+
+  Usage:
+    {% render 'product-plus' title: 'Lorem' content: 'Lorem' image_1: 'image.jpg' image_2: 'image.jpg' %}
+{% endcomment %}
+
+
+{% if title and content and title != blank and content != blank %}
+  <div class="pt-10 pb-20 flex flex-col gap-y-16">
+    <div class="grid grid-cols-2 gap-x-5">
+      <h2 class="text-balance leading-none">{{ title }}</h2>
+  
+      <div>
+        {{ content }}
+      </div>
+    </div>
+  
+    <div
+      class="
+        {% if image_1 or image_2 or image_1 != blank or image_2 != blank %}
+          grid
+          {% if image_1 and image_2 and image_1 != blank and image_2 != blank %}
+            grid-cols-2 gap-x-5
+          {% else %}
+            grid-cols-1
+          {% endif %}
+        {% else %}
+          hidden
+        {% endif %}
+      "
+    >
+      <img class="rounded" src="{{ image_1 | asset_url }}" />
+      <img class="rounded" src="{{ image_2 | asset_url }}" />
+    </div>
+  </div>
+{% endif %}

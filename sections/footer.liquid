@@ -41,22 +41,22 @@
                     <ul>
                         {% if settings.social_instagram_link %}
                             <li>
-                                {{ settings.social_instagram_link | link_to: settings.social_instagram_link.url }}
+                                <a href="{{ settings.social_instagram_link }}" target="_blank">Instagram</a>
                             </li>
                         {% endif %}
                         {% if settings.social_linkedin_link %}
                             <li>
-                                {{ settings.social_linkedin_link | link_to: settings.social_linkedin_link.url }}
+                                <a href="{{ settings.social_linkedin_link }}" target="_blank">LinkedIn</a>
                             </li>
                         {% endif %}
                         {% if settings.social_tiktok_link %}
                             <li>
-                                {{ settings.social_tiktok_link | link_to: settings.social_tiktok_link.url }}
+                                <a href="{{ settings.social_tiktok_link }}" target="_blank">TikTok</a>
                             </li>
                         {% endif %}
                         {% if settings.social_youtube_link %}
                             <li>
-                                {{ settings.social_youtube_link | link_to: settings.social_youtube_link.url }}
+                                <a href="{{ settings.social_youtube_link }}" target="_blank">YouTube</a>
                             </li>
                         {% endif %}
                     </ul>

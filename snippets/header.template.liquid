@@ -1,0 +1,38 @@
+{% comment %}
+  Renders a header for template page (lambda).
+
+  Accepts:
+    - cover: {image} Cover (required)
+    - title: {string} Title (required)
+    - alignment: {string} Alignment (optional)
+
+  Usage:
+    {% render 'header-template' cover: '{{ 'lorem.jpg' | asset_url }}' title: 'Lorem' alignment: 'left' %}
+{% endcomment %}
+
+<section>
+  <div class="h-full max-h-[65vh] overflow-hidden relative">
+    <img src="{{ cover | asset_url }}"/>
+
+    <div class="absolute bottom-0 left-0 right-0 bg-white rounded-tl-[50px] rounded-tr-[50px] h-8"></div>
+  </div>
+
+  <div class="container pb-14">
+    {% if title or title != empty %}
+      <h1
+        class="
+          {% if alignment == 'left' %}
+            text-left
+          {% elsif alignment == 'center' %}
+            text-center
+          {% elsif alignment == 'right' %}
+            text-right
+          {% else %}
+            text-center
+          {% endif %}
+          text-[82px] text-balance leading-0
+        "
+      >{{ title }}</h1>
+    {% endif %}
+  </div>
+</section>
