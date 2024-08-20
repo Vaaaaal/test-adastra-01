@@ -1,8 +1,69 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "product",
+      "blocks": {
+        "accordion_block_7qhBgj": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Détails",
+            "content": "{{ product.metafields.custom.details | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "accordion_block_CKA4cC": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Inclus avec l'achat",
+            "content": "{{ product.metafields.custom.included | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "accordion_block_zmTpqt": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Entretien & Utilisation",
+            "content": "{{ product.metafields.custom.caring_using | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "accordion_block_HCWwFh": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Livraisons & Retours",
+            "content": "{{ product.metafields.custom.shipping | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "product_plus_block_DdcapC": {
+          "type": "product-plus-block",
+          "settings": {
+            "title": "{{ product.metafields.custom.product_plus_title.value }}",
+            "content": "Chez Oceneo, nous croyons en un avenir où chaque produit a une seconde vie. Nos lunettes, fabriquées à partir de combinaisons de surf recyclées, ne sont pas seulement un symbole de notre engagement écologique, mais aussi une promesse de durabilité. En fin de vie, nos montures (hors charnières et verres) peuvent être rebroyées et recyclées, offrant ainsi des possibilités infinies de réutilisation. Chaque paire est conçue avec une finition artisanale de haute qualité, garantissant une résistance exceptionnelle à l'eau et à la pluie. En choisissant Oceneo, vous optez pour un produit non seulement élégant, mais aussi respectueux de l'environnement, conçu pour durer et pour être réutilisé, encore et encore."
+          }
+        }
+      },
+      "block_order": [
+        "accordion_block_7qhBgj",
+        "accordion_block_CKA4cC",
+        "accordion_block_zmTpqt",
+        "accordion_block_HCWwFh",
+        "product_plus_block_DdcapC"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
