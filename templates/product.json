@@ -47,7 +47,7 @@
         "product_plus_block_DdcapC": {
           "type": "product-plus-block",
           "settings": {
-            "title": "{{ product.metafields.custom.product_plus_title.value }}",
+            "title": "Recyclable à l’infini & ultra résistante",
             "content": "Chez Oceneo, nous croyons en un avenir où chaque produit a une seconde vie. Nos lunettes, fabriquées à partir de combinaisons de surf recyclées, ne sont pas seulement un symbole de notre engagement écologique, mais aussi une promesse de durabilité. En fin de vie, nos montures (hors charnières et verres) peuvent être rebroyées et recyclées, offrant ainsi des possibilités infinies de réutilisation. Chaque paire est conçue avec une finition artisanale de haute qualité, garantissant une résistance exceptionnelle à l'eau et à la pluie. En choisissant Oceneo, vous optez pour un produit non seulement élégant, mais aussi respectueux de l'environnement, conçu pour durer et pour être réutilisé, encore et encore."
           }
         }
