@@ -38,7 +38,7 @@
                     De plus, nous offrons aussi la possibilité de revaloriser votre propre combinaison en une paire de lunettes personnalisée. Vous pouvez ainsi donner une seconde vie à votre combinaison préférée tout en obtenant un accessoire élégant, unique et écologique.
                 </p>
                 {% if section.settings.unique_link != blank %}
-                    <a href="{{ section.settings.unique_link }}" class="button-primary">
+                    <a href="{{ settings.main_cta }}" class="button-primary">
                         Je crée ma paire
                     </a>
                 {% endif %}
@@ -52,15 +52,15 @@
             <div
                 class="flex flex-col items-start gap-y-10 pt-40"
             >
-                <img class="w-full rounded-md shadow-md" src="{{ 'home-lifestyle-1.jpg' | asset_url }}" />
-                <img class="w-full rounded-md shadow-md" src="{{ 'home-lifestyle-2.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-1.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-2.jpg' | asset_url }}" />
             </div>
             
             <div
                 class="flex flex-col items-start gap-y-10"
             >
-                <img class="w-full rounded-md shadow-md" src="{{ 'home-lifestyle-3.jpg' | asset_url }}" />
-                <img class="w-full rounded-md shadow-md" src="{{ 'home-lifestyle-4.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-3.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-4.jpg' | asset_url }}" />
             </div>
         </section>
     </div>
@@ -103,11 +103,6 @@
       "type": "text",
       "id": "intro",
       "label": "Texte pour la partie intro"
-    },
-    {
-      "type": "url",
-      "id": "unique_link",
-      "label": "Lien vers le produit pour la section 'Chaque paire est unique'"
     },
   ],
   "presets": [

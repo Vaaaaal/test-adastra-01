@@ -1,10 +1,18 @@
 {% form 'cart', cart %}
-    {% render 'header.template' cover: "home-cover.jpg" title: "Mon panier" %}
+    {% render 'header.template' cover: "cart-cover.jpg" title: "Mon panier" %}
 
     <div class="container">
         <div class="pb-20">
             {% if cart.empty? %}
-                <p>Votre panier est vide.</p>
+                <div class="flex flex-col items-center gap-y-2 pb-8">
+                    <h3>Votre panier est vide</h3>
+                    <p>Allez créer votre paire avant de bruler les étapes 😉</p>
+                    
+                    <div class="flex gap-x-3 pt-4">
+                        <a class="button-primary" href="{{ settings.main_cta }}">Je crée ma paire</a>
+                        <a class="button-secondary" href="">Je découvre le concept</a>
+                    </div>
+                </div>
             {% else %}
                 <div class="flex justify-between items-start gap-x-10">
                     <div id="cart_list" class="max-w-[830px] w-full flex flex-col gap-y-10">
@@ -56,9 +64,27 @@
                     </div>
     
                     <div id="cart_total" class="shrink-0 w-full max-w-[350px] flex flex-col gap-y-6 sticky top-28">
-                        <div class="flex justify-between items-center">
-                            <h2 class="text-[36px]">Total</h2>
-                            <p class="cart-price">{{ cart.items_subtotal_price | money }}</p>
+                        <div class="flex flex-col gap-y-2">
+                            {% comment %} Keep this 👇 for apply discount if needed {% endcomment %}
+                            
+                            {% comment %} <div class="flex flex-col gap-y-1 pb-2">
+                                <div class="flex justify-between items-center">
+                                    <h2 class="text-[24px]">Article(s)</h2>
+                                    <p class="cart-price">{{ cart.items_subtotal_price | money }}</p>
+                                </div>
+    
+                                <div class="flex justify-between items-center">
+                                    <h2 class="text-[24px]">Réductions</h2>
+                                    <p class="cart-price">{{ cart.total_discount | money }}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between items-center pt-3 border-t border-[#C4C4C4]"> {% endcomment %}
+                            
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-[40px]">Total</h2>
+                                <p class="cart-price">{{ cart.total_price | money }}</p>
+                            </div>
                         </div>
     
                         <div class="flex flex-col gap-y-2">
@@ -69,11 +95,11 @@
                 </div>
             {% endif %}
         </div>
-
-        <div>
-            Éléments de réassurances ici
-        </div>
     </div>
+
+    <section id="cart_warranty">
+        {% render 'warranty-banner' %}
+    </section>
 {% endform %}
 
 {% stylesheet %}

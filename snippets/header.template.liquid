@@ -12,8 +12,9 @@
 
 <section>
   <div class="h-full max-h-[65vh] overflow-hidden relative">
-    <img src="{{ cover | asset_url }}"/>
+    <img class="max-h-[65vh] w-full object-cover object-center" src="{{ cover | asset_url }}"/>
 
+    <div class="absolute bottom-0 left-0 right-0 h-[25%] bg-gradient-to-t from-[#161616]"></div>
     <div class="absolute bottom-0 left-0 right-0 bg-white rounded-tl-[50px] rounded-tr-[50px] h-8"></div>
   </div>
 

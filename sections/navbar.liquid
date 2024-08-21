@@ -6,19 +6,30 @@
 <div class="fixed top-0 bottom-0 left-0 right-0 z-40 mix-blend-difference pointer-events-none">
   <div class="container pt-6 flex justify-starts items-center">
     <img class="max-w-36" src="{{ 'logo-oceneo.svg' | asset_url }}">
+    
+    <div id="navbar_elements" class="flex gap-x-2 pointer-events-none opacity-0">
+      <div class="border border-gray-200 p-3 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow">
+        <svg class="w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 6H21" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
   </div>
+
 </div>
 
-<nav class="fixed top-0 bottom-0 left-0 right-0 z-50 pointer-events-none">
+<nav id="menu" class="fixed top-0 bottom-0 left-0 right-0 z-50 pointer-events-none">
   <div class="container pt-6 flex justify-between items-center">
-    <a id="navbar_logo" href="/" class="opacity-0 pointer-events-auto">
-      <img class="max-w-36" src="{{ 'logo-oceneo-black.png' | asset_url }}">
+    <a id="menu-logo" href="/" class="pointer-events-auto">
+      <img class="max-w-36" src="{{ 'logo-oceneo-white.png' | asset_url }}">
     </a>
 
     <div id="navbar_elements" class="flex gap-x-2 pointer-events-auto">
-      <a href="/" class="button-primary">Je crée ma paire</a>
+      <a id="menu-cta" href="{{ settings.main_cta }}" class="button-primary">Je crée ma paire</a>
 
-      <a class="border border-gray-200 p-3 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow" href="/cart">
+      <a class="border border-gray-200 p-3 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow" href="{{ settings.cart_link }}">
         <svg class="w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M3 6H21" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -26,17 +37,76 @@
         </svg>
       </a>
 
-      <button class="border border-gray-200 p-3 bg-white rounded-md">
-        <svg class="w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 8C2 7.44772 2.44772 7 3 7H21C21.5523 7 22 7.44772 22 8C22 8.55228 21.5523 9 21 9H3C2.44772 9 2 8.55228 2 8Z" fill="#161616"/>
-          <path d="M2 16C2 15.4477 2.44772 15 3 15H21C21.5523 15 22 15.4477 22 16C22 16.5523 21.5523 17 21 17H3C2.44772 17 2 16.5523 2 16Z" fill="#161616"/>
+      <button id="menu-toggle" class="border border-gray-200 p-3 bg-white rounded-md">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="menu-burger-icon">
+            <path d="M0 6C0 5.44772 0.447715 5 1 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H1C0.447716 7 0 6.55228 0 6Z" fill="#161616"/>
+            <path d="M0 14C0 13.4477 0.447715 13 1 13H19C19.5523 13 20 13.4477 20 14C20 14.5523 19.5523 15 19 15H1C0.447716 15 0 14.5523 0 14Z" fill="#161616"/>
+          </g>
+
+          <g id="menu-burger-exit">
+            <path d="M4.29295 15.6066C3.90242 15.2161 3.90242 14.5829 4.29295 14.1924L14.1924 4.29289C14.583 3.90237 15.2161 3.90237 15.6067 4.29289C15.9972 4.68342 15.9972 5.31658 15.6067 5.70711L5.70716 15.6066C5.31664 15.9971 4.68347 15.9971 4.29295 15.6066Z" fill="#161616"/>
+            <path d="M4.29289 4.6066C4.68342 4.21608 5.31658 4.21608 5.70711 4.6066L15.6066 14.5061C15.9971 14.8966 15.9971 15.5298 15.6066 15.9203C15.2161 16.3108 14.5829 16.3108 14.1924 15.9203L4.29289 6.02082C3.90237 5.63029 3.90237 4.99713 4.29289 4.6066Z" fill="#161616"/>
+          </g>
         </svg>
       </button>
+    </div>
+  </div>
+
+  <div class="absolute top-0 bottom-0 right-0 left-0 w-full h-full pointer-events-none z-[-1]">
+    <div id="menu-overlay" class="cursor-pointer absolute top-0 bottom-0 right-0 left-0 w-full h-full pointer-events-none z-[-2]"></div>
+    
+    <div id="menu-panel" class="px-[7%] py-[150px] absolute top-0 bottom-0 right-0 z-[-1] bg-white w-full h-full max-w-[580px] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-between items-start gap-y-[70px]">
+      <div class="flex flex-col justify-center h-full">
+        <ul>
+          {% for link in linklists.main-menu.links %}
+            <li class="burger-menu-link">
+              {{ link.title | link_to: link.url }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+  
+      <div>
+        <ul class="flex gap-x-4">
+          {% for link in linklists.menu-legals.links %}
+            <li class="text-[14px]">
+              {{ link.title | link_to: link.url }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
 
 {% stylesheet %}
+#menu-logo {
+  opacity: 0;
+}
+
+#menu-overlay {
+  background: rgba(22, 22, 22, 0.7);
+  opacity: 0;
+  backdrop-filter: blur(10px);
+}
+
+#menu-burger-exit {
+  opacity: 0;
+}
+
+#menu-panel {
+  transform: translateX(100%);
+}
+
+.burger-menu-link {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-variation-settings: "wdth" 75, "wght" 800;
+  text-transform: uppercase;
+  line-height: 110%;
+  font-size: 60px;
+}
+
 #navbar_elements {
   isolation: isolate;
 }

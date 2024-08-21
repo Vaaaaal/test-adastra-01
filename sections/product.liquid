@@ -2,14 +2,21 @@
     Contenu de la page produit
 
 {% endcomment %}
+
+{% assign current = product.selected_or_first_available_variant %}
  
 <div>
     <section id="product_hero">
         <div class="flex flex-nowrap overflow-scroll">
+            <div class="flex-shrink-0 max-h-[700px]">
+                <img src="{{ current.featured_image | image_url: height: 700 }}"/>
+            </div>
             {% for image in product.images %}
-                <div class="flex-shrink-0 max-h-[700px]">
-                    <img src="{{ image | image_url: height: 700 }}"/>
-                </div>
+                {% if image.id != current.featured_image.id %}
+                    <div class="flex-shrink-0 max-h-[700px]">
+                        <img src="{{ image | image_url: height: 700 }}"/>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
     </section>
@@ -25,7 +32,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="flex flex-col gap-y-4">
                     {% for block in section.blocks %}
                         {% if block.type == 'accordion-block' %}
                             {% render 'accordion'
@@ -42,7 +49,7 @@
                 {% form 'product', product %}
                     <!-- form content -->
                     <div class="flex flex-col gap-y-6">
-                        <h2 class="text-[42px]">{{ product.price | money }}</h2>
+                        <h2 class="text-[42px]">{{ current.price | money }}</h2>
     
                         {% if product.has_only_default_variant == false %}
                             <div class="flex flex-col gap-y-4">
@@ -56,7 +63,8 @@
                                                 {% if value.available %}
                                                     <a 
                                                         class="
-                                                            {% if value.variant.selected %}
+                                                            {% comment %} {% if value.variant.selected %} {% endcomment %}
+                                                            {% if value.variant.id == current.id %}
                                                                 bg-black text-white
                                                             {% else %}
                                                                 text-black
@@ -71,7 +79,8 @@
                                                     <span class="border border-black text-black opacity-25 px-2 py-1 rounded">{{ value.name }}</span>
                                                 {% endif %}
 
-                                                {% if value.variant.selected %}
+                                                {% if value.variant.id == current.id %}
+                                                    {% comment %} {% if value.variant.selected %} {% endcomment %}
                                                     <input type="hidden" name="id" value="{{ value.variant.id }}" />
                                                 {% endif %}
                                             {% endfor %}
@@ -110,7 +119,7 @@
     </div>
     
     <section id="product_warranty">
-        Product warranty section
+        {% render 'warranty-banner' %}
     </section>
 </div>
 

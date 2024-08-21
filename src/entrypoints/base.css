@@ -49,6 +49,10 @@
   .button-primary {
     @apply button bg-black text-white;
   }
+  
+  .button-secondary {
+    @apply button border border-black text-black hover:bg-black hover:text-white transition-all;
+  }
 
   .button-primary.is-heading-font {
     font-family: "Bricolage Grotesque", sans-serif;

@@ -1,0 +1,52 @@
+{% comment %}
+  Renders a warranty banner (TODO: with block settings inside).
+
+  Usage:
+    {% render 'warranty-banner' %}
+{% endcomment %}
+
+<div class="bg-[#F8F4EF] w-full text-[16px] pt-16 pb-20">
+  <div class="container flex justify-center gap-x-10">
+    <div class="flex flex-col items-center gap-y-4 w-full max-w-sm">
+      <div class="flex flex-col items-center gap-y-2">
+        <svg class="w-full max-w-[34px] h-full max-h-8" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.333 21.3333V4H1.33301V21.3333H21.333ZM21.333 21.3333H30.6663V14.6667L26.6663 10.6667H21.333V21.3333ZM10.6663 24.6667C10.6663 26.5076 9.17396 28 7.33301 28C5.49206 28 3.99967 26.5076 3.99967 24.6667C3.99967 22.8257 5.49206 21.3333 7.33301 21.3333C9.17396 21.3333 10.6663 22.8257 10.6663 24.6667ZM27.9997 24.6667C27.9997 26.5076 26.5073 28 24.6663 28C22.8254 28 21.333 26.5076 21.333 24.6667C21.333 22.8257 22.8254 21.3333 24.6663 21.3333C26.5073 21.3333 27.9997 22.8257 27.9997 24.6667Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <p class="font-semibold">Livraison offerte*</p>
+      </div>
+      
+      <p class="text-balance text-center">
+        *(en point relais et selon coût du transporteur pour une livraison à domicile)
+      </p>
+    </div>
+    
+    <div class="flex flex-col items-center gap-y-4 w-full max-w-sm">
+      <div class="flex flex-col items-center gap-y-2">
+        <svg class="w-full max-w-[34px] h-full max-h-8" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.33301 13.333H31.6663M4.99967 5.33301H28.9997C30.4724 5.33301 31.6663 6.52692 31.6663 7.99967V23.9997C31.6663 25.4724 30.4724 26.6663 28.9997 26.6663H4.99967C3.52692 26.6663 2.33301 25.4724 2.33301 23.9997V7.99967C2.33301 6.52692 3.52692 5.33301 4.99967 5.33301Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <p class="font-semibold">Paiement 100% sécurisé</p>
+      </div>
+      
+      <p class="text-balance text-center">
+        Visa, Mastercard, American Express, Apple Pay, Google Pay, PayPal…
+      </p>
+    </div>
+    
+    <div class="flex flex-col items-center gap-y-4 w-full max-w-sm">
+      <div class="flex flex-col items-center gap-y-2">
+        <svg class="w-full max-w-8 h-full max-h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 24V16C4 12.8174 5.26428 9.76516 7.51472 7.51472C9.76516 5.26428 12.8174 4 16 4C19.1826 4 22.2348 5.26428 24.4853 7.51472C26.7357 9.76516 28 12.8174 28 16V24M28 25.3333C28 26.0406 27.719 26.7188 27.219 27.2189C26.7189 27.719 26.0406 28 25.3333 28H24C23.2928 28 22.6145 27.719 22.1144 27.2189C21.6143 26.7188 21.3333 26.0406 21.3333 25.3333V21.3333C21.3333 20.6261 21.6143 19.9478 22.1144 19.4477C22.6145 18.9476 23.2928 18.6667 24 18.6667H28V25.3333ZM4 25.3333C4 26.0406 4.28095 26.7188 4.78105 27.2189C5.28115 27.719 5.95942 28 6.66667 28H8C8.70724 28 9.38552 27.719 9.88562 27.2189C10.3857 26.7188 10.6667 26.0406 10.6667 25.3333V21.3333C10.6667 20.6261 10.3857 19.9478 9.88562 19.4477C9.38552 18.9476 8.70724 18.6667 8 18.6667H4V25.3333Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <p class="font-semibold">Besoin d’aide ?</p>
+      </div>
+      
+      <p class="text-balance text-center">
+        Consultez nos FAQs ou contactez nous via le formulaire pour obtenir une réponse
+      </p>
+    </div>
+  </div>
+</div>

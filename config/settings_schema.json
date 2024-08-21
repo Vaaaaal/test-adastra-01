@@ -8,6 +8,26 @@
     "theme_support_url": "https://help.blanklob.com"
   },
   {
+    "name": "Paramètres généraux",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Headings"
+      },
+      {
+        "type": "url",
+        "id": "cart_link",
+        "label": "Lien vers le panier",
+      },
+      {
+        "type": "url",
+        "id": "main_cta",
+        "label": "CTA principal",
+        "info": "Le CTA principal est utilisé sur la navigation, la page d'accueil et le panier vide par exemple."
+      },
+    ]
+  },
+  {
     "name": "Brand",
     "settings": [
       {
