@@ -9,8 +9,22 @@
 */
 {
   "current": {
+    "main_cta": "shopify:\/\/products\/the-collection-snowboard-hydrogen",
     "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
     "social_youtube_link": "https:\/\/www.youtube.com\/@shopify",
+    "sections": {
+      "navbar": {
+        "type": "navbar",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "has_newsletter": false
+        }
+      }
+    },
     "content_for_index": [
 
     ]
