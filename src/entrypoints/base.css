@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("{{ 'BricolageGrotesque-Variable.woff' | asset_url }}") format("woff");
-}
-@font-face {
-  font-family: "Inter Tight";
-  font-style: normal;
-  src: url("{{ 'InterTight-Variable.woff' | asset_url }}") format("woff");
-}
-@font-face {
-  font-family: "Inter Tight";
-  font-style: italic;
-  src: url("{{ 'InterTight-Italic-Variable.woff' | asset_url }}") format("woff");
-}
-
 @layer base {
   html {
     @apply h-full antialiased font-body text-base text-accent bg-white;
