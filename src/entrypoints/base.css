@@ -42,7 +42,7 @@
 
   .button-primary.is-heading-font {
     font-family: "Bricolage Grotesque", sans-serif;
-    /* font-variation-settings: "wdth" 80, "wght" 800; */
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 110%;
     padding: 12px 24px;
@@ -55,7 +55,7 @@
   h5,
   h6 {
     font-family: "Bricolage Grotesque", sans-serif;
-    /* font-variation-settings: "wdth" 80, "wght" 800; */
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 110%;
     text-wrap: balance;
@@ -166,7 +166,7 @@
   text-transform: uppercase;
   line-height: 0.8;
   font-family: "Bricolage Grotesque", sans-serif;
-  /* font-variation-settings: "wdth" 80, "wght" 800; */
+  font-weight: 800;
   font-size: 250px;
 }
 @media screen and (max-width: 1024px) {
