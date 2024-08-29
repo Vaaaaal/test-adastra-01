@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -156,7 +159,7 @@
 }
 
 .home_hero_keyword {
-  font-size: clamp(4.375rem, -0.4167rem + 23.9583vw, 18.75rem);
+  font-size: clamp(4.375rem, 0.1042rem + 21.3542vw, 17.1875rem);
 }
 
 /* ------------------------------------------------- Ecology - Component ------------------------------------------------- */
