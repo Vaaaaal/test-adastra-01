@@ -13,6 +13,7 @@
   "devDependencies": {
     "@shopify/cli": "latest",
     "@shopify/theme": "latest",
+    "@videojs/themes": "^1.0.1",
     "adastra-cli": "latest",
     "adastra-plugin": "latest",
     "adastra-prettier-config": "latest",
@@ -20,6 +21,7 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "tailwindcss": "^3.2.7",
+    "video.js": "^8.17.3",
     "vite": "^4.1.4"
   },
   "prettier": "adastra-prettier-config",

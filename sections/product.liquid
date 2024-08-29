@@ -13,7 +13,13 @@
             </div>
             {% for image in product.images %}
                 {% if image.id != current.featured_image.id %}
-                    <div class="flex-shrink-0 max-h-[700px]">
+                    <div 
+                        class="flex-shrink-0 max-h-[700px] hidden"
+                        {% comment %} Allow to filter image by alt tag for variants {% endcomment %}
+                        {% if image.alt == current.featured_image.alt or image.alt == product.title %}
+                            style="display: block;"
+                        {% endif %}
+                    >
                         <img src="{{ image | image_url: height: 700 }}"/>
                     </div>
                 {% endif %}

@@ -4,20 +4,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'sm': '640px',
-        // => @media (min-width: 640px) { ... }
-
-        'md': '768px',
-        // => @media (min-width: 768px) { ... }
-
-        'lg': '1024px',
-        // => @media (min-width: 1024px) { ... }
-
-        'xl': '1280px',
-        // => @media (min-width: 1280px) { ... }
-
-        '2xl': '1536px',
-        // => @media (min-width: 1536px) { ... }
+        '2lg': '1100px',
+        // => @media (min-width: 1100px) { ... }
       },
       fontFamily: {
         heading: ['Bricolage Grotesque', 'sans-serif'],
@@ -43,7 +31,12 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: 'max(5%, 4rem)',
+        padding: {
+          DEFAULT: '5vw',
+          sm: '2vw',
+          lg: '3vw',
+          xl: '5vw',
+        },
       },
       backgroundImage: {
         'dark-gradient': "linear-gradient(160deg, #161616 0%, #212121 51%, #0C0C0C 100%)",
@@ -51,11 +44,12 @@ module.exports = {
     },
     container: {
       screens: {
-        'sm': 'max(100%, 768px)',
-        'md': 'max(100%, 992px)',
-        'lg': 'max(100%, 1100px)',
-        'xl': 'max(100%, 1280px)',
-        '2xl': 'max(100%, 1440px)',
+        'sm': '100%',
+        'md': '100%',
+        'lg': '100%',
+        '2lg': '1240px',
+        'xl': '1340px',
+        '2xl': '1540px',
       },
     },
   }

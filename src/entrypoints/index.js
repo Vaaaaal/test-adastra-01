@@ -1,4 +1,7 @@
 import { gsap } from 'gsap';
+// Keep it to make the plugin works
+import videojs from 'video.js';
+import 'video.js/dist/video-js.min.css';
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 
 gsap.registerPlugin(MorphSVGPlugin) 

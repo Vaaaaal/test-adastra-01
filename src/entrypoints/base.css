@@ -36,7 +36,7 @@
   }
 
   p > span {
-    @apply font-mono text-lg font-semibold bg-secondary/20 text-secondary py-1 px-2 rounded;
+    @apply font-mono font-semibold bg-secondary/20 text-secondary py-1 px-2 rounded;
   }
 }
 
@@ -87,6 +87,13 @@
     text-wrap: balance;
   }
 
+  p {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 18px;
+  }
+
   h2 {
     font-size: 56px;
   }
@@ -102,8 +109,72 @@
   h6 {
     font-size: 18px;
   }
+  
+  @media screen and (max-width: 1024px) {
+    h2 {
+      font-size: 48px;
+    }
+    h3 {
+      font-size: 36px;
+    }
+    h4 {
+      font-size: 24px;
+    }
+    h5 {
+      font-size: 20px;
+    }
+    h6 {
+      font-size: 16px;
+    }
+    p {
+      line-height: 140%;
+      font-size: 16px;
+    }
+    .button,
+    button {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 32px;
+    }
+    h4 {
+      font-size: 24px;
+    }
+    h5 {
+      font-size: 20px;
+    }
+    h6 {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    h2 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+  }
 }
 
+.home_hero_keyword {
+  font-size: clamp(4.375rem, -0.4167rem + 23.9583vw, 18.75rem);
+}
+
+/* ------------------------------------------------- Ecology - Component ------------------------------------------------- */
 #ecology_wrapper {
   background-size: cover;
   background-position: center center;
@@ -123,4 +194,79 @@
   font-variation-settings: "wdth" 80, "wght" 800;
   font-size: 250px;
   font-family: "Bricolage Grotesque", sans-serif;
+}
+@media screen and (max-width: 1024px) {
+  .ecology_title {
+    font-size: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #ecology_overlay {
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 20%, rgba(0, 0, 0, 80%) 100%);
+  }
+  .ecology_title {
+    font-size: 150px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .ecology_title {
+    font-size: 90px;
+  }
+}
+
+/* ------------------------------------------- HOME video + VIDEO JS param here ------------------------------------------- */
+.vjs-big-play-button {
+  height: auto !important;
+  width: 30% !important;
+  max-width: 110px !important;
+  aspect-ratio: 1 !important;
+  background-color: #fff !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+@media screen and (max-width: 640px) {
+  .vjs-big-play-button {
+    width: 20% !important;
+  }
+}
+
+.vjs-big-play-button .vjs-svg-icon {
+  width: 65% !important;
+  height: auto !important;
+  fill: #000 !important;
+}
+
+.video-js .vjs-control-bar {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%) !important;
+}
+
+.vjs-control:focus .vjs-svg-icon, .vjs-svg-icon:hover {
+  filter: none !important;
+}
+.vjs-play-control .vjs-svg-icon {
+  transition: all 0.2s ease-out !important;
+}
+.vjs-play-control:hover .vjs-svg-icon {
+  transform: scale(1.5) !important;
+}
+.vjs-volume-panel {
+  display: none !important;
+}
+.video-js .vjs-progress-control .vjs-progress-holder {
+  margin: 0px !important;
+}
+.vjs-progress-holder, .vjs-load-progress {
+  background: #ffffff4e !important;
+}
+.video-js .vjs-load-progress div {
+  background: #ffffffa9 !important;
+}
+.video-js .vjs-play-progress{
+  background-color: #FC9E4F !important;
+}
+.video-js .vjs-play-progress span {
+  fill: #FC9E4F !important;
 }
