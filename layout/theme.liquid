@@ -37,7 +37,8 @@
     <!-- shopify/apps -->
     {{ content_for_header }}
 
-    {{ 'fonts.css.liquid' | stylesheet_tag }}
+    {% comment %} ------------- FONTS HERE -------------- {% endcomment %}
+    {{ 'fonts.css' | asset_url | stylesheet_tag }}
     {% liquid
       # Always add entrypoint below content_for_header
       render 'adastra' with 'base.css'
