@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   html {
@@ -48,18 +46,6 @@
     text-transform: uppercase;
     line-height: 110%;
     padding: 12px 24px;
-  }
-
-  .card {
-    background-image: var(--gradient);
-    background-size: 500%;
-    background-position: 100%;
-    transition: background-position 3s;
-    @apply ease-wiggle;
-  }
-
-  .card:is(:hover, :focus-within) {
-    background-position: 0;
   }
 
   h1,
@@ -179,9 +165,9 @@
 .ecology_title {
   text-transform: uppercase;
   line-height: 0.8;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-variation-settings: "wdth" 80, "wght" 800;
   font-size: 250px;
-  font-family: "Bricolage Grotesque", sans-serif;
 }
 @media screen and (max-width: 1024px) {
   .ecology_title {

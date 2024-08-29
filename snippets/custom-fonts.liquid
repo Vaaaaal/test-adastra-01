@@ -1,0 +1,23 @@
+{% comment %}
+  Renders a set of customs fonts.
+
+  Usage:
+    {% render 'custom-fonts' %}
+{% endcomment %}
+
+{% style %}
+  @font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("{{ 'BricolageGrotesque.ttf' | asset_url }}") format("ttf-variations");
+  }
+  @font-face {
+    font-family: "Inter Tight";
+    font-style: normal;
+    src: url("{{ 'InterTightVariable.woff2' | asset_url }}") format("woff2-variations");
+  }
+  @font-face {
+    font-family: "Inter Tight";
+    font-style: italic;
+    src: url("{{ 'InterTightItalicVariable.woff2' | asset_url }}") format("woff2-variations");
+  }
+{% endstyle %}
