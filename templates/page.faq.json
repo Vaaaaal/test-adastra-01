@@ -11,6 +11,55 @@
   "sections": {
     "main": {
       "type": "faq-page",
+      "blocks": {
+        "accordion_block_dxDQRX": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_dhnfKA": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_zVVffj": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_A9j8Rj": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_MEAJtN": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Lorem ipsum dolor sit amet",
+            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "type": "strong"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_block_dxDQRX",
+        "accordion_block_dhnfKA",
+        "accordion_block_zVVffj",
+        "accordion_block_A9j8Rj",
+        "accordion_block_MEAJtN"
+      ],
       "settings": {
       }
     }
