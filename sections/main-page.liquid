@@ -1,0 +1,32 @@
+{% comment %}
+    Contenu utilisé par le modèle de page "classique"
+
+{% endcomment %}
+
+{% assign cover = settings.cover or "classic-cover.png" %}
+
+<div>
+    {% render 'header.template' cover: settings.cover title: page.title %}
+
+    <div>
+        {{ page.content }}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cover",
+      "label": "Choisir une image de couverture"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Main Page"
+    }
+  ]
+}
+{% endschema %}

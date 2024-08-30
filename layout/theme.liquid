@@ -44,12 +44,13 @@
       render 'adastra' with 'index.js'
     %}
   </head>
-  <body>
+  <body style="overscroll-behavior: none;">
     {% section 'navbar' %}
 
     <main
       id="MainContent"
-      tabindex="-1">
+      tabindex="-1"
+    >
       {{ content_for_layout }}
     </main>
     

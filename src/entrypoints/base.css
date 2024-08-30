@@ -34,6 +34,7 @@
 
   .button-primary {
     @apply button bg-black text-white;
+    border: 1px solid #77777787;
   }
   
   .button-secondary {

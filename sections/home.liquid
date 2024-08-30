@@ -5,15 +5,15 @@
  
 <div>
     <section id="home_hero" class="relative">
-        <img class="w-screen h-dvh object-cover object-bottom hidden md:block" src="{{ 'hero-cover.png' | asset_url }}" />
-        <img class="w-screen h-dvh object-cover object-bottom md:hidden" src="{{ 'hero-cover-mobile.png' | asset_url }}" />
+        <img class="w-screen h-svh object-cover object-bottom hidden md:block" src="{{ 'hero-cover.png' | asset_url }}" />
+        <img class="w-screen h-svh object-cover object-bottom md:hidden" src="{{ 'hero-cover-mobile.png' | asset_url }}" />
 
         <div class="absolute bottom-0 left-0 w-full">
             <div class="bg-gradient-to-b from-transparent via-85% via-black to-black">
                 <div class="container">
-                    <div class="pb-16">
+                    <div class="pb-12">
                         <h1 class="text-white flex flex-col">
-                            <span class="block font-body normal-case text-[14px] sm:text-[16px] md:text-[20px] 2lg:text-[24px]" style="margin-left: 5px; font-variation-settings: 'wght' 500">Lunettes à partir de combinaisons de surf</span>
+                            <span class="block font-body normal-case text-16px font-medium sm:text-[18px] md:text-[20px] 2lg:text-[24px]" style="margin-left: 5px;">Lunettes à partir de combinaisons de surf</span>
                             <span class="home_hero_keyword leading-[0.95] sm:leading-[0.8]">recyclées</span>
                         </h1>
                     </div>
@@ -61,7 +61,7 @@
 
         <section
             id="home_lifestyle"
-            class="pb-24 grid grid-cols-1 items-center gap-5 lg:grid-cols-2"
+            class="pb-20 sm:pb-24 grid grid-cols-1 items-center gap-5 lg:grid-cols-2"
         >
             <div
                 class="flex flex-col items-start gap-y-5 lg:gap-y-10 lg:pt-40"
@@ -84,12 +84,12 @@
         class="pb-24 bg-dark-gradient text-white"
     >
         <div class="container">
-            <div class="pt-20 flex flex-col gap-y-16 md:gap-y-24">
+            <div class="pt-16 sm:pt-20 flex flex-col gap-y-16 md:gap-y-24">
                 <div
                     id="home_video"
                     class="max-w-screen-lg w-full mx-auto flex flex-col gap-y-10 md:gap-y-14"
                 >
-                    <div class="w-2/3 mx-auto flex flex-col items-center text-center">
+                    <div class="w-full sm:w-2/3 mx-auto flex flex-col items-center text-center">
                         <h2 class="text-white leading-none">Un savoir-faire made in Bassin d'Arcachon*</h2>
                         <p class="text-[#FC9E4F]">*(et made in France)</p>
                     </div>

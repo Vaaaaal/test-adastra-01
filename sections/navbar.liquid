@@ -9,7 +9,7 @@
     
     <div id="navbar_elements" class="flex gap-x-2 pointer-events-none opacity-0">
       <div class="border border-gray-200 p-3 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow">
-        <svg class="w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-4 md:w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M3 6H21" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -23,7 +23,8 @@
 <nav id="menu" class="fixed top-0 bottom-0 left-0 right-0 z-50 pointer-events-none">
   <div class="container pt-4 md:pt-6 flex justify-between items-center">
     <a id="menu-logo" href="/" class="pointer-events-auto">
-      <img class="max-w-28 sm:max-w-36" src="{{ 'logo-oceneo-white.png' | asset_url }}">
+      <img class="max-w-36 hidden md:block" src="{{ 'logo-oceneo-white.png' | asset_url }}">
+      <img class="max-w-28 sm:max-w-36 md:hidden" src="{{ 'logo-oceneo-black.png' | asset_url }}">
     </a>
 
     <div id="navbar_elements" class="flex gap-x-2 pointer-events-auto">
@@ -56,23 +57,16 @@
         </svg>
       </button>
     </div>
-
-    <a 
-      href="{{ settings.main_cta }}" 
-      class="button-primary flex sm:hidden fixed w-[90%] bottom-5 left-[5%] border border-[#777777] pointer-events-auto"
-    >
-      Je crée ma paire
-    </a>
   </div>
 
   <div class="absolute top-0 bottom-0 right-0 left-0 w-full h-full pointer-events-none z-[-1]">
     <div id="menu-overlay" class="cursor-pointer absolute top-0 bottom-0 right-0 left-0 w-full h-full pointer-events-none z-[-2]"></div>
     
-    <div id="menu-panel" class="px-[7%] py-[150px] absolute top-0 bottom-0 right-0 z-[-1] bg-white w-full h-full max-w-[580px] rounded-tl-[40px] rounded-bl-[40px] flex flex-col justify-between items-start gap-y-[70px]">
+    <div id="menu-panel" class="px-[7%] pt-[170px] pb-[140px] sm:py-[150px] absolute top-0 bottom-0 right-0 z-[-1] bg-white w-full max-w-full h-full md:max-w-[580px] md:rounded-tl-[40px] md:rounded-bl-[40px] flex flex-col justify-between items-start gap-y-12 sm:gap-y-[70px]">
       <div class="flex flex-col justify-center h-full">
         <ul>
           {% for link in linklists.main-menu.links %}
-            <li class="burger-menu-link">
+            <li class="burger-menu-link text-5xl sm:text-7xl md:text-6xl">
               {{ link.title | link_to: link.url }}
             </li>
           {% endfor %}
@@ -80,7 +74,7 @@
       </div>
   
       <div>
-        <ul class="flex gap-x-4">
+        <ul class="flex flex-col sm:flex-row sm:gap-x-4">
           {% for link in linklists.menu-legals.links %}
             <li class="text-[14px]">
               {{ link.title | link_to: link.url }}
@@ -90,6 +84,13 @@
       </div>
     </div>
   </div>
+
+  <a 
+    href="{{ settings.main_cta }}" 
+    class="button-primary flex sm:hidden fixed w-full bottom-0 rounded-none border-t border-[#777777] pointer-events-auto"
+  >
+    Je crée ma paire
+  </a>
 </nav>
 
 {% stylesheet %}
@@ -113,10 +114,8 @@
 
 .burger-menu-link {
   font-family: "Bricolage Grotesque", sans-serif;
-  font-variation-settings: "wdth" 75, "wght" 800;
   text-transform: uppercase;
   line-height: 110%;
-  font-size: 60px;
 }
 
 #navbar_elements {

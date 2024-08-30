@@ -1,0 +1,90 @@
+{% comment %}
+    Contenu utilisé par le modèle de page "classique"
+
+{% endcomment %}
+
+{% assign cover = settings.cover or "classic-cover.png" %}
+
+<div>
+    {% render 'header.template' cover: settings.cover title: page.title %}
+
+    <div>
+      {% for block in section.blocks %}
+        {% if block.type == 'accordion-block' %}
+            {% render 'accordion'
+                title: block.settings.title
+                content: block.settings.content
+                type: block.settings.type
+            %}
+        {% endif %}
+      {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page FAQ",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cover",
+      "label": "Choisir une image de couverture"
+    },
+  ],
+  "blocks": [
+    {
+      "name": "Accordion",
+      "type": "accordion-block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Contenu"
+        },
+        {
+          "type": "select",
+          "id": "type",
+          "label": "Type",
+          "options": [
+            {
+              "value": "strong",
+              "label": "Texte gras"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ],
+          "default": "strong"
+        }
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "Page FAQ"
+    }
+  ]
+}
+{% endschema %}
