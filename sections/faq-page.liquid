@@ -7,7 +7,7 @@
     {% render 'header.template' cover: "faq-cover.jpg" title: page.title %}
 
     <div class="container max-w-4xl pb-24">
-      <div>
+      <div class="flex flex-col gap-y-6">
         {% for block in section.blocks %}
           {% if block.type == 'accordion-block' %}
               {% render 'accordion'
@@ -19,7 +19,7 @@
         {% endfor %}
       </div>
 
-      <div class="pt-12 flex flex-col gap-y-4 max-w-3xl">
+      <div class="pt-16 flex flex-col gap-y-4 max-w-3xl">
         <p class="text-center font-heading font-bold text-4xl uppercase">Pas la bonne question ?</p>
         <p class="text-center text-balance">Si vous n’avez pas trouvé la réponse à votre question dans notre liste vous pouvez toujours nous joindre via notre <a href="/pages/contact" class="underline font-semibold">formulaire de contact</a>.</p>
       </div>
