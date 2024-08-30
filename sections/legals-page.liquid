@@ -1,5 +1,5 @@
 {% comment %}
-    Contenu utilisé par le modèle de page "classique"
+    Contenu utilisé par le modèle de page "Pages légales"
 
 {% endcomment %}
 
@@ -7,13 +7,13 @@
     {% render 'header.template' cover: "classic-cover.png" title: page.title %}
 
     <div class="container max-w-4xl pb-24">
-        {{ page.content }}
+      {{ page.content }}
     </div>
 </div>
 
 {% schema %}
 {
-  "name": "Main Page",
+  "name": "Page Légales",
   "settings": [
     {
       "type": "image_picker",
@@ -23,7 +23,7 @@
   ],
   "presets": [
     {
-      "name": "Main Page"
+      "name": "Page Légales"
     }
   ]
 }

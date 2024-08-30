@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "faq-page",
+      "type": "legals-page",
     }
   },
   "order": ["main"]

@@ -1,27 +1,28 @@
 {% comment %}
-    Contenu utilisé par le modèle de page "classique"
+    Contenu utilisé par le modèle de page "FAQ"
 
 {% endcomment %}
 
-{% if settings.cover == blank %} 
-  {% assign cover = settings.cover %}
-  {% else %}
-  {% assign cover = "classic-cover.png" %}
-{% endif %}
-
 <div>
-    {% render 'header.template' cover: cover title: page.title %}
+    {% render 'header.template' cover: "faq-cover.jpg" title: page.title %}
 
-    <div>
-      {% for block in section.blocks %}
-        {% if block.type == 'accordion-block' %}
-            {% render 'accordion'
-                title: block.settings.title
-                content: block.settings.content
-                type: block.settings.type
-            %}
-        {% endif %}
-      {% endfor %}
+    <div class="container max-w-4xl pb-24">
+      <div>
+        {% for block in section.blocks %}
+          {% if block.type == 'accordion-block' %}
+              {% render 'accordion'
+                  title: block.settings.title
+                  content: block.settings.content
+                  type: block.settings.type
+              %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="pt-12 flex flex-col gap-y-4 max-w-3xl">
+        <p class="text-center font-heading font-bold text-4xl uppercase">Pas la bonne question ?</p>
+        <p class="text-center text-balance">Si vous n’avez pas trouvé la réponse à votre question dans notre liste vous pouvez toujours nous joindre via notre <a href="/pages/contact" class="underline font-semibold">formulaire de contact</a>.</p>
+      </div>
     </div>
 </div>
 

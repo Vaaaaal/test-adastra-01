@@ -1,0 +1,38 @@
+{% comment %}
+    Contenu utilisé par le modèle de page "Contact"
+
+{% endcomment %}
+
+<div>
+    {% render 'header.template' cover: "classic-cover.png" title: page.title %}
+
+    <div class="container max-w-6xl pb-24">
+      <div class="flex justify-between items-center gap-x-6">
+        <div>
+          Form goes here
+        </div>
+        
+        <div>
+          Espace Pro goes here
+        </div>
+      </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page Contact",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cover",
+      "label": "Choisir une image de couverture"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Page Contact"
+    }
+  ]
+}
+{% endschema %}
