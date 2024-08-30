@@ -3,10 +3,14 @@
 
 {% endcomment %}
 
-{% assign cover = settings.cover or "classic-cover.png" %}
+{% if settings.cover == blank %} 
+  {% assign cover = settings.cover %}
+  {% else %}
+  {% assign cover = "classic-cover.png" %}
+{% endif %}
 
 <div>
-    {% render 'header.template' cover: settings.cover title: page.title %}
+    {% render 'header.template' cover: cover title: page.title %}
 
     <div>
       {% for block in section.blocks %}
