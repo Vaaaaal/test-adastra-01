@@ -40,6 +40,35 @@
   animation: fadeEffect 0.7s;
 }
 
+.tabcontent h2,
+.tabcontent h3,
+.tabcontent h4,
+.tabcontent h5,
+.tabcontent h6,
+.tabcontent p,
+.tabcontent ul,
+.tabcontent ol {
+  margin-bottom: 1rem;
+}
+
+/* Remove tailwind no-style for this element */
+.tabcontent ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+/* Remove tailwind no-style for this element */
+.tabcontent ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+}
+
+/* Remove tailwind no-style for this element */
+.tabcontent a {
+  text-decoration: underline;
+}
+
+
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
