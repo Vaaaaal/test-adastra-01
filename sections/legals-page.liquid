@@ -6,10 +6,73 @@
 <div>
     {% render 'header.template' cover: "classic-cover.png" title: page.title %}
 
-    <div class="container max-w-4xl pb-24">
-      {{ page.content }}
+    <div class="container max-w-4xl pb-24 flex flex-col items-center">
+      <div class="tab flex flex-col sm:flex-row items-center gap-2">
+        <button class="tablinks button-secondary" data-tab="Mentions" id="defaultOpen">Mentions Légales</button>
+        <button class="tablinks button-secondary" data-tab="Confidentiality">Politique de confidentialité</button>
+      </div>
+
+      <div id="tabcontent-list" class="mt-8">
+        {% if section.settings.mentions %}
+          <div id="Mentions" class="tabcontent">
+            {{ section.settings.mentions }}
+          </div>
+        {% endif %}
+        
+        {% if section.settings.confidentialty %}
+          <div id="Confidentiality" class="tabcontent">
+            {{ section.settings.confidentialty }}
+          </div>
+        {% endif %}
+      </div>
     </div>
 </div>
+
+{% stylesheet %}
+.tab button.active {
+  background-color: #161616;
+  color: white;
+  pointer-events: none;
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 0.7s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+{% endstylesheet %}
+
+{% javascript %}
+const tabcontent = document.getElementsByClassName("tabcontent");
+const tablinks =  document.getElementsByClassName("tablinks");
+
+for (let index = 0; index < tablinks.length; index++) {
+  
+  tablinks[index].addEventListener("click", function() {
+    const tabName = this.getAttribute("data-tab");
+    openTab(event, tabName);
+  });
+  if(tablinks[index].id === "defaultOpen") {
+    tablinks[index].click();
+  }
+}
+
+function openTab(evt, tabName) {
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+{% endjavascript %}
 
 {% schema %}
 {
@@ -19,6 +82,16 @@
       "type": "image_picker",
       "id": "cover",
       "label": "Choisir une image de couverture"
+    },
+    {
+      "type": "richtext",
+      "id": "mentions",
+      "label": "Texte pour la partie \"Mentions légales\""
+    },
+    {
+      "type": "richtext",
+      "id": "confidentialty",
+      "label": "Texte pour la partie \"Politique de confidentialité\""
     },
   ],
   "presets": [
