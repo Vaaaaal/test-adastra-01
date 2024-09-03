@@ -1,8 +1,9 @@
 {
   "sections": {
     "main": {
-      "type": "hello-world"
+      "type": "not-found-page"
     }
   },
+  "layout": "not-found",
   "order": ["main"]
 }

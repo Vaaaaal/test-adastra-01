@@ -1,0 +1,37 @@
+{% comment %}
+  Contenu de la page 404
+
+{% endcomment %}
+
+<div class="flex justify-center items-center min-h-screen">
+    <div class="container">
+        <div class="flex flex-col items-center gap-y-2">
+            <h1 class="text-[200px] sm:text-[300px] md:text-[430px] leading-[0.9] font-display">404</h1>
+            
+            <div class="max-w-md flex flex-col items-center gap-y-2">
+                <h2>
+                    Vous semblez perdu...
+                </h2>
+    
+                <div class="flex flex-col items-center gap-y-4">
+                    <p class="text-balance text-center">
+                        À moins que vous n’ayez fais exprès de vous retrouver ici, voici ce que l’on vous propose 😉 
+                    </p>
+        
+                    <div class="tab flex flex-col sm:flex-row items-center gap-2">
+                        <a class="button-primary" href="{{ settings.main_cta }}">
+                            Je crée ma paire
+                        </a>
+        
+                        <a class="button-secondary" href="{{ routes.root_url }}">
+                            Je retourne à l'accueil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% stylesheet %}
+{% endstylesheet %}
