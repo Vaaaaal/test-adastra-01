@@ -24,6 +24,10 @@
   p > span {
     @apply font-mono font-semibold bg-secondary/20 text-secondary py-1 px-2 rounded;
   }
+
+  input[type="checkbox"] {
+    @apply accent-orange-300 checked:border-white outline-offset-2 focus:outline focus:outline-orange-500;
+  }
 }
 
 @layer components {
@@ -38,7 +42,7 @@
   }
   
   .button-secondary {
-    @apply button border border-black text-black hover:bg-black hover:text-white transition-all;
+    @apply button border border-black focus:border-transparent text-black hover:bg-black hover:text-white transition-all;
   }
 
   .button-primary.is-heading-font {
@@ -47,6 +51,19 @@
     text-transform: uppercase;
     line-height: 110%;
     padding: 12px 24px;
+  }
+
+  .input-wrapper {
+    @apply flex flex-col gap-y-2;
+  }
+  .input-wrapper label {
+    @apply text-black font-semibold;
+  }
+  .input-wrapper label.no-style {
+    @apply font-normal;
+  }
+  .input-wrapper .input-element {
+    @apply rounded-md px-2 py-1 border border-gray-300 focus:border-transparent focus:outline focus:outline-orange-500;
   }
 
   h1,

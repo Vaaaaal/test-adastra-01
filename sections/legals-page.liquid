@@ -4,28 +4,32 @@
 {% endcomment %}
 
 <div>
+  {% if settings.section.cover %}
+    {% render 'header.template' cover: settings.section.cover, title: page.title %}
+  {% else %}
     {% render 'header.template' cover: "classic-cover.png" title: page.title %}
+  {% endif %}
 
-    <div class="container max-w-4xl pb-24 flex flex-col items-center">
-      <div class="tab flex flex-col sm:flex-row items-center gap-2">
-        <button class="tablinks button-secondary" data-tab="Mentions" id="defaultOpen">Mentions Légales</button>
-        <button class="tablinks button-secondary" data-tab="Confidentiality">Politique de confidentialité</button>
-      </div>
-
-      <div id="tabcontent-list" class="mt-8">
-        {% if section.settings.mentions %}
-          <div id="Mentions" class="tabcontent">
-            {{ section.settings.mentions }}
-          </div>
-        {% endif %}
-        
-        {% if section.settings.confidentialty %}
-          <div id="Confidentiality" class="tabcontent">
-            {{ section.settings.confidentialty }}
-          </div>
-        {% endif %}
-      </div>
+  <div class="container max-w-4xl pb-24 flex flex-col items-center">
+    <div class="tab flex flex-col sm:flex-row items-center gap-2">
+      <button class="tablinks button-secondary" data-tab="Mentions" id="defaultOpen">Mentions Légales</button>
+      <button class="tablinks button-secondary" data-tab="Confidentiality">Politique de confidentialité</button>
     </div>
+
+    <div id="tabcontent-list" class="mt-8">
+      {% if section.settings.mentions %}
+        <div id="Mentions" class="tabcontent">
+          {{ section.settings.mentions }}
+        </div>
+      {% endif %}
+      
+      {% if section.settings.confidentialty %}
+        <div id="Confidentiality" class="tabcontent">
+          {{ section.settings.confidentialty }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
 </div>
 
 {% stylesheet %}
@@ -116,7 +120,7 @@ function openTab(evt, tabName) {
     {
       "type": "image_picker",
       "id": "cover",
-      "label": "Choisir une image de couverture"
+      "label": "Choisir une image de couverture",
     },
     {
       "type": "richtext",

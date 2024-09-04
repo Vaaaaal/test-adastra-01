@@ -4,20 +4,73 @@
 {% endcomment %}
 
 <div>
-    {% render 'header.template' cover: "classic-cover.png" title: page.title %}
+  {% if settings.section.cover %}
+    {% render 'header.template' cover: settings.section.cover, title: page.title %}
+  {% else %}
+    {% render 'header.template' cover: "classic-cover.png", title: page.title %}
+  {% endif %}
 
-    <div class="container max-w-6xl pb-24">
-      <div class="flex justify-between items-center gap-x-6">
-        <div>
-          Form goes here
-        </div>
+  <div class="container max-w-3xl pb-24">
+    <div class="mx-auto gap-x-6">
+      {% form 'contact' %}
+        {{ form.errors | default_errors }}
+      
+        <div class="flex flex-col gap-y-4">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="input-wrapper w-full">
+              <label for="first-name">Prénom</label>
+              <input required class="input-element" type="text" name="contact[first_name]" id="first-name" />
+            </div>
+          
+            <div class="input-wrapper w-full">
+              <label for="last-name">Nom</label>
+              <input required class="input-element" type="text" name="contact[last_name]" id="last-name" />
+            </div>
+          </div>
         
-        <div>
-          Espace Pro goes here
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="input-wrapper w-full">
+              <label for="email">Email</label>
+              <input required class="input-element" type="email" name="contact[email]" id="email" />
+            </div>
+            
+            <div class="input-wrapper w-full">
+              <label for="phone">Téléphone</label>
+              <input class="input-element" type="tel" name="contact[phone]" id="phone" />
+            </div>
+          </div>
+          
+          <div class="input-wrapper">
+            <label for="is-pro" class="block">
+              <input type="checkbox" name="contact[is_pro]" id="is-pro" />
+              <span class="ml-2">Je suis un professionnel</span>
+            </label>
+            
+          </div>
+
+          {% comment %} <div class="input-wrapper">
+            <label for="order-number">Numéro de commande</label>
+            <input class="input-element" type="text" name="contact[order_number]" id="order-number" />
+          </div> {% endcomment %}
+        
+          <div class="input-wrapper">
+            <label for="message">Message</label>
+            <textarea required class="input-element" name="contact[body]" id="message" rows="5"></textarea>
+          </div>
+
+          <input type="hidden" name="form_type" value="contact">
+        
+          <div class="submit">
+            <input class="button-primary" type="submit" value="Envoyer" />
+          </div>
         </div>
-      </div>
+      {% endform %}        
     </div>
+  </div>
 </div>
+
+{% comment %} {% javascript %}
+{% endjavascript %} {% endcomment %}
 
 {% schema %}
 {
@@ -26,7 +79,7 @@
     {
       "type": "image_picker",
       "id": "cover",
-      "label": "Choisir une image de couverture"
+      "label": "Choisir une image de couverture",
     },
   ],
   "presets": [

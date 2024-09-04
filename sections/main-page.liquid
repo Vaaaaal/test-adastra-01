@@ -4,7 +4,11 @@
 {% endcomment %}
 
 <div>
-    {% render 'header.template' cover: "classic-cover.png" title: page.title %}
+    {% if settings.section.cover %}
+      {% render 'header.template' cover: settings.section.cover, title: page.title %}
+    {% else %}
+      {% render 'header.template' cover: "classic-cover.png" title: page.title %}
+    {% endif %}
 
     <div class="container max-w-4xl pb-24">
         {{ page.content }}
@@ -18,7 +22,7 @@
     {
       "type": "image_picker",
       "id": "cover",
-      "label": "Choisir une image de couverture"
+      "label": "Choisir une image de couverture",
     },
   ],
   "presets": [

@@ -4,26 +4,30 @@
 {% endcomment %}
 
 <div>
+  {% if settings.section.cover %}
+    {% render 'header.template' cover: settings.section.cover, title: page.title %}
+  {% else %}
     {% render 'header.template' cover: "faq-cover.jpg" title: page.title %}
+  {% endif %}
 
-    <div class="container max-w-4xl pb-24">
-      <div class="flex flex-col gap-y-3">
-        {% for block in section.blocks %}
-          {% if block.type == 'accordion-block' %}
-              {% render 'accordion'
-                  title: block.settings.title
-                  content: block.settings.content
-                  type: block.settings.type
-              %}
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      <div class="pt-16 flex flex-col gap-y-4 max-w-3xl">
-        <p class="text-center font-heading font-bold text-4xl uppercase">Pas la bonne question ?</p>
-        <p class="text-center text-balance">Si vous n’avez pas trouvé la réponse à votre question dans notre liste vous pouvez toujours nous joindre via notre <a href="/pages/contact" class="underline font-semibold">formulaire de contact</a>.</p>
-      </div>
+  <div class="container max-w-4xl pb-24">
+    <div class="flex flex-col gap-y-3">
+      {% for block in section.blocks %}
+        {% if block.type == 'accordion-block' %}
+            {% render 'accordion'
+                title: block.settings.title
+                content: block.settings.content
+                type: block.settings.type
+            %}
+        {% endif %}
+      {% endfor %}
     </div>
+
+    <div class="pt-16 flex flex-col gap-y-4 max-w-3xl">
+      <p class="text-center font-heading font-bold text-4xl uppercase">Pas la bonne question ?</p>
+      <p class="text-center text-balance">Si vous n’avez pas trouvé la réponse à votre question dans notre liste vous pouvez toujours nous joindre via notre <a href="/pages/contact" class="underline font-semibold">formulaire de contact</a>.</p>
+    </div>
+  </div>
 </div>
 
 {% schema %}
