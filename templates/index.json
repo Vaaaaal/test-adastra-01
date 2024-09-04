@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "home",
+      "type": "home-page",
       "settings": {
         "unique_link": "shopify:\/\/products\/the-collection-snowboard-hydrogen"
       }

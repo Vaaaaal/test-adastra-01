@@ -1,0 +1,210 @@
+{% comment %}
+    Contenu de la page home avec des paramètres à définir dans les settings de Shopify
+
+{% endcomment %}
+ 
+<div>
+    <section id="home_hero" class="relative">
+        <img class="w-screen h-svh object-cover object-bottom hidden md:block" src="{{ 'hero-cover.png' | asset_url }}" />
+        <img class="w-screen h-svh object-cover object-bottom md:hidden" src="{{ 'hero-cover-mobile.png' | asset_url }}" />
+
+        <div class="absolute bottom-0 left-0 w-full">
+            <div class="bg-gradient-to-b from-transparent via-85% via-black to-black">
+                <div class="container">
+                    <div class="pb-12">
+                        <h1 class="text-white flex flex-col">
+                            <span class="block font-body normal-case text-16px font-medium sm:text-[18px] md:text-[20px] 2lg:text-[24px]" style="margin-left: 5px;">Lunettes à partir de combinaisons de surf</span>
+                            <span class="home_hero_keyword leading-[0.95] sm:leading-[0.8]">recyclées</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="home_intro">
+            {% if section.settings.intro != blank %}
+                test
+                <p class="pt-24 pb-28 max-w-3xl mx-auto font-normal text-xl sm:text-2xl lg:text-3xl leading-snug indent-16 text-justify">
+                    {{ section.settings.intro }}
+                </p>
+            {% else %}
+                <p class="pt-24 pb-28 max-w-3xl mx-auto font-normal text-xl sm:text-2xl lg:text-3xl leading-snug indent-16 text-justify">
+                    Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et une résine naturelle à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.
+                </p>
+            {% endif %}
+        </section>
+    
+        <section
+            id="home_unique"
+            class="pb-24 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-16"
+        >
+            <img
+                src="{{ 'home-unique.jpg' | asset_url }}"
+                class="rounded-md shadow-md"
+            />
+            
+            <div class="flex flex-col items-start gap-y-6 md:gap-y-8">
+                <h2>Chaque paire est unique</h2>
+                <p>
+                    Chaque paire est fabriquée de manière artisanale à partir de combinaisons de surf recyclées. Les couleurs et les motifs de nos lunettes proviennent directement des designs des combinaisons, ce qui rend chaque produit véritablement unique.
+                    De plus, nous offrons aussi la possibilité de revaloriser votre propre combinaison en une paire de lunettes personnalisée. Vous pouvez ainsi donner une seconde vie à votre combinaison préférée tout en obtenant un accessoire élégant, unique et écologique.
+                </p>
+                {% if settings.main_cta != blank %}
+                    <a href="{{ settings.main_cta }}" class="button-primary">
+                        Je crée ma paire
+                    </a>
+                {% endif %}
+            </div>
+        </section>
+
+        <section
+            id="home_lifestyle"
+            class="pb-20 sm:pb-24 grid grid-cols-1 items-center gap-5 lg:grid-cols-2"
+        >
+            <div
+                class="flex flex-col items-start gap-y-5 lg:gap-y-10 lg:pt-40"
+            >
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-1.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-2.jpg' | asset_url }}" />
+            </div>
+            
+            <div
+                class="flex flex-col items-start gap-y-5 lg:gap-y-10"
+            >
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-3.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-4.jpg' | asset_url }}" />
+            </div>
+        </section>
+    </div>
+
+    <section
+        id="home_infos"
+        class="pb-24 bg-dark-gradient text-white"
+    >
+        <div class="container">
+            <div class="pt-16 sm:pt-20 flex flex-col gap-y-16 md:gap-y-24">
+                {% if settings.section.video_process %}
+                    <div
+                        id="home_video"
+                        class="max-w-screen-lg w-full mx-auto flex flex-col gap-y-10 md:gap-y-14"
+                    >
+                        <div class="w-full sm:w-2/3 mx-auto flex flex-col items-center text-center">
+                            <h2 class="text-white leading-none">Un savoir-faire made in Bassin d'Arcachon*</h2>
+                            <p class="text-[#FC9E4F]">*(et made in France)</p>
+                        </div>
+
+                        <div class="relative">
+                            {% if settings.section.video_process.preview_image %}
+                                <div class="absolute top-0 left-0 w-full h-full blur-2xl z-0 scale-105 opacity-50">
+                                    <img
+                                        src="{{ settings.section.video_process.preview_image | image_url: width: 1024 }}" 
+                                        class="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
+                            {% endif %}
+
+                            <video
+                                id="home-process-video"
+                                class="video-js video-js-player w-full rounded-lg border border-[#777777] border-opacity-45 overflow-hidden"
+                                poster="{{ settings.section.video_process.preview_image | image_url: width: 1024 }}"
+                                data-setup='{"controls": true,"autoplay": false,"preload": "auto","fluid": true,"disablePictureInPicture": true,"experimentalSvgIcons": true,"poster":"{{ settings.section.video_process.preview_image | image_url: width: 1024 }}"}'
+                            >
+                                <source src="{{ settings.section.video_process.sources.first.url }}" type="{{ settings.section.video_process.sources.first.mime_type }}" />
+                                <p class="vjs-no-js py-8">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                        >supports HTML5 video</a
+                                    >
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                {% endif %}
+                
+                <div 
+                    id="home_bento"
+                    class="flex flex-col gap-y-8"
+                >
+                    <h2 class="text-white">Le petit plus Oceneo</h2>
+
+                    <div class="border border-[#777777] bg-white bg-opacity-5 overflow-hidden rounded-lg grid grid-cols-1 md:grid-cols-2 2lg:grid-cols-3">
+                        <div class="border-b md:border-r border-[#777777] p-4 md:p-6 flex flex-col gap-y-4">
+                            <h3 class="text-white lg:text-[32px]">Une solution innovante</h3>
+                            <p class="opacity-80">
+                                Découvrez une solution innovante dans le monde de la mode et de l'écologie : les premières lunettes au monde fabriquées à partir de combinaison de surf recyclée.
+                            </p>
+                        </div>
+                        
+                        <div class="border-b border-[#777777] p-4 md:p-6 flex flex-col gap-y-4">
+                            <h3 class="text-white lg:text-[32px]">Une qualité garantie</h3>
+                            <p class="opacity-80">
+                                Transformer les combinaisons de surf en matériel durable pour lunettes est un art. Nous utilisons une technologie avancée et un savoir-faire artisanal pour garantir que chaque paire soit parfaite.
+                            </p>
+                        </div>
+                        
+                        <div class="border-b md:border-r 2lg:border-r-0 2lg:border-l border-[#777777] p-4 md:p-6 flex flex-col gap-y-4">
+                            <h3 class="text-white lg:text-[32px]">L'originalité</h3>
+                            <p class="opacity-80">
+                                Chaque paire de lunettes Oceneo commence à partir des combinaisons de surf. Grâce à notre technologie, ce matériau allie durabilité et qualité, transformant ce déchet en un accessoire de mode.
+                            </p>
+                        </div>
+                        
+                        <div class="border-[#777777] row-start-5 2lg:row-start-auto md:col-span-2 py-4 md:p-4 flex flex-col gap-y-4 relative">
+                            <h3 class="text-white lg:text-[32px] px-4 md:px-0">Ultra résistantes</h3>
+                            <div class="flex flex-col gap-y-2">
+                                <p class="w-full md:w-3/5 pr-4 opacity-80 px-4 md:px-0">
+                                    Nos lunettes ne sont pas uniquement éco-responsables, elles sont également résistantes à l’eau et durable. Que ce soit pour un tour sur la mer en pleine journée avec les verres polarisés comme apprécier une fin de journée au restaurant avec les verres classiques, elles sauront vous accompagner dans toutes vos activités du quotidien.
+                                    Elles possèdent également une texture agréable et originale au toucher ainsi que des coloris directement issus du design de combinaisons de surf.
+                                </p>
+                                <img 
+                                    src="{{ 'bento-product.png' | asset_url }}"
+                                    class="md:absolute right-0 top-[50%] md:-translate-y-[45%] max-w-md md:max-w-full w-full ml-auto md:ml-0 md:w-2/5"
+                                />
+                            </div>
+                        </div>
+                        
+                        <div class="border-b 2lg:border-b-0 2lg:border-l border-[#777777] p-4 md:p-6 flex flex-col gap-y-4">
+                            <h3 class="text-white lg:text-[32px]">Où nous trouver ?</h3>
+                            <p class="opacity-80">
+                                Actuellement, nos produits sont exclusivement disponibles sur notre site web. Cependant, nous travaillons activement à étendre notre présence dans des boutiques physiques près de chez vous. Abonnez-vous à notre newsletter pour être les premiers informés ! 🙂
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% render 'ecology-card' %}
+</div>
+
+{% schema %}
+{
+  "name": "Home",
+  "settings": [
+    {
+      "type": "text",
+      "id": "intro",
+      "label": "Texte pour la partie intro"
+    },
+    {
+      "type": "video",
+      "id": "video_process",
+      "label": "Vidéo du processus de fabrication"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_process_cover",
+      "label": "Image de couverture pour la vidéo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home"
+    }
+  ]
+}
+{% endschema %}
