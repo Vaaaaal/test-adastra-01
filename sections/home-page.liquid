@@ -85,7 +85,12 @@
     >
         <div class="container">
             <div class="pt-16 sm:pt-20 flex flex-col gap-y-16 md:gap-y-24">
-                {% if settings.section.video_process %}
+                <div class="text-white">
+                    {{ section.settings.video_process.duration }}
+                </div>
+
+
+                {% if section.settings.video_process %}
                     <div
                         id="home_video"
                         class="max-w-screen-lg w-full mx-auto flex flex-col gap-y-10 md:gap-y-14"
@@ -96,10 +101,10 @@
                         </div>
 
                         <div class="relative">
-                            {% if settings.section.video_process.preview_image %}
+                            {% if section.settings.video_process.preview_image %}
                                 <div class="absolute top-0 left-0 w-full h-full blur-2xl z-0 scale-105 opacity-50">
                                     <img
-                                        src="{{ settings.section.video_process.preview_image | image_url: width: 1024 }}" 
+                                        src="{{ section.settings.video_process.preview_image | image_url: width: 1024 }}" 
                                         class="w-full h-full object-cover rounded-lg"
                                     />
                                 </div>
@@ -108,10 +113,10 @@
                             <video
                                 id="home-process-video"
                                 class="video-js video-js-player w-full rounded-lg border border-[#777777] border-opacity-45 overflow-hidden"
-                                poster="{{ settings.section.video_process.preview_image | image_url: width: 1024 }}"
+                                poster="{{ section.settings.video_process.preview_image | image_url: width: 1024 }}"
                                 data-setup='{"controls": true,"autoplay": false,"preload": "auto","fluid": true,"disablePictureInPicture": true,"experimentalSvgIcons": true,"poster":"{{ settings.section.video_process.preview_image | image_url: width: 1024 }}"}'
                             >
-                                <source src="{{ settings.section.video_process.sources.first.url }}" type="{{ settings.section.video_process.sources.first.mime_type }}" />
+                                <source src="{{ section.settings.video_process.sources.first.url }}" type="{{ section.settings.video_process.sources.first.mime_type }}" />
                                 <p class="vjs-no-js py-8">
                                     To view this video please enable JavaScript, and consider upgrading to a
                                     web browser that
@@ -195,11 +200,6 @@
       "id": "video_process",
       "label": "Vidéo du processus de fabrication"
     },
-    {
-      "type": "image_picker",
-      "id": "video_process_cover",
-      "label": "Image de couverture pour la vidéo"
-    }
   ],
   "presets": [
     {
