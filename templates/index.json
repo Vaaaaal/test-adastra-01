@@ -12,7 +12,8 @@
     "main": {
       "type": "home-page",
       "settings": {
-        "unique_link": "shopify:\/\/products\/the-collection-snowboard-hydrogen"
+        "intro": "Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et une résine naturelle à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.",
+        "video_process": "shopify:\/\/files\/videos\/process.mp4"
       }
     }
   },
