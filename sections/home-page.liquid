@@ -25,7 +25,6 @@
     <div class="container">
         <section id="home_intro">
             {% if section.settings.intro != blank %}
-                test
                 <p class="pt-24 pb-28 max-w-3xl mx-auto font-normal text-xl sm:text-2xl lg:text-3xl leading-snug indent-16 text-justify">
                     {{ section.settings.intro }}
                 </p>
@@ -100,7 +99,7 @@
                                 id="home-process-video"
                                 class="video-js video-js-player w-full rounded-lg border border-[#777777] border-opacity-45 overflow-hidden"
                                 poster="{{ section.settings.video_process.preview_image | image_url: width: 1024 }}"
-                                data-setup='{"controls": true,"autoplay": false,"preload": "auto","fluid": true,"disablePictureInPicture": true,"experimentalSvgIcons": true"}'
+                                data-setup='{"controls": true,"autoplay": false,"preload": "auto","fluid": true,"disablePictureInPicture": true,"experimentalSvgIcons": true,"poster":"{{ settings.section.video_process.preview_image }}"}'
                             >
                                 <source src="{{ section.settings.video_process.sources.first.url }}" type="{{ section.settings.video_process.sources.first.mime_type }}" />
                                 <p class="vjs-no-js py-8">
