@@ -10,8 +10,10 @@
 {
   "current": {
     "main_cta": "shopify:\/\/products\/hossegor",
-    "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
-    "social_youtube_link": "https:\/\/www.youtube.com\/@shopify",
+    "social_instagram_link": "https:\/\/www.instagram.com\/oceneo.fr\/",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@oceneo.fr",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCiwQM4YzVXPJ_ZbHQn_Tnyg",
+    "social_linkedin_link": "https:\/\/www.linkedin.com\/company\/oceneo\/",
     "sections": {
       "navbar": {
         "type": "navbar",
