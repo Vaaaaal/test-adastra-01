@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "hello-world"
+      "type": "wip-page"
     }
   },
   "order": ["main"]
