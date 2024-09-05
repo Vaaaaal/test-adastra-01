@@ -48,7 +48,9 @@
           "type": "product-plus-block",
           "settings": {
             "title": "{{ product.metafields.custom.product_plus_title.value }}",
-            "content": "{{ product.metafields.custom.product_plus_content | metafield_tag }}"
+            "content": "{{ product.metafields.custom.product_plus_content | metafield_tag }}",
+            "image_1": "{{ product.metafields.custom.product_plus_image_1.value }}",
+            "image_2": "{{ product.metafields.custom.product_plus_image_2.value }}"
           }
         }
       },
