@@ -47,8 +47,8 @@
         "product_plus_block_3zHUQw": {
           "type": "product-plus-block",
           "settings": {
-            "title": "",
-            "content": ""
+            "title": "{{ product.metafields.custom.product_plus_title.value }}",
+            "content": "{{ product.metafields.custom.product_plus_content | metafield_tag }}"
           }
         }
       },
