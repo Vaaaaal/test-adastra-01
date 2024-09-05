@@ -37,13 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const announcementBar = document.querySelector('#announcementBar');
     if(announcementBar) {
-        gsap.to(announcementBar, { 
+        const announcementBarElements = announcementBar.querySelectorAll('.announcement-bar-element');
+        gsap.to(announcementBarElements, { 
             duration: 20, 
             xPercent: -100,
             repeat: -1,
             ease: 'none',
             onComplete: () => {
-                gsap.set(announcementBar, { clearProps: 'all' });
+                gsap.set(announcementBarElements, { clearProps: 'all' });
             }
         });
     }
