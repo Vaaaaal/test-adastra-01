@@ -23,48 +23,112 @@
         "accordion_block_dhnfKA": {
           "type": "accordion-block",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet",
-            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "title": "Vos lunettes sont-elles adaptées pour les hommes et les femmes ?",
+            "content": "<p>Notre modèle est unisexe et convient autant aux hommes qu’aux femmes.<\/p>",
             "type": "strong"
           }
         },
         "accordion_block_zVVffj": {
           "type": "accordion-block",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet",
-            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "title": "Vos verres offrent-ils une protection UV ?",
+            "content": "<p>Oui, tous nos verres de lunettes de soleil sont certifiés catégorie 3, UV 400 et offrent une protection à 100% contre les rayons UV.<\/p>",
             "type": "strong"
           }
         },
         "accordion_block_K8HDcT": {
           "type": "accordion-block",
           "settings": {
-            "title": "",
-            "content": "",
+            "title": "Proposez-vous des verres polarisés ?",
+            "content": "<p>Oui, nous proposons des verres polarisés pour réduire l'éblouissement et améliorer le confort visuel.<\/p>",
             "type": "strong"
           }
         },
         "accordion_block_WGqP4K": {
           "type": "accordion-block",
           "settings": {
-            "title": "",
-            "content": "",
+            "title": "Quels matériaux utilisez-vous pour vos montures ?",
+            "content": "<p>Nos montures sont fabriquées à partir de combinaison de surf recyclés et de résine bio-sourcée à base d’huile de pin.<\/p>",
             "type": "strong"
           }
         },
         "accordion_block_KniymH": {
           "type": "accordion-block",
           "settings": {
-            "title": "",
-            "content": "",
+            "title": "Vos lunettes sont-elles éco-responsables ?",
+            "content": "<p>Oui, nous nous engageons à utiliser des matériaux durables et des procédés de fabrication respectueux de l'environnement pour toutes nos lunettes.<\/p>",
             "type": "strong"
           }
         },
         "accordion_block_ReHMQm": {
           "type": "accordion-block",
           "settings": {
-            "title": "",
-            "content": "",
+            "title": "Proposez-vous des collections saisonnières ou des éditions limitées ?",
+            "content": "<p>Oui, nous lançons régulièrement de nouvelles collections saisonnières et des éditions limitées pour offrir des designs exclusifs à nos clients.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_cDemYd": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Puis-je personnaliser mes lunettes ?",
+            "content": "<p>Il est possible de créer votre paire de lunette à partir de votre combinaison. Ainsi, la monture sera aux couleurs du design de votre combinaison.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_mr7RUe": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Comment puis-je contacter le service client ?",
+            "content": "<p>Vous pouvez nous contacter par email à contact@oceneo.fr.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_EHTHAV": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Quels modes de paiement acceptez-vous ?",
+            "content": "<p>Nous acceptons divers modes de paiement, y compris les cartes de crédit, PayPal, et les virements bancaires.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_zLwHfU": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Quelles sont les options de livraison ?",
+            "content": "<p>Nous offrons plusieurs options de livraison, y compris la livraison standard et express. Les délais de livraison varient en fonction de votre emplacement.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_EMzkAR": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Comment suivre ma commande ?",
+            "content": "<p>Une fois votre commande expédiée, vous recevrez un email avec un numéro de suivi pour suivre l'état de votre livraison en temps réel.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_7c88xz": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Comment puis-je retourner ou échanger une paire de lunettes ?",
+            "content": "<p>Vous pouvez retourner ou échanger vos lunettes dans un délai de 30 jours suivant l'achat, à condition qu'elles soient en état neuf. Consultez notre <a href=\"\/pages\/conditions-generales-de-ventes\" title=\"Conditions Générales de Vente\">politique de retour <\/a>pour plus de détails.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_7EiJCC": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Proposez-vous une garantie sur vos produits ?",
+            "content": "<p>Oui, toutes nos lunettes sont couvertes par une garantie de un an contre les défauts de fabrication.<\/p>",
+            "type": "strong"
+          }
+        },
+        "accordion_block_JNNgJW": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Comment entretenir mes lunettes ?",
+            "content": "<p>Pour entretenir vos lunettes, nettoyez-les régulièrement avec un chiffon doux et de l'eau savonneuse, et rangez-les dans leur étui lorsque vous ne les portez pas.<\/p>",
             "type": "strong"
           }
         }
@@ -76,7 +140,15 @@
         "accordion_block_K8HDcT",
         "accordion_block_WGqP4K",
         "accordion_block_KniymH",
-        "accordion_block_ReHMQm"
+        "accordion_block_ReHMQm",
+        "accordion_block_cDemYd",
+        "accordion_block_mr7RUe",
+        "accordion_block_EHTHAV",
+        "accordion_block_zLwHfU",
+        "accordion_block_EMzkAR",
+        "accordion_block_7c88xz",
+        "accordion_block_7EiJCC",
+        "accordion_block_JNNgJW"
       ],
       "settings": {
       }
