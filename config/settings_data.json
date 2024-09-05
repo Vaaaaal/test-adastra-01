@@ -23,7 +23,7 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "has_newsletter": false
+          "has_newsletter": true
         }
       }
     },
