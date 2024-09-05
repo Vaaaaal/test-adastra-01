@@ -8,9 +8,11 @@
 <div>
     <section id="product_hero">
         <div class="flex flex-nowrap items-stretch overflow-scroll">
-            <div class="w-auto shrink-0 h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
-                {{ current.featured_image | image_url: height: 700 | image_tag: class: 'h-full w-auto' }}
-            </div>
+            {% if current.featured_image %}
+                <div class="w-auto shrink-0 h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
+                    {{ current.featured_image | image_url: height: 700 | image_tag: class: 'h-full w-auto' }}
+                </div>
+            {% endif %}
 
             {% for image in product.images %}
                 {% if image.id != current.featured_image.id %}
