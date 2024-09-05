@@ -36,19 +36,35 @@
             "type": "strong"
           }
         },
-        "accordion_block_A9j8Rj": {
+        "accordion_block_K8HDcT": {
           "type": "accordion-block",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet",
-            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "title": "",
+            "content": "",
             "type": "strong"
           }
         },
-        "accordion_block_MEAJtN": {
+        "accordion_block_WGqP4K": {
           "type": "accordion-block",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet",
-            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "title": "",
+            "content": "",
+            "type": "strong"
+          }
+        },
+        "accordion_block_KniymH": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "",
+            "content": "",
+            "type": "strong"
+          }
+        },
+        "accordion_block_ReHMQm": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "",
+            "content": "",
             "type": "strong"
           }
         }
@@ -57,8 +73,10 @@
         "accordion_block_dxDQRX",
         "accordion_block_dhnfKA",
         "accordion_block_zVVffj",
-        "accordion_block_A9j8Rj",
-        "accordion_block_MEAJtN"
+        "accordion_block_K8HDcT",
+        "accordion_block_WGqP4K",
+        "accordion_block_KniymH",
+        "accordion_block_ReHMQm"
       ],
       "settings": {
       }
