@@ -4,6 +4,7 @@
       "type": "wip-page",
     }
   },
+  "layout": "not-found",
   "order": [
     "main"
   ]
