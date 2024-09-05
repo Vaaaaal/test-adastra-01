@@ -36,8 +36,13 @@
         {% endif %}
       "
     >
-      {{ image_1 | image_url: width: 500 | image_tag: class: 'rounded w-full' }}
-      {{ image_2 | image_url: width: 500 | image_tag: class: 'rounded w-full' }}
+      {% if image_1 != blank %}
+        {{ image_1 | image_url: width: 500 | image_tag: class: 'rounded w-full' }}
+      {% endif %}
+
+      {% if image_2 != blank %}
+        {{ image_2 | image_url: width: 500 | image_tag: class: 'rounded w-full' }}
+      {% endif %}
     </div>
   </div>
 {% endif %}

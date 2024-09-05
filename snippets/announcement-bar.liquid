@@ -1,0 +1,20 @@
+{% comment %}
+  Renders an announcement bar item.
+
+  Accepts:
+    - content: {string} Content (required)
+    - link_to: {url} Link to (optionnal)
+
+  Usage:
+    {% render 'announcement-bar' content: 'Lorem ipsum dolor sit amet' link_to: 'link' %}
+{% endcomment %}
+ 
+<div class="bg-black text-white fixed top-0 left-0 right-0 z-[49]">
+  <div id="announcementBar" class="flex flex-nowrap py-2">
+    {% for i in (1..2) %}
+      <div class="flex justify-center shrink-0 px-12 min-w-full text-xs">
+        {{ content }}
+      </div>
+    {% endfor %}
+  </div>
+</div>

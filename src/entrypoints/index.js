@@ -34,6 +34,19 @@ document.addEventListener('DOMContentLoaded', function() {
             body.style.maxHeight = item.classList.contains('active') ? body.scrollHeight + 'px' : 0;
         });
     });
+
+    const announcementBar = document.querySelector('#announcementBar');
+    if(announcementBar) {
+        gsap.to(announcementBar, { 
+            duration: 20, 
+            xPercent: -100,
+            repeat: -1,
+            ease: 'none',
+            onComplete: () => {
+                gsap.set(announcementBar, { clearProps: 'all' });
+            }
+        });
+    }
 });
 
 function toggleMenu() {

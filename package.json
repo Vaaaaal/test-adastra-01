@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "dev:shopify": "shopify theme dev -s vaaal-test-01.myshopify.com",
+    "dev:shopify": "shopify theme dev -s 2aa7d1-87.myshopify.com",
     "build": "vite build",
     "preview": "adastra preview",
     "check": "adastra check",

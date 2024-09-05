@@ -2,9 +2,22 @@
     Contenu du footer avec la possibilité d'ajouter des paramètres à définir dans les settings de Shopify
 
 {% endcomment %}
- 
+
+
+{% if section.settings.bar_content != blank %}
+  {% render 'announcement-bar' content: section.settings.bar_content link_to: section.settings.bar_link_to %}
+{% endif %} 
+
 <div class="fixed top-0 bottom-0 left-0 right-0 z-40 mix-blend-difference pointer-events-none">
-  <div class="container pt-4 md:pt-6 flex justify-starts items-center">
+  <div class="
+    container pt-6
+    {% if section.settings.bar_content == blank %}
+      md:pt-6
+    {% else %}
+      md:pt-10
+    {% endif %}
+    flex justify-starts items-center
+  ">
     <img class="max-w-28 sm:max-w-36" src="{{ 'logo-oceneo.svg' | asset_url }}">
     
     <div id="navbar_elements" class="flex gap-x-2 pointer-events-none opacity-0">
@@ -21,7 +34,15 @@
 </div>
 
 <nav id="menu" class="fixed top-0 bottom-0 left-0 right-0 z-50 pointer-events-none">
-  <div class="container pt-4 md:pt-6 flex justify-between items-center">
+  <div class="
+    container pt-6
+    {% if section.settings.bar_content == blank %}
+      md:pt-6
+    {% else %}
+      md:pt-10
+    {% endif %}
+    flex justify-between items-center
+  ">
     <a id="menu-logo" href="{{ routes.root_url }}" class="pointer-events-auto">
       <img class="max-w-36 hidden md:block" src="{{ 'logo-oceneo-white.png' | asset_url }}">
       <img class="max-w-28 sm:max-w-36 md:hidden" src="{{ 'logo-oceneo-black.png' | asset_url }}">
@@ -62,7 +83,7 @@
   <div class="absolute top-0 bottom-0 right-0 left-0 w-full h-full pointer-events-none z-[-1]">
     <div id="menu-overlay" class="cursor-pointer absolute top-0 bottom-0 right-0 left-0 w-full h-full pointer-events-none z-[-2]"></div>
     
-    <div id="menu-panel" class="px-[7%] pt-[170px] pb-[140px] sm:py-[150px] absolute top-0 bottom-0 right-0 z-[-1] bg-white w-full max-w-full h-full md:max-w-[580px] md:rounded-tl-[40px] md:rounded-bl-[40px] flex flex-col justify-between items-start gap-y-12 sm:gap-y-[70px]">
+    <div id="menu-panel" class="px-[7%] pt-[170px] pb-[140px] sm:py-[150px] absolute top-0 bottom-0 right-0 z-[-1] bg-white w-full max-w-full h-full md:max-w-[580px] md:rounded-tl-[40px] md:rounded-bl-[40px] flex flex-col justify-between items-start gap-y-12 sm:gap-y-14">
       <div class="flex flex-col justify-center h-full">
         <ul>
           {% for link in linklists.main-menu.links %}
@@ -131,7 +152,18 @@
 {% schema %}
 {
   "name": "Navbar",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "bar_content",
+      "label": "Texte pour la barre d'annonce",
+    },
+    {
+      "type": "url",
+      "id": "bar_link_to",
+      "label": "Lien pour la barre d'annonce",
+    },
+  ],
   "presets": [
     {
       "name": "Navbar"
