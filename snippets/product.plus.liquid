@@ -36,8 +36,8 @@
         {% endif %}
       "
     >
-      <img class="rounded" src="{{ image_1 | asset_url }}" />
-      <img class="rounded" src="{{ image_2 | asset_url }}" />
+      {{ image_1 | image_url: width: 500 | image_tag class: 'rounded' }}
+      {{ image_2 | image_url: width: 500 | image_tag class: 'rounded' }}
     </div>
   </div>
 {% endif %}
