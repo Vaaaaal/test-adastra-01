@@ -47,7 +47,7 @@
         "product_plus_block_g9MyQ4": {
           "type": "product-plus-block",
           "settings": {
-            "title": "",
+            "title": "{{ product.metafields.custom.product_plus_title.value }}",
             "content": ""
           }
         }
