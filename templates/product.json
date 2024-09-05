@@ -44,10 +44,10 @@
             "type": "h2"
           }
         },
-        "product_plus_block_g9MyQ4": {
+        "product_plus_block_3zHUQw": {
           "type": "product-plus-block",
           "settings": {
-            "title": "{{ product.metafields.custom.product_plus_title.value }}",
+            "title": "",
             "content": ""
           }
         }
@@ -57,7 +57,7 @@
         "accordion_block_VnACKX",
         "accordion_block_wt3VCJ",
         "accordion_block_WYFTUp",
-        "product_plus_block_g9MyQ4"
+        "product_plus_block_3zHUQw"
       ],
       "settings": {
       }
