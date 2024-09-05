@@ -11,6 +11,54 @@
   "sections": {
     "main": {
       "type": "product-page",
+      "blocks": {
+        "accordion_block_p6M3Jm": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Détails",
+            "content": "{{ product.metafields.custom.details | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "accordion_block_VnACKX": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Inclus avec l'achat",
+            "content": "{{ product.metafields.custom.included | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "accordion_block_wt3VCJ": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Livraisons & retours",
+            "content": "{{ product.metafields.custom.shipping | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "accordion_block_WYFTUp": {
+          "type": "accordion-block",
+          "settings": {
+            "title": "Entretien & utilisation",
+            "content": "{{ product.metafields.custom.caring_using | metafield_tag }}",
+            "type": "h2"
+          }
+        },
+        "product_plus_block_3zHUQw": {
+          "type": "product-plus-block",
+          "settings": {
+            "title": "",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "accordion_block_p6M3Jm",
+        "accordion_block_VnACKX",
+        "accordion_block_wt3VCJ",
+        "accordion_block_WYFTUp",
+        "product_plus_block_3zHUQw"
+      ],
       "settings": {
       }
     }
