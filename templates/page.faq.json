@@ -15,8 +15,8 @@
         "accordion_block_dxDQRX": {
           "type": "accordion-block",
           "settings": {
-            "title": "Lorem ipsum dolor sit amet",
-            "content": "<p>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet<\/p>",
+            "title": "Quels types de lunettes proposez-vous ?",
+            "content": "<p>Nous proposons un modèle de lunettes de soleil disponible en plusieurs coloris de montures et de verres. Ce modèle est également disponible en version optique chez nos opticiens partenaires.<\/p>",
             "type": "strong"
           }
         },
