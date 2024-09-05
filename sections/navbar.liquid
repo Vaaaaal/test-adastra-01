@@ -22,7 +22,7 @@
 
 <nav id="menu" class="fixed top-0 bottom-0 left-0 right-0 z-50 pointer-events-none">
   <div class="container pt-4 md:pt-6 flex justify-between items-center">
-    <a id="menu-logo" href="/" class="pointer-events-auto">
+    <a id="menu-logo" href="{{ routes.root_url }}" class="pointer-events-auto">
       <img class="max-w-36 hidden md:block" src="{{ 'logo-oceneo-white.png' | asset_url }}">
       <img class="max-w-28 sm:max-w-36 md:hidden" src="{{ 'logo-oceneo-black.png' | asset_url }}">
     </a>
@@ -35,7 +35,7 @@
         Je crée ma paire
       </a>
 
-      <a class="border border-gray-200 p-3 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow" href="/cart">
+      <a class="border border-gray-200 p-3 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow" href="{{ routes.cart_url }}">
         <svg class="w-4 md:w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M3 6H21" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -85,12 +85,17 @@
     </div>
   </div>
 
-  <a 
-    href="{{ settings.main_cta }}" 
-    class="button-primary flex sm:hidden fixed w-full bottom-0 rounded-none border-t border-[#777777] pointer-events-auto"
-  >
-    Je crée ma paire
-  </a>
+  {%
+    if template.name != "product"
+    and template.name != "cart"
+  %}
+    <a 
+      href="{{ settings.main_cta }}" 
+      class="button-primary flex sm:hidden fixed w-full bottom-0 rounded-none border-0 border-t border-[#ffffff55] pointer-events-auto"
+    >
+      Je crée ma paire
+    </a>
+  {% endif %}
 </nav>
 
 {% stylesheet %}

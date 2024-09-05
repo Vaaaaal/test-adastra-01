@@ -13,10 +13,10 @@
 
 {% if title and content and title != blank and content != blank %}
   <div class="accordion-item">
-    <button class="accordion-header w-full rounded-none shadow-none hover:shadow-none text-left flex justify-between gap-x-4 p-0 pt-5 pb-4 border-b border-[#C4C4C4]">
+    <button class="accordion-header w-full rounded-none shadow-none hover:shadow-none text-left flex justify-between gap-x-2 md:gap-x-4 p-0 pt-4 pb-3 md:pt-5 md:pb-4 border-b border-[#C4C4C4]">
       {% case type %}
         {% when 'h2' %}
-          <h2 class="text-[40px]">{{ title }}</h2>
+          <h2 class="apply-h3">{{ title }}</h2>
         {% when 'h3' %}
           <h3>{{ title }}</h3>
         {% when 'h4' %}
@@ -37,7 +37,7 @@
     </button>
     
     <div class="accordion-body max-h-0 overflow-hidden transition-all">
-      <div class="py-4">
+      <div class="py-4 accordion-richtext">
         {{ content }}
       </div>
     </div>

@@ -14,7 +14,7 @@
 
 {% if title and content and title != blank and content != blank %}
   <div class="pt-10 pb-20 flex flex-col gap-y-16">
-    <div class="grid grid-cols-2 gap-x-5">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-3 md:gap-y-4 lg:gap-x-5">
       <h2 class="text-balance leading-none">{{ title }}</h2>
   
       <div>
@@ -27,7 +27,7 @@
         {% if image_1 or image_2 or image_1 != blank or image_2 != blank %}
           grid
           {% if image_1 and image_2 and image_1 != blank and image_2 != blank %}
-            grid-cols-2 gap-x-5
+            grid-cols-1 lg:grid-cols-2 gap-y-3 md:gap-y-4 lg:gap-x-5
           {% else %}
             grid-cols-1
           {% endif %}

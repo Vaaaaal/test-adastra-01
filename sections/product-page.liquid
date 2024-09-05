@@ -7,31 +7,29 @@
  
 <div>
     <section id="product_hero">
-        <div class="flex flex-nowrap overflow-scroll">
-            <div class="flex-shrink-0 max-h-[700px]">
-                <img src="{{ current.featured_image | image_url: height: 700 }}"/>
+        <div class="flex flex-nowrap items-stretch overflow-scroll">
+            <div class="w-auto shrink-0 h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
+                {{ current.featured_image | image_url: height: 700 | image_tag: class: 'h-full w-auto' }}
             </div>
+
             {% for image in product.images %}
                 {% if image.id != current.featured_image.id %}
-                    <div 
-                        class="flex-shrink-0 max-h-[700px] hidden"
-                        {% comment %} Allow to filter image by alt tag for variants {% endcomment %}
-                        {% if image.alt == current.featured_image.alt or image.alt == product.title %}
-                            style="display: block;"
-                        {% endif %}
-                    >
-                        <img src="{{ image | image_url: height: 700 }}"/>
-                    </div>
+                    {% comment %} Allow to filter image by alt tag for variants {% endcomment %}
+                    {% if image.alt == current.featured_image.alt or image.alt == product.title %}
+                        <div class="w-auto shrink-0 h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
+                            {{ image | image_url: height: 700 | image_tag: class: 'h-full w-auto' }}
+                        </div>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </div>
     </section>
     
     <div class="container">
-        <section id="product_info" class="pt-10 pb-24 grid grid-cols-12 items-start">
-            <div class="col-start-1 col-end-8 flex flex-col gap-y-8">
+        <section id="product_info" class="pt-10 pb-14 md:pb-24 grid grid-cols-1 lg:grid-cols-12 items-start">
+            <div class="row-start-2 row-end-3 mt-8 lg:mt-0 lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-8 flex flex-col gap-y-8">
                 <div class="flex flex-col gap-y-7">
-                    <h1 class="text-[82px] text-balance leading-[0.9]">{{ product.title }}</h1>
+                    <h1 class="text-4xl sm:text-5xl md:text-[82px] text-balance leading-[0.9]">{{ product.title }}</h1>
 
                     <div>
                         {{ product.description }}
@@ -51,11 +49,11 @@
                 </div>
             </div>
     
-            <div class="col-start-9 col-end-13 sticky top-28">
+            <div class="row-start-1 row-end-2 lg:col-start-9 lg:col-end-13 lg:sticky lg:top-28">
                 {% form 'product', product %}
                     <!-- form content -->
-                    <div class="flex flex-col gap-y-6">
-                        <h2 class="text-[42px]">{{ current.price | money }}</h2>
+                    <div class="flex flex-col gap-y-3 sm:gap-y-6">
+                        <h2 class="text-3xl sm:text-[42px]">{{ current.price | money }}</h2>
     
                         {% if product.has_only_default_variant == false %}
                             <div class="flex flex-col gap-y-4">
@@ -101,9 +99,9 @@
                         
                         <div class="pt-4 flex flex-col gap-y-3">
                             <input type="hidden" name="quantity" value="1">
-                            <button type="submit" class="button-primary is-heading-font w-full">Ajouter au panier</button>
+                            <button type="submit" class="button-primary lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static">Ajouter au panier</button>
 
-                            <small class="text-xs text-center">Livraison gratuite pour les commandes supérieures à 200€</small>
+                            <small class="hidden lg:block text-xs text-center">Livraison gratuite pour les commandes supérieures à 200€</small>
                         </div>
                     </div>
                 {% endform %}

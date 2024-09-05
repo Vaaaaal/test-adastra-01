@@ -79,46 +79,58 @@
     text-wrap: balance;
   }
 
-  p {
+  p,
+  li {
     font-family: "Inter Tight", sans-serif;
     font-weight: 400;
     line-height: 140%;
     font-size: 18px;
   }
 
-  h2 {
+  h2,
+  .apply-h2 {
     font-size: 56px;
   }
-  h3 {
+  h3,
+  .apply-h3 {
     font-size: 40px;
   }
-  h4 {
+  h4,
+  .apply-h4 {
     font-size: 28px;
   }
-  h5 {
+  h5,
+  .apply-h5 {
     font-size: 24px;
   }
-  h6 {
+  h6,
+  .apply-h6 {
     font-size: 18px;
   }
   
   @media screen and (max-width: 1024px) {
-    h2 {
+    h2,
+    .apply-h2 {
       font-size: 48px;
     }
-    h3 {
+    h3,
+    .apply-h3 {
       font-size: 36px;
     }
-    h4 {
+    h4,
+    .apply-h4 {
       font-size: 24px;
     }
-    h5 {
+    h5,
+    .apply-h5 {
       font-size: 20px;
     }
-    h6 {
+    h6,
+    .apply-h6 {
       font-size: 16px;
     }
-    p {
+    p,
+    li {
       line-height: 140%;
       font-size: 16px;
     }
@@ -129,39 +141,98 @@
   }
 
   @media screen and (max-width: 768px) {
-    h2 {
+    h2,
+    .apply-h2 {
       font-size: 40px;
     }
-    h3 {
+    h3,
+    .apply-h3 {
       font-size: 32px;
     }
-    h4 {
+    h4,
+    .apply-h4 {
       font-size: 24px;
     }
-    h5 {
+    h5,
+    .apply-h5 {
       font-size: 20px;
     }
-    h6 {
+    h6,
+    .apply-h6 {
       font-size: 16px;
     }
   }
   
   @media screen and (max-width: 640px) {
-    h2 {
+    h2,
+    .apply-h2 {
       font-size: 32px;
     }
-    h3 {
+    h3,
+    .apply-h3 {
       font-size: 28px;
     }
-    h4 {
+    h4,
+    .apply-h4 {
       font-size: 18px;
     }
-    h5 {
+    h5,
+    .apply-h5 {
       font-size: 16px;
     }
   }
+
+  .accordion-richtext h2,
+  .accordion-richtext h3,
+  .accordion-richtext h4,
+  .accordion-richtext h5,
+  .accordion-richtext h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .accordion-richtext p,
+  .accordion-richtext ul,
+  .accordion-richtext ol {
+    margin-bottom: 1rem;
+  }
+
+  /* Remove tailwind no-style for this element */
+  .accordion-richtext ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+    font-size: inherit;
+  }
+
+  /* Remove tailwind no-style for this element */
+  .accordion-richtext ol {
+    list-style-type: decimal;
+    margin-left: 1rem;
+    font-size: inherit;
+  }
+
+  /* Remove tailwind no-style for this element */
+  .accordion-richtext a {
+    text-decoration: underline;
+  }
+
+  .accordion-richtext:last-child {
+    margin-bottom: 0;
+  }
 }
 
+/* ------------------------------------------------- Hide scrollbar from alla elements ------------------------------------------------- */
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ------------------------------------------------- Home - Hero section ------------------------------------------------- */
 .home_hero_keyword {
   font-size: clamp(4.375rem, 0.1042rem + 21.3542vw, 17.1875rem);
 }
