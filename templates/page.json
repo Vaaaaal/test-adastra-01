@@ -12,6 +12,7 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "cover": "shopify:\/\/shop_images\/DSC04972.jpg"
       }
     }
   },
