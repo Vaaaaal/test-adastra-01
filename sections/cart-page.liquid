@@ -1,5 +1,9 @@
 {% form 'cart', cart %}
-    {% render 'header.template' cover: "cart-cover.jpg" title: "Mon panier" %}
+    {% if section.settings.cover %}
+        {% render 'header.template' cover:  section.settings.cover, title: "Mon panier" %}
+    {% else %}
+        {% render 'header.template' cover: "cart-cover.jpg" title: "Mon panier" %}
+    {% endif %}
 
     <div class="container">
         <div class="pb-20">
@@ -154,3 +158,21 @@
         });
     });
 {% endjavascript %}
+
+{% schema %}
+{
+  "name": "Cart Page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cover",
+      "label": "Choisir une image de couverture",
+    },
+  ],
+  "presets": [
+    {
+      "name": "Cart Page"
+    }
+  ]
+}
+{% endschema %}
