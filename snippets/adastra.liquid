@@ -5,7 +5,7 @@
 {% endcomment %}
 {% assign path = adastra | replace: '~/', '../' | replace: '@/', '../' %}
 {% if path == "/src/entrypoints/base.css" or path == "base.css" %}
-  {{ 'base-d9e5ceeb.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
+  {{ 'base-8ebf733d.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload }}
 {% elsif path == "/src/entrypoints/index.js" or path == "index.js" %}
   <link rel="modulepreload" href="{{ 'index-a86d7171.js' | asset_url | split: '?' | first }}" as="script" crossorigin="anonymous">
   <script src="{{ 'index-a86d7171.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>

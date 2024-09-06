@@ -25,11 +25,11 @@
     <div class="container">
         <section id="home_intro">
             {% if section.settings.intro != blank %}
-                <p class="pt-24 pb-28 max-w-3xl mx-auto font-normal text-xl sm:text-2xl lg:text-3xl leading-snug indent-16 text-justify">
+                <p class="pt-24 pb-28 max-w-3xl mx-auto font-normal text-xl sm:text-2xl leading-snug indent-16 text-justify">
                     {{ section.settings.intro }}
                 </p>
             {% else %}
-                <p class="pt-24 pb-28 max-w-3xl mx-auto font-normal text-xl sm:text-2xl lg:text-3xl leading-snug indent-16 text-justify">
+                <p class="pt-24 pb-28 max-w-3xl mx-auto font-normal text-xl sm:text-2xl leading-snug indent-16 text-justify">
                     Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et une résine naturelle à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.
                 </p>
             {% endif %}
@@ -52,7 +52,7 @@
                 </p>
                 {% if settings.main_cta != blank %}
                     <a href="{{ settings.main_cta }}" class="button-primary">
-                        Je crée ma paire
+                        Shopper ma paire
                     </a>
                 {% endif %}
             </div>
@@ -65,15 +65,15 @@
             <div
                 class="flex flex-col items-start gap-y-5 lg:gap-y-10 lg:pt-40"
             >
-                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-1.jpg' | asset_url }}" />
-                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-2.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-1-2.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-2-2.jpg' | asset_url }}" />
             </div>
             
             <div
                 class="flex flex-col items-start gap-y-5 lg:gap-y-10"
             >
-                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-3.jpg' | asset_url }}" />
-                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-4.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-3-2.jpg' | asset_url }}" />
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ 'home-lifestyle-4-2.jpg' | asset_url }}" />
             </div>
         </section>
     </div>
