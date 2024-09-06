@@ -37,11 +37,11 @@
       "
     >
       {% if image_1 != blank %}
-        {{ image_1 | image_url: width: 500 | image_tag: class: 'rounded w-full' }}
+        {{ image_1 | image_url: width: 500 | image_tag: class: 'rounded w-full h-full object-cover aspect-[3/4]' }}
       {% endif %}
 
       {% if image_2 != blank %}
-        {{ image_2 | image_url: width: 500 | image_tag: class: 'rounded w-full' }}
+        {{ image_2 | image_url: width: 500 | image_tag: class: 'rounded w-full h-full object-cover aspect-[3/4]' }}
       {% endif %}
     </div>
   </div>
