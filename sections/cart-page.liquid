@@ -21,10 +21,10 @@
                 <div class="flex flex-col lg:flex-row justify-between items-start gap-y-8 gap-x-10">
                     <div id="cart_list" class="max-w-[830px] w-full flex flex-col gap-y-10">
                         {% for item in cart.items %}
-                            <div class="flex flex-col xs:flex-row xs:items-stretch justify-between gap-x-6">
+                            <div class="flex flex-col xs:flex-row xs:items-stretch justify-between gap-x-6 gap-y-3">
                                 <div class="flex gap-x-3">
                                     {% if item.image != blank %}
-                                        {{ item.image | image_url: width: 250 | image_tag: class:'self-center max-w-16 xs:max-w-24 sm:max-w-32 md:max-w-40 h-auto rounded object-contain' }}
+                                        {{ item.image | image_url: width: 250 | image_tag: class:'self-center max-w-16 max-h-16 object-cover xs:max-w-24 xs:max-h-24 sm:max-w-32 sm:max-h-32 md:max-w-40 h-auto rounded object-contain' }}
                                     {% endif %}
 
                                     <div class="xs:hidden">
@@ -41,8 +41,8 @@
                                     </div>
                                 </div>
 
-                                <div class="w-full flex flex-col xs:flex-row">
-                                    <div class="flex flex-col justify-between w-full">
+                                <div class="w-full flex flex-col xs:flex-row gap-y-1">
+                                    <div class="flex flex-row xs:flex-col justify-between w-full">
                                         <div class="hidden xs:block">
                                             <p class="product_title">{{ item.product.title }}</p>
                                             {% if item.variant.title != blank %}
@@ -56,9 +56,9 @@
                                             </p>
                                         </div>
     
-                                        <div>
-                                            <div class="flex">
-                                                <div class="update_quantity flex items-center gap-x-4">
+                                        <div class="w-full xs:w-auto">
+                                            <div class="flex w-full xs:w-auto">
+                                                <div class="update_quantity flex items-center justify-between xs:justify-start w-full xs:w-auto gap-x-4">
                                                     {% comment %} Quantity input with plus / minus buttons {% endcomment %}
                                                     <div class="flex">
                                                         <button type="button" id="sub" class="sub border-[0.5px] border-black border-opacity-10 text-[16px] h-6 p-0 rounded aspect-square">-</button>
@@ -75,7 +75,7 @@
                                         </div>
                                     </div>
     
-                                    <div class="flex flex-col justify-between">
+                                    <div class="flex flex-row xs:flex-col justify-between">
                                         <p>{{ item.price | money }}</p>
                                         
                                         {% comment %} Do not move this element 👇 further in the incrementation because it will not working anymore {% endcomment %}
