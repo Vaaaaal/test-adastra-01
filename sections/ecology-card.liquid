@@ -72,7 +72,12 @@
                     </h6>
                 {% endif %}
 
-                <p class="w-full md:w-3/4 md:min-w-96">
+                <p
+                    class="w-full md:w-3/4 md:min-w-96"
+                    {% if section.settings.test_color %}
+                        style="color: {{ section.settings.test_color }};"
+                    {% endif %}
+                >
                     {{ section.settings.text }}
                 </p>
             </div>
