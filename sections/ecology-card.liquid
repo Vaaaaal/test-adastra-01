@@ -17,17 +17,59 @@
         <div class="pt-40 md:pt-28 pb-14">
             <div class="flex flex-col items-bottoms gap-y-8 text-white">
                 {% if section.settings.title_style == "display" %}
-                    <span class="ecology_title">{{ section.settings.title }}</span>
+                    <span
+                        class="ecology_title"
+                        {% if section.settings.test_color %}
+                            style="color: {{ section.settings.test_color }};"
+                        {% endif %}
+                    >
+                        {{ section.settings.title }}
+                    </span>
                 {% elsif section.settings.title_style == "h2" %}
-                    <h2>{{ section.settings.title }}</h2>
+                    <h2
+                        class="text-white"
+                        {% if section.settings.test_color %}
+                            style="color: {{ section.settings.test_color }};"
+                        {% endif %}
+                    >
+                        {{ section.settings.title }}
+                    </h2>
                 {% elsif section.settings.title_style == "h3" %}
-                    <h3>{{ section.settings.title }}</h3>
+                    <h3
+                        class="text-white"
+                        {% if section.settings.test_color %}
+                            style="color: {{ section.settings.test_color }};"
+                        {% endif %}
+                    >
+                        {{ section.settings.title }}
+                    </h3>
                 {% elsif section.settings.title_style == "h4" %}
-                    <h4>{{ section.settings.title }}</h4>
+                    <h4
+                        class="text-white"
+                        {% if section.settings.test_color %}
+                            style="color: {{ section.settings.test_color }};"
+                        {% endif %}
+                    >
+                        {{ section.settings.title }}
+                    </h4>
                 {% elsif section.settings.title_style == "h5" %}
-                    <h5>{{ section.settings.title }}</h5>
+                    <h5
+                        class="text-white"
+                        {% if section.settings.test_color %}
+                            style="color: {{ section.settings.test_color }};"
+                        {% endif %}
+                    >
+                        {{ section.settings.title }}
+                    </h5>
                 {% elsif section.settings.title_style == "h6" %}
-                    <h6>{{ section.settings.title }}</h6>
+                    <h6
+                        class="text-white"
+                        {% if section.settings.test_color %}
+                            style="color: {{ section.settings.test_color }};"
+                        {% endif %}
+                    >
+                        {{ section.settings.title }}
+                    </h6>
                 {% endif %}
 
                 <p class="w-full md:w-3/4 md:min-w-96">
@@ -46,6 +88,11 @@
             "type": "text",
             "id": "title",
             "label": "Titre"
+        },
+        {
+            "type": "color",
+            "id": "test_color",
+            "label": "Couleur du texte",
         },
         {
             "type": "select",
