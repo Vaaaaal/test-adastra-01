@@ -80,15 +80,15 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/credit-card.svg",
             "title": "Paiement 100% sécurisé",
-            "content": ""
+            "content": "Visa, Mastercard, American Express,Apple Pay, Google Pay, PayPal…"
           }
         },
         "warranty_block_WJheip": {
           "type": "warranty-block",
           "settings": {
             "icon": "shopify:\/\/shop_images\/headphones.svg",
-            "title": "",
-            "content": ""
+            "title": "Besoin d’aide ?",
+            "content": "Consultez nos FAQs ou contactez nous viale formulaire pour obtenir une réponse"
           }
         }
       },
