@@ -15,13 +15,45 @@
         "cover": "shopify:\/\/shop_images\/DSC04613.jpg"
       }
     },
-    "warranty": {
-      "type": "warranty",
-      "settings": {}
+    "warranty_banner_9aVnFj": {
+      "type": "warranty-banner",
+      "blocks": {
+        "warranty_block_6xpGz3": {
+          "type": "warranty-block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/truck.svg",
+            "title": "Livraison gratuite*",
+            "content": "*(pour toute commande supérieure à 200€)"
+          }
+        },
+        "warranty_block_wFRHLq": {
+          "type": "warranty-block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/credit-card.svg",
+            "title": "Paiement 100% sécurisé",
+            "content": "Visa, Mastercard, American Express,Apple Pay, Google Pay, PayPal…"
+          }
+        },
+        "warranty_block_LCrLDY": {
+          "type": "warranty-block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/headphones.svg",
+            "title": "Besoin d’aide ?",
+            "content": "Consultez nos FAQs ou contactez nous via le formulaire pour obtenir une réponse"
+          }
+        }
+      },
+      "block_order": [
+        "warranty_block_6xpGz3",
+        "warranty_block_wFRHLq",
+        "warranty_block_LCrLDY"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "warranty"
+    "warranty_banner_9aVnFj"
   ]
 }
