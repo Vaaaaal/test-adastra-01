@@ -63,9 +63,13 @@
       ],
       "settings": {
       }
+    },
+    "warranty": {
+      "type": "warranty-banner",
     }
   },
   "order": [
-    "main"
+    "main",
+    "warranty"
   ]
 }

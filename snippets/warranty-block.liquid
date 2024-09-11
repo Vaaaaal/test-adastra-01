@@ -1,0 +1,25 @@
+{% comment %}
+  Renders an warranty item.
+
+  Accepts:
+    - title: {string} Title (required)
+    - content: {string} Content (required)
+    - icon: {image} Image (required)
+
+  Usage:
+    {% render 'wrranty-block' title: 'Lorem' content: 'Lorem' icon: 'lorem.jpg' %}
+{% endcomment %}
+
+<div class="flex flex-col items-center gap-y-2 md:gap-y-4 w-full max-w-sm">
+  <div class="flex flex-col items-center gap-y-2">
+    {{ icon | image_url: width: 300 | image_tag: class: "w-full max-w-8 h-full max-h-8 object-contain" }}
+
+    <div class="font-semibold">
+      {{ title }}
+    </div>
+  </div>
+  
+  <div class="text-balance text-center">
+    {{ content }}
+  </div>
+</div>
