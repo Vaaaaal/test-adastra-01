@@ -44,6 +44,8 @@
         "lifestyle_section_K9jwze"
       ],
       "settings": {
+        "hero_image": "shopify:\/\/shop_images\/hero-cover.png",
+        "hero_mobile_image": "shopify:\/\/shop_images\/hero-cover-mobile.png"
       }
     },
     "home_plus_RABgfH": {
