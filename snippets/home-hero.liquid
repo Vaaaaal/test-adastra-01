@@ -1,0 +1,33 @@
+{% comment %}
+  Renders a header for home page.
+
+  Accepts:
+    - hero_image: {image} Cover (required)
+    - hero_mobile_image: {image} Cover (required)
+
+  Usage:
+    {% render 'home-hero' hero_image: 'lorem.jpg' hero_mobile_image: 'lorem.jpg' %}
+{% endcomment %}
+
+<section id="home_hero" class="relative">
+    {% if hero_image.id %}
+        {{ hero_image | image_url: width: 2400 | image_tag: class: 'w-screen h-svh object-cover object-bottom hidden md:block' }}
+        {{ hero_mobile_image | image_url: width: 2400 | image_tag: class: 'w-screen h-svh object-cover object-bottom md:hidden' }}
+    {% else %}
+        <img class="w-screen h-svh object-cover object-bottom hidden md:block" src="{{ hero_image | asset_url }}" />
+        <img class="w-screen h-svh object-cover object-bottom md:hidden" src="{{ hero_mobile_image | asset_url }}" />
+    {% endif %}
+
+    <div class="absolute bottom-0 left-0 w-full">
+        <div class="bg-gradient-to-b from-transparent via-85% via-black to-black">
+            <div class="container">
+                <div class="pb-12">
+                    <h1 class="text-white flex flex-col">
+                        <span class="block font-body normal-case text-16px font-medium sm:text-[18px] md:text-[20px] 2lg:text-[24px]" style="margin-left: 5px;">Lunettes à partir de combinaisons de surf</span>
+                        <span class="home_hero_keyword leading-[0.95] sm:leading-[0.8]">recyclées</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

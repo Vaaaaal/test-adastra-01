@@ -1,0 +1,17 @@
+{% comment %}
+  Renders a split section.
+
+  Accepts:
+    - text: {string} text (required)
+
+  Usage:
+    {% render 'split-section' text: 'Lorem ipsum dolor sit amet' %}
+{% endcomment %}
+
+<div class="container">
+  <section class="pt-24 pb-28">
+      <p class="max-w-3xl mx-auto font-normal text-xl sm:text-2xl leading-snug indent-16 text-justify">
+          {{ text }}
+      </p>
+  </section>
+</div>

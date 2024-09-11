@@ -1,0 +1,44 @@
+{% comment %}
+  Renders the lifestyle section for home page.
+
+  Accepts:
+    - image_1: {image} image (required)
+    - image_2: {image} image (required)
+    - image_3: {image} image (optional)
+    - image_4: {image} image (optional)
+
+  Usage:
+    {% render 'home-lifestyle' image_1: 'lorem.jpg' image_2: 'lorem.jpg' image_3: 'lorem.jpg' image_4: 'lorem.jpg' %}
+{% endcomment %}
+
+<div class="container">
+    <section class="pb-20 sm:pb-24 grid grid-cols-1 items-center gap-5 lg:grid-cols-2">
+        <div class="flex flex-col items-start gap-y-5 lg:gap-y-10 lg:pt-40">
+            {% if image_1.id %}
+                {{ image_1 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% else %}
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ image_1 | asset_url }}" />
+            {% endif %}
+            
+            {% if image_3.id %}
+                {{ image_3 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% else %}
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ image_3 | asset_url }}" />
+            {% endif %}
+        </div>
+        
+        <div class="flex flex-col items-start gap-y-5 lg:gap-y-10">
+            {% if image_2.id %}
+                {{ image_2 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% else %}
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ image_2 | asset_url }}" />
+            {% endif %}
+            
+            {% if image_4.id %}
+                {{ image_4 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% else %}
+                <img class="w-full rounded-md shadow-md aspect-[3/3.7] object-cover" src="{{ image_4 | asset_url }}" />
+            {% endif %}
+        </div>
+    </section>
+</div>
