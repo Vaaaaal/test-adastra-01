@@ -14,9 +14,14 @@
       "settings": {
         "cover": "shopify:\/\/shop_images\/DSC04613.jpg"
       }
+    },
+    "warranty": {
+      "type": "warranty",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "warranty"
   ]
 }
