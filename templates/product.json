@@ -71,8 +71,8 @@
           "type": "warranty-block",
           "settings": {
             "icon": "shopify:\/\/shop_images\/truck.svg",
-            "title": "Livraison offerte*",
-            "content": "*(en point relais et selon coût du transporteur pour une livraison à domicile)"
+            "title": "Livraison gratuite*",
+            "content": "*(pour toute commande supérieure à 200€)"
           }
         },
         "warranty_block_N74RNW": {
