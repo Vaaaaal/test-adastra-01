@@ -11,22 +11,56 @@
   "sections": {
     "main": {
       "type": "home-page",
-      "settings": {}
+      "blocks": {
+        "intro_section_eTBhCd": {
+          "type": "intro-section",
+          "settings": {
+            "text": "Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et une résine naturelle à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable."
+          }
+        },
+        "split_section_cNBCiL": {
+          "type": "split-section",
+          "settings": {
+            "content_image": "shopify:\/\/shop_images\/home-unique.jpg",
+            "text": "Chaque paire est fabriquée de manière artisanale à partir de combinaisons de surf recyclées. Les couleurs et les motifs de nos lunettes proviennent directement des designs des combinaisons, ce qui rend chaque produit véritablement unique. De plus, nous offrons aussi la possibilité de revaloriser votre propre combinaison en une paire de lunettes personnalisée. Vous pouvez ainsi donner une seconde vie à votre combinaison préférée tout en obtenant un accessoire élégant, unique et écologique.",
+            "title": "Chaque paire est unique",
+            "link_text": "Shopper ma paire",
+            "link_to": "shopify:\/\/products\/hossegor"
+          }
+        },
+        "lifestyle_section_K9jwze": {
+          "type": "lifestyle-section",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/home-lifestyle-1-V2.jpg",
+            "image_2": "shopify:\/\/shop_images\/home-lifestyle-3-V2.jpg",
+            "image_3": "shopify:\/\/shop_images\/home-lifestyle-2-V2.jpg",
+            "image_4": "shopify:\/\/shop_images\/home-lifestyle-4-V2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "intro_section_eTBhCd",
+        "split_section_cNBCiL",
+        "lifestyle_section_K9jwze"
+      ],
+      "settings": {
+      }
     },
-    "home-plus": {
+    "home_plus_RABgfH": {
       "type": "home-plus",
       "settings": {
         "video_process": "shopify:\/\/files\/videos\/process.mp4"
       }
     },
-    "ecology-card": {
+    "ecology_card_UQQbRC": {
       "type": "ecology-card",
-      "settings": {}
-    },
+      "settings": {
+      }
+    }
   },
   "order": [
     "main",
-    "home-plus",
-    "ecology-card",
+    "home_plus_RABgfH",
+    "ecology_card_UQQbRC"
   ]
 }
