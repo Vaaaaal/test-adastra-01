@@ -13,13 +13,35 @@
   href="{{ product.url }}"
   class="flex flex-col gap-y-2"
 >
-  {% if product.featured_image.id %}
-    {{ product.featured_image | image_url: width: 640, height: 800 | image_tag: class: "rounded w-full aspect-[7.5/10] object-cover shrink-0" }}
-  {% else %}
-    <div class="w-full aspect-[7.5/10] bg-[#F8F4EF] rounded flex justify-center items-center shrink-0">
-      <img class="w-2/3" src="{{ 'logo-oceneo-black.png' | asset_url }}" />
-    </div>
-  {% endif %}
+  <div class="relative">
+    {% if product.available == false %}
+      <div class="absolute z-10 w-full top-0 left-0 flex justify-center pt-3">
+        <span class="text-xs rounded-full text-white bg-black px-3 py-2">En rupture de stock</span>
+      </div>
+    {% endif %}
+
+    {% if product.featured_image.id %}
+      <div class="bg-[#F8F4EF] rounded flex justify-center items-center shrink-0 overflow-hidden">
+        {% if product.available %}
+          {{ product.featured_image
+            | image_url: width: 640, height: 800
+            | image_tag:
+              class: "w-full aspect-[7.5/10] object-cover grayscale"
+          }}
+        {% else %}
+          {{ product.featured_image
+            | image_url: width: 640, height: 800
+            | image_tag:
+              class: "w-full aspect-[7.5/10] object-cover grayscale"
+          }}
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="w-full aspect-[7.5/10] bg-[#F8F4EF] rounded flex justify-center items-center shrink-0 overflow-hidden">
+        <img class="w-2/3" src="{{ 'logo-oceneo-black.png' | asset_url }}" />
+      </div>
+    {% endif %}
+  </div>
   
   <div class="flex justify-between items-start gap-x-4 w-full">
     <div>
