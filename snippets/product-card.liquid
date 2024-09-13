@@ -1,0 +1,40 @@
+{% comment %}
+  Renders a product card item used in products list.
+
+  Accepts:
+    - product: {object} Product (required)
+
+  Usage:
+    {% render 'product-card' product: 'product' %}
+{% endcomment %}
+
+
+<a
+  href="{{ product.url }}"
+  class="flex flex-col gap-y-2"
+>
+  {% if product.featured_image.id %}
+    {{ product.featured_image | image_url: width: 640, height: 800 | image_tag: class: "rounded w-full aspect-[7.5/10] object-cover shrink-0" }}
+  {% else %}
+    <div class="w-full aspect-[7.5/10] bg-[#F8F4EF] rounded flex justify-center items-center shrink-0">
+      <img class="w-2/3" src="{{ 'logo-oceneo-black.png' | asset_url }}" />
+    </div>
+  {% endif %}
+  
+  <div class="flex justify-between items-start gap-x-4 w-full">
+    <div>
+      <h2 class="apply-h4 leading-[0.8] mt-1">{{ product.title }}</h2>
+      {% if product.has_only_default_variant == false %}
+        <span class="text-xs text-gray-500 leading-none">(plusieurs options disponibles)</span>
+      {% endif %}
+    </div>
+    
+    <div class="shrink-0">
+      <span class="font-semibold text-[#FC9E4F] text-sm">
+        {% if product.price_varies %}
+          Dès 
+        {% endif %}
+        {{ product.price_min | money }}</span>
+    </div>
+  </div>
+</a>

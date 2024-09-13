@@ -78,7 +78,16 @@
 
     <div
         id="footer_logo"
-        class="bg-dark-gradient pb-9 sm:pb-0"
+        class="
+            bg-dark-gradient
+            {%
+                if template.name != "collection"
+                and template.name != "collection-list"
+            %}
+                pb-9
+            {% endif %}
+            sm:pb-0
+        "
     >
         <svg class="w-full" viewBox="0 0 1512 300" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_457_3502)">
