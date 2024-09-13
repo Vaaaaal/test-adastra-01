@@ -72,7 +72,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/truck.svg",
             "title": "Livraison gratuite*",
-            "content": "*(pour toute commande supérieure à 200€)"
+            "content": "*pour toute commande supérieure à 200€"
           }
         },
         "warranty_block_N74RNW": {
@@ -88,7 +88,7 @@
           "settings": {
             "icon": "shopify:\/\/shop_images\/headphones.svg",
             "title": "Besoin d’aide ?",
-            "content": "Consultez nos FAQs ou contactez nous viale formulaire pour obtenir une réponse"
+            "content": "Consultez nos FAQs ou contactez nous via le formulaire pour obtenir une réponse"
           }
         }
       },
