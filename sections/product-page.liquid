@@ -101,7 +101,11 @@
                         
                         <div class="pt-4 flex flex-col gap-y-3">
                             <input type="hidden" name="quantity" value="1">
-                            <button type="submit" class="button-primary lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static">Ajouter au panier</button>
+                            {% if product.available == false %}
+                                <button type="submit" class="button-primary lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static">Ajouter au panier</button>
+                            {% else %}
+                                <button class="button-primary opacity-90 cursor-not-allowed lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static" disabled>En rupture de stock</button>
+                            {% endif %}
 
                             <small class="hidden lg:block text-xs text-center">Livraison gratuite pour les commandes supérieures à 200€</small>
                         </div>
