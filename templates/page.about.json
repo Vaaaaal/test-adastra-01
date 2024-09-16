@@ -21,10 +21,23 @@
             "link_text": "",
             "link_to": ""
           }
+        },
+        "images_disposition_BLaqzk": {
+          "type": "images-disposition",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/about-1.png",
+            "image_1_mobile": "shopify:\/\/shop_images\/about-1-mobile.png",
+            "image_2": "shopify:\/\/shop_images\/about-2.png",
+            "image_2_mobile": "shopify:\/\/shop_images\/about-2-mobile.png",
+            "image_3": "shopify:\/\/shop_images\/about-3.png",
+            "image_3_mobile": "shopify:\/\/shop_images\/about-3-mobile.png",
+            "layout": "triptych"
+          }
         }
       },
       "block_order": [
-        "split_section_title_giUTra"
+        "split_section_title_giUTra",
+        "images_disposition_BLaqzk"
       ],
       "settings": {
         "cover": "shopify:\/\/shop_images\/about-cover.jpg"
