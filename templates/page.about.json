@@ -11,7 +11,23 @@
   "sections": {
     "main": {
       "type": "about-page",
+      "blocks": {
+        "split_section_title_giUTra": {
+          "type": "split-section-title",
+          "settings": {
+            "title": "Nos origines",
+            "title_position": "left",
+            "text": "<p>C’est lors d’une session de surf sur la côte Est Australienne en 2018 que Marco se rend compte du manque de moyens mis en œuvre pour recycler les combinaisons néoprènes.<\/p><p>Après seulement une session, sa combinaison de surf se déchire au niveau de l’entre-jambes. Il se rend alors dans le magasin où il l’a acheté la veille pour procéder à une réparation et c’est lorsque le vendeur lui indique que celle-ci sera jetée et non pas réparée qu’il tombe des nues.<\/p><p>Il décide alors de trouver une alternative pour revaloriser les quelque 32 tonnes de combinaisons jetées et brûlées chaque année (dont la sienne).<\/p>",
+            "link_text": "",
+            "link_to": ""
+          }
+        }
+      },
+      "block_order": [
+        "split_section_title_giUTra"
+      ],
       "settings": {
+        "cover": "shopify:\/\/shop_images\/about-cover.jpg"
       }
     }
   },
