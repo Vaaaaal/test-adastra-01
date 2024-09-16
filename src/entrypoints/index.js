@@ -158,7 +158,7 @@ function initSliders(sliders) {
 
         const options = {
             slidesPerView: 1,
-            loop: params.loop || false
+            // loop: !!params.loop
         }
 
         // Check if slidesPerView has multiple values

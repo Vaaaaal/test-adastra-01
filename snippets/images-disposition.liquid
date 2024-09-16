@@ -21,7 +21,7 @@
               {% endif %}
             </div>
   
-            <div class="hflex w-full md:w-3/5 flex-col gap-3">
+            <div class="flex w-full md:w-3/5 flex-col gap-3">
               {% if image_2.id %}
                 {{ image_2 | image_url: width: 1000 | image_tag: class: "w-full max-w-[500px] h-auto rounded shadow-md" }}
               {% else %}
@@ -68,6 +68,7 @@
             <div 
               class="swiper max-w-96"
               data-effect="cards"
+              data-loop
             >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -86,7 +87,7 @@
                 </div>
                 
                 <div class="swiper-slide">{% if image_3_mobile.id %}
-                    {{ image_3 | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
+                    {{ image_3_mobile | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
                   {% else %}
                     <img src="{{ image_3_mobile | asset_url }}" class="h-full w-full object-contain rounded shadow-md" />
                   {% endif %}
