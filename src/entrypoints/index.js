@@ -61,11 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if(swiperSliders.length > 0) {
         initSliders(swiperSliders);
     }
-
-    // Resize event
-    window.addEventListener('resize', () => {
-        initSliders(swiperSliders);
-    }, true)
 });
 
 function toggleMenu() {
@@ -260,7 +255,6 @@ function initSliders(sliders) {
                 clickable: true,
             }
         }
-
         new Swiper(slider, options);
     });
 }
