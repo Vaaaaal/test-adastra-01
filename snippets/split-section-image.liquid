@@ -10,12 +10,12 @@
     - content_image: {image} image (required)
 
   Usage:
-    {% render 'split-section' content_image: 'lorem.jpg' image_position: 'left' title: 'Lorem ipsum dolor sit amet' text: 'Lorem ipsum dolor sit amet' link_text: 'Lorem ipsum dolor sit amet' link_to: 'Lorem ipsum dolor sit amet' %}
+    {% render 'split-section-image' content_image: 'lorem.jpg' image_position: 'left' title: 'Lorem ipsum dolor sit amet' text: 'Lorem ipsum dolor sit amet' link_text: 'Lorem ipsum dolor sit amet' link_to: 'Lorem ipsum dolor sit amet' %}
 {% endcomment %}
 
 <div class="container">
     <section class="pb-24 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-16">
-        {% if image_position == "left" or image_position == blank or image_position == empty %}
+        {% if image_position == "left" %}
             {% if content_image.id %}
                 {{ content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
             {% else %}

@@ -14,9 +14,10 @@
         {%- case block.type -%}
             {%- when "intro-section" -%}
                 {% render 'text-intro' text: block.settings.text %}
-            {%- when "split-section" -%}
+            {%- when "split-section-image" -%}
                 {% render 'split-section-image'
                     content_image: block.settings.content_image
+                    image_position: block.settings.image_position
                     title: block.settings.title
                     text: block.settings.text
                     link_text: block.settings.link_text
@@ -61,7 +62,7 @@
             ]
         },
         {
-            "name": "Section - Split",
+            "name": "Section - Split (image)",
             "type": "split-section-image",
             "settings": [
                 {
