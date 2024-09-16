@@ -1,0 +1,100 @@
+{% comment %}
+  Renders a split section.
+
+  Accepts:
+    - title: {string} text (required)
+
+  Usage:
+    {% render 'split-section-title' content_image: 'lorem.jpg' image_position: 'left' title: 'Lorem ipsum dolor sit amet' text: 'Lorem ipsum dolor sit amet' link_text: 'Lorem ipsum dolor sit amet' link_to: 'Lorem ipsum dolor sit amet' %}
+{% endcomment %}
+
+{% if image_1 != blank and image_2 != blank and image_3 != blank %}
+    <div class="container">
+      <div class="pt-6 pb-16">
+        {% if layout == "triptych" or layout != blank %}
+          <section class="hidden md:flex md:flex-row justify-center md:justify-start items-center gap-3">
+            <div class="w-full md:w-2/5 min-w-[300px]">
+              {% if image_1.id %}
+                {{ image_1 | image_url: width: 1000 | image_tag: class: "w-full h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ image_1 | asset_url }}" class="w-full h-auto rounded shadow-md" />
+              {% endif %}
+            </div>
+  
+            <div class="hflex w-full md:w-3/5 flex-col gap-3">
+              {% if image_2.id %}
+                {{ image_2 | image_url: width: 1000 | image_tag: class: "w-full max-w-[500px] h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ image_2 | asset_url }}" class="w-full max-w-[500px] h-auto rounded shadow-md" />
+              {% endif %}
+    
+              {% if image_3.id %}
+                {{ image_3 | image_url: width: 1000 | image_tag: class: "w-full h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ image_3 | asset_url }}" class="w-full h-auto rounded shadow-md" />
+              {% endif %}
+            </div>
+          </section>
+        {% elsif layout == "grid" %}
+          <section class="hidden md:grid grid-columns-3 items-center">
+            <div>
+              {% if image_1.id %}
+                {{ image_1 | image_url: width: 1000 | image_tag: class: "w-full h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ image_1 | asset_url }}" class="w-full h-auto rounded shadow-md" />
+              {% endif %}
+            </div>
+  
+            <div>
+              {% if image_2.id %}
+                {{ image_2 | image_url: width: 1000 | image_tag: class: "w-full h-auto" }}
+              {% else %}
+                <img src="{{ image_2 | asset_url }}" class="w-full h-auto" />
+              {% endif %}
+            </div>
+  
+            <div>
+              {% if image_3.id %}
+                {{ image_3 | image_url: width: 1000 | image_tag: class: "w-full h-auto" }}
+              {% else %}
+                <img src="{{ image_3 | asset_url }}" class="w-full h-auto" />
+              {% endif %}
+            </div>
+          </section>
+        {% endif %}
+
+        <section class="md:hidden">
+          <div class="w-full">
+            <div 
+              class="swiper max-w-96"
+              data-effect="cards"
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  {% if image_1_mobile.id %}
+                    {{ image_1_mobile | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
+                  {% else %}
+                    <img src="{{ image_1_mobile | asset_url }}" class="h-full w-full object-contain rounded shadow-md" />
+                  {% endif %}
+                </div>
+  
+                <div class="swiper-slide">{% if image_2_mobile.id %}
+                    {{ image_2_mobile | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
+                  {% else %}
+                    <img src="{{ image_2_mobile | asset_url }}" class="h-full w-full object-contain rounded shadow-md" />
+                  {% endif %}
+                </div>
+                
+                <div class="swiper-slide">{% if image_3_mobile.id %}
+                    {{ image_3 | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
+                  {% else %}
+                    <img src="{{ image_3_mobile | asset_url }}" class="h-full w-full object-contain rounded shadow-md" />
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+{% endif %}

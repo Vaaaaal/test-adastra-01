@@ -23,6 +23,14 @@
                     link_text: block.settings.link_text
                     link_to: block.settings.link_to
                 %}
+            {%- when "split-section-title" -%}
+                {% render 'split-section-title'
+                    title: block.settings.title
+                    title_position: block.settings.title_position
+                    text: block.settings.text
+                    link_text: block.settings.link_text
+                    link_to: block.settings.link_to
+                %}
             {%- when "lifestyle-section" -%}
                 {% render 'home-lifestyle' 
                     image_1: block.settings.image_1
@@ -94,6 +102,47 @@
                     "type": "text",
                     "id": "title",
                     "label": "Titre"
+                },
+                {
+                    "type": "text",
+                    "id": "link_text",
+                    "label": "Texte du lien"
+                },
+                {
+                    "type": "url",
+                    "id": "link_to",
+                    "label": "Lien"
+                },
+            ]
+        },
+        {
+            "name": "Section - Split (titre)",
+            "type": "split-section-title",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Titre"
+                },
+                {
+                    "type": "select",
+                    "id": "title_position",
+                    "label": "Position de l'image",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Gauche"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Droite"
+                        }
+                    ]
+                },
+                {
+                    "type": "textarea",
+                    "id": "text",
+                    "label": "Contenu"
                 },
                 {
                     "type": "text",

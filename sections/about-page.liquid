@@ -5,32 +5,35 @@
  
 <div>
     {% if section.settings.cover %}
-        {% render 'header.template' cover:  section.settings.cover, title: "Mon panier" %}
+        {% render 'header.template', cover:  section.settings.cover, title: "Notre histoire", alignment: "left" %}
     {% else %}
-        {% render 'header.template' cover: "cart-cover.jpg" title: "Mon panier" %}
+        {% render 'header.template', cover: "about-cover.jpg", title: "Notre histoire", alignment: "left" %}
     {% endif %}
 
-    {% comment %} {% for block in section.blocks %}
+    {% for block in section.blocks %}
         {%- case block.type -%}
             {%- when "intro-section" -%}
                 {% render 'text-intro' text: block.settings.text %}
-            {%- when "split-section" -%}
-                {% render 'split-section'
-                    content_image: block.settings.content_image
+            {%- when "split-section-title" -%}
+                {% render 'split-section-title',
                     title: block.settings.title
+                    title_position: block.settings.title_position
                     text: block.settings.text
                     link_text: block.settings.link_text
                     link_to: block.settings.link_to
                 %}
-            {%- when "lifestyle-section" -%}
-                {% render 'home-lifestyle' 
+            {%- when "images-disposition" -%}
+                {% render 'images-disposition'
                     image_1: block.settings.image_1
+                    image_1_mobile:block.settings.image_1_mobile
                     image_2: block.settings.image_2
+                    image_2_mobile: block.settings.image_2_mobile
                     image_3: block.settings.image_3
-                    image_4: block.settings.image_4
+                    image_3_mobile: block.settings.image_3_mobile
+                    layout: 'triptych'
                 %}
         {% endcase %}
-    {% endfor %} {% endcomment %}
+    {% endfor %}
 </div>
 
 {% schema %}
@@ -56,23 +59,33 @@
             ]
         },
         {
-            "name": "Section - Split",
-            "type": "split-section",
+            "name": "Section - Split (titre)",
+            "type": "split-section-title",
             "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "content_image",
-                    "label": "Image"
-                },
-                {
-                    "type": "textarea",
-                    "id": "text",
-                    "label": "Contenu"
-                },
                 {
                     "type": "text",
                     "id": "title",
                     "label": "Titre"
+                },
+                {
+                    "type": "select",
+                    "id": "title_position",
+                    "label": "Position de l'image",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Gauche"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Droite"
+                        }
+                    ]
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Contenu"
                 },
                 {
                     "type": "text",
@@ -83,6 +96,57 @@
                     "type": "url",
                     "id": "link_to",
                     "label": "Lien"
+                },
+            ]
+        },
+        {
+            "name": "Section - Images Layout",
+            "type": "images-disposition",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image_1",
+                    "label": "Image 1 (desktop)",
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_1_mobile",
+                    "label": "Image 1 (mobile)",
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_2",
+                    "label": "Image 2 (desktop)"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_2_mobile",
+                    "label": "Image 2 (mobile)",
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_3",
+                    "label": "Image 3 (desktop)"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_3_mobile",
+                    "label": "Image 3 (mobile)",
+                },
+                {
+                    "type": "select",
+                    "id": "layout",
+                    "label": "Disposition des images",
+                    "options": [
+                        {
+                            "value": "triptych",
+                            "label": "En tryptique"
+                        },
+                        {
+                            "value": "grid",
+                            "label": "En grille"
+                        }
+                    ]
                 },
             ]
         },

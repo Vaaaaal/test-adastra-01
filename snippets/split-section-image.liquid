@@ -13,38 +13,40 @@
     {% render 'split-section-image' content_image: 'lorem.jpg' image_position: 'left' title: 'Lorem ipsum dolor sit amet' text: 'Lorem ipsum dolor sit amet' link_text: 'Lorem ipsum dolor sit amet' link_to: 'Lorem ipsum dolor sit amet' %}
 {% endcomment %}
 
-<div class="container">
-    <section class="pb-24 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-16">
-        {% if image_position == "left" %}
-            {% if content_image.id %}
-                {{ content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
-            {% else %}
-                <img class="rounded-md shadow-md" src="{{ content_image | asset_url }}" />
+{% if text != blank and content_image != blank %}
+    <div class="container">
+        <section class="pb-24 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-16">
+            {% if image_position == "left" %}
+                {% if content_image.id %}
+                    {{ content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
+                {% else %}
+                    <img class="rounded-md shadow-md" src="{{ content_image | asset_url }}" />
+                {% endif %}
             {% endif %}
-        {% endif %}
-    
-        <div class="flex flex-col items-start gap-y-6 md:gap-y-8">
-            {% if title != blank %}
-                <h2>{{ title }}</h2>
-            {% endif %}
-            
-            <div>
-                {{ text }}
+        
+            <div class="flex flex-col items-start gap-y-6 md:gap-y-8">
+                {% if title != blank %}
+                    <h2>{{ title }}</h2>
+                {% endif %}
+                
+                <div>
+                    {{ text }}
+                </div>
+        
+                {% if link_to != blank %}
+                    <a href="{{ link_to }}" class="button-primary">
+                        {{ link_text }}
+                    </a>
+                {% endif %}
             </div>
-    
-            {% if link_to != blank %}
-                <a href="{{ link_to }}" class="button-primary">
-                    {{ link_text }}
-                </a>
-            {% endif %}
-        </div>
 
-        {% if image_position == "right" %}
-            {% if content_image.id %}
-                {{ content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
-            {% else %}
-                <img class="rounded-md shadow-md" src="{{ content_image | asset_url }}" />
+            {% if image_position == "right" %}
+                {% if content_image.id %}
+                    {{ content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
+                {% else %}
+                    <img class="rounded-md shadow-md" src="{{ content_image | asset_url }}" />
+                {% endif %}
             {% endif %}
-        {% endif %}
-    </section>
-</div>
+        </section>
+    </div>
+{% endif %}

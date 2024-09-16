@@ -8,6 +8,10 @@
     @apply h-full antialiased font-body text-base text-accent bg-white;
   }
 
+  body {
+    overflow-x: clip;
+  }
+
   model-viewer {
     @apply h-fit aspect-square;
   }

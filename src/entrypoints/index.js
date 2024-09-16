@@ -3,6 +3,14 @@ import { gsap } from 'gsap';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.min.css';
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
+import Swiper from 'swiper';
+import { Navigation, Pagination, EffectCards } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 gsap.registerPlugin(MorphSVGPlugin) 
 
@@ -48,6 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    const swiperSliders = document.querySelectorAll('.swiper');
+    if(swiperSliders.length > 0) {
+        initSliders(swiperSliders);
+    }
+
+    // Resize event
+    window.addEventListener('resize', () => {
+        initSliders(swiperSliders);
+    }, true)
 });
 
 function toggleMenu() {
@@ -124,4 +142,125 @@ function toggleMenu() {
             opacity: 1,
         });
     }
+}
+
+function initSliders(sliders) {
+    sliders.forEach(slider => {
+        const params = {}
+
+        if(slider.dataset) {
+            for (const key in slider.dataset) {
+                if (slider.dataset.hasOwnProperty(key)) {
+                    params[key] = slider.dataset[key];
+                }
+            }
+        }
+
+        const options = {
+            slidesPerView: 1,
+            loop: params.loop || false
+        }
+
+        // Check if slidesPerView has multiple values
+        if(params.slidesperview) {
+            const breakpointValue = params.slidesperview.split(';');
+            // Example format : data-spaceBetween="320, 1;768, 2;1024, 3"
+            if(breakpointValue.length > 1) {
+                if(!options.breakpoints) {
+                    options.breakpoints = {};
+                }
+
+                breakpointValue.forEach(value => {
+                    const formattedPerView = value.split(',');
+
+                    if(!options.breakpoints[formattedPerView[0]]) {
+                        options.breakpoints[formattedPerView[0].trim()] = {
+                            slidesPerView: formattedPerView[1].trim() * 1
+                        }
+                    } else {
+                        options.breakpoints[formattedPerView[0].trim()] = {
+                            ...options.breakpoints[formattedPerView[0].trim()],
+                            slidesPerView: formattedPerView[1].trim() * 1
+                        }
+                    }
+                });
+            }
+        }
+
+        // Check if spaceBetween exists
+        if(params.spacebetween) {
+            // Example format : data-spaceBetween="320, 20px;768, 30%;1024, 50vh"
+            const breakpointValue = params.spacebetween.split(';');
+            if(breakpointValue.length > 1) {
+                if(!options.breakpoints) {
+                    options.breakpoints = {};
+                }
+
+                breakpointValue.forEach(value => {
+                    const formattedSpaceBetween = value.split(',');
+
+                    if(!options.breakpoints[formattedSpaceBetween[0]]) {
+                        options.breakpoints[formattedSpaceBetween[0].trim()] = {
+                            spaceBetween: formattedSpaceBetween[1].trim()
+                        }
+                    } else {
+                        options.breakpoints[formattedSpaceBetween[0].trim()] = {
+                            ...options.breakpoints[formattedSpaceBetween[0].trim()],
+                            spaceBetween: formattedSpaceBetween[1].trim()
+                        }
+                    }
+                });
+            }
+        }
+
+        // Check if effect is apply
+        if(params.effect) {
+            if(params.effect === 'cards') {
+                if(!options.modules) {
+                    options.modules = [EffectCards];
+                } else {
+                    options.modules = [...options.modules, EffectCards];
+                }
+                
+                options.effect = "cards";
+                options.grabCursor = true;
+                options.cardsEffect = {
+                    perSlideOffset: 8,
+                    perSlideRotate: 1.25,
+                }
+            }
+        }
+
+        // Check if navigation exists
+        if(slider.querySelector('.swiper-button-prev') || slider.querySelector('.swiper-button-next')) {
+            if(!options.modules) {
+                options.modules = [Navigation];
+            } else {
+                options.modules = [...options.modules, Navigation];
+            }
+
+            if(slider.querySelector('.swiper-button-prev')) {
+                options.navigation.nextEl = slider.querySelector('.swiper-button-next')
+            }
+            if(slider.querySelector('.swiper-button-next')) {
+                options.navigation.prevEl = slider.querySelector('.swiper-button-prev')
+            }
+        }
+
+        // Check if pagination exists
+        if(slider.querySelector('.swiper-pagination')) {
+            if(!options.modules) {
+                options.modules = [Pagination];
+            } else {
+                options.modules = [...options.modules, Pagination];
+            }
+
+            options.pagination = {
+                el: slider.querySelector('.swiper-pagination'),
+                clickable: true,
+            }
+        }
+
+        new Swiper(slider, options);
+    });
 }
