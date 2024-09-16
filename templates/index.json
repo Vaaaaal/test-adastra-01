@@ -18,11 +18,12 @@
             "text": "Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et une résine naturelle à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable."
           }
         },
-        "split_section_cNBCiL": {
-          "type": "split-section",
+        "split_section_image_Qt8GxG": {
+          "type": "split-section-image",
           "settings": {
             "content_image": "shopify:\/\/shop_images\/home-unique.jpg",
-            "text": "Chaque paire est fabriquée de manière artisanale à partir de combinaisons de surf recyclées. Les couleurs et les motifs de nos lunettes proviennent directement des designs des combinaisons, ce qui rend chaque produit véritablement unique. De plus, nous offrons aussi la possibilité de revaloriser votre propre combinaison en une paire de lunettes personnalisée. Vous pouvez ainsi donner une seconde vie à votre combinaison préférée tout en obtenant un accessoire élégant, unique et écologique.",
+            "image_position": "left",
+            "text": "Chaque paire est fabriquée de manière artisanale à partir de combinaisons de surf recyclées. Les couleurs et les motifs de nos lunettes proviennent directement des designs des combinaisons, ce qui rend chaque produit véritablement unique.\nDe plus, nous offrons aussi la possibilité de revaloriser votre propre combinaison en une paire de lunettes personnalisée. Vous pouvez ainsi donner une seconde vie à votre combinaison préférée tout en obtenant un accessoire élégant, unique et écologique.",
             "title": "Chaque paire est unique",
             "link_text": "Shopper ma paire",
             "link_to": "shopify:\/\/collections\/nos-produits"
@@ -40,7 +41,7 @@
       },
       "block_order": [
         "intro_section_eTBhCd",
-        "split_section_cNBCiL",
+        "split_section_image_Qt8GxG",
         "lifestyle_section_K9jwze"
       ],
       "settings": {
