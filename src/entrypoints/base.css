@@ -217,6 +217,40 @@
   }
 }
 
+.custom-richtext h2,
+.custom-richtext h3,
+.custom-richtext h4,
+.custom-richtext h5,
+.custom-richtext h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.custom-richtext p,
+.custom-richtext ul,
+.custom-richtext ol {
+  margin-bottom: 1rem;
+}
+
+/* Remove tailwind no-style for this element */
+.custom-richtext ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  font-size: inherit;
+}
+
+/* Remove tailwind no-style for this element */
+.custom-richtext ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+  font-size: inherit;
+}
+
+/* Remove tailwind no-style for this element */
+.custom-richtext a {
+  text-decoration: underline;
+}
+
 /* ------------------------------------------------- Hide scrollbar from alla elements ------------------------------------------------- */
 /* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
