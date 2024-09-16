@@ -4,18 +4,18 @@
 {% endcomment %}
  
 <div>
-    {% if section.settings.hero_image and section.settings.hero_mobile_image %}
-        {% render 'home-hero' hero_image: section.settings.hero_image hero_mobile_image: section.settings.hero_mobile_image %}
+    {% if section.settings.cover %}
+        {% render 'header.template' cover:  section.settings.cover, title: "Mon panier" %}
     {% else %}
-        {% render 'home-hero' hero_image: 'hero-cover.png' hero_mobile_image: 'hero-cover-mobile.png' %}
+        {% render 'header.template' cover: "cart-cover.jpg" title: "Mon panier" %}
     {% endif %}
 
-    {% for block in section.blocks %}
+    {% comment %} {% for block in section.blocks %}
         {%- case block.type -%}
             {%- when "intro-section" -%}
                 {% render 'text-intro' text: block.settings.text %}
             {%- when "split-section" -%}
-                {% render 'split-section-image'
+                {% render 'split-section'
                     content_image: block.settings.content_image
                     title: block.settings.title
                     text: block.settings.text
@@ -30,22 +30,17 @@
                     image_4: block.settings.image_4
                 %}
         {% endcase %}
-    {% endfor %}
+    {% endfor %} {% endcomment %}
 </div>
 
 {% schema %}
 {
-    "name": "Home Page",
+    "name": "About Page",
     "settings": [
         {
             "type": "image_picker",
-            "id": "hero_image",
-            "label": "Image de fond pour la section hero"
-        },
-        {
-            "type": "image_picker",
-            "id": "hero_mobile_image",
-            "label": "Image de fond pour la section hero sur mobile"
+            "id": "cover",
+            "label": "Choisir une image de couverture",
         },
     ],
     "blocks": [
@@ -62,27 +57,12 @@
         },
         {
             "name": "Section - Split",
-            "type": "split-section-image",
+            "type": "split-section",
             "settings": [
                 {
                     "type": "image_picker",
                     "id": "content_image",
                     "label": "Image"
-                },
-                {
-                    "type": "select",
-                    "id": "image_position",
-                    "label": "Position de l'image",
-                    "options": [
-                        {
-                            "value": "left",
-                            "label": "Gauche"
-                        },
-                        {
-                            "value": "right",
-                            "label": "Droite"
-                        }
-                    ]
                 },
                 {
                     "type": "textarea",
@@ -106,36 +86,10 @@
                 },
             ]
         },
-        {
-            "name": "Section - Lifestyle",
-            "type": "lifestyle-section",
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "image_1",
-                    "label": "Image 1"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image_2",
-                    "label": "Image 2"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image_3",
-                    "label": "Image 3"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image_4",
-                    "label": "Image 4"
-                },
-            ]
-        },
     ],
     "presets": [
         {
-            "name": "Home Page"
+            "name": "About Page"
         }
     ]
 }
