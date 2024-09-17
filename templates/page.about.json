@@ -52,7 +52,7 @@
       }
     },
     "what_is": {
-      "type": "what_is",
+      "type": "what-is",
       "settings": {
         "text": "<p>Notre mission est de revaloriser les combinaisons de surf usagées en leur donnant une seconde vie. Nous les transformons en lunettes de soleil uniques, fabriquées artisanalement sur le Bassin d'Arcachon.<\/p><p>Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.<\/p>",
         "bg_color": "#F8F4EF",
