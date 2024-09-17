@@ -33,35 +33,37 @@
             "image_3_mobile": "shopify:\/\/shop_images\/about-3-mobile.png",
             "layout": "triptych"
           }
-        },
+        }
       },
       "block_order": [
         "split_section_title_giUTra",
-        "images_disposition_BLaqzk",
+        "images_disposition_BLaqzk"
       ],
       "settings": {
         "cover": "shopify:\/\/shop_images\/about-cover.jpg"
       }
     },
-    "text_only": {
+    "text_only_PTWC7G": {
       "type": "text-only",
       "settings": {
-        "text": "<p>Notre mission est de revaloriser les combinaisons de surf usagées en leur donnant une seconde vie. Nous les transformons en lunettes de soleil uniques, fabriquées artisanalement sur le Bassin d'Arcachon.<\/p><p>Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.<\/p>",
+        "text": "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.<\/p><p>Notre secret réside dans l'association du broyât de combinaison avec une résine biosourcée à base d’huile de pin. Cette combinaison permet de conserver les caractéristiques physiques du néoprène tout en continuant de travailler avec des produits durables et naturels.<\/p>",
         "text_position": "left",
-        "text_align": "center",
+        "text_align": "left",
+        "max_width": 850
       }
     },
-    "what_is": {
+    "what_is_DPYyAh": {
       "type": "what-is",
       "settings": {
-        "text": "<p>Notre mission est de revaloriser les combinaisons de surf usagées en leur donnant une seconde vie. Nous les transformons en lunettes de soleil uniques, fabriquées artisanalement sur le Bassin d'Arcachon.<\/p><p>Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.<\/p>",
-        "bg_color": "#F8F4EF",
+        "text": "<p>Oceneo c’est l’association des mots “océan” et “néo”.“<br\/>Océan” car il est notre inspiration, notre terrain de jeu.<\/p><p>Le surf fait partie intégrante de l’âme de notre marque : passionnés par celui-ci, nous occupons la majorité de notre temps libre à surfer les vagues de notre belle région.<br\/>En choisissant d’insérer une partie de ce mot, nous cherchons à rendre hommage à notre précieux environnement et espérons promouvoir sa préservation.<\/p><p>Et “néo”, en référence à notre matière première, celle que nous “upcyclons” : les combinaisons en néoprène que nous revalorisons à 100% pour créer de nouveaux accessoires innovants et durables. C’est l’incarnation de l’idée du renouveau. Nous croyons en la possibilité de donner une seconde vie à des produits initialement destinés à la décharge et une seconde chance aux personnes qui en ont besoin (personnes en situation de handicap, etc...)<\/p>",
+        "logo": "shopify:\/\/shop_images\/Oceneo2024_logo_Noir_ab952fc1-bb25-4e7c-aa3f-c6973bc10be9.png",
+        "bg_color": "#f8f4ef"
       }
-    },
+    }
   },
   "order": [
     "main",
-    "text_only",
-    "what_is",
+    "text_only_PTWC7G",
+    "what_is_DPYyAh"
   ]
 }
