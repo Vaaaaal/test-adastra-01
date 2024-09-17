@@ -33,35 +33,28 @@
             "image_3_mobile": "shopify:\/\/shop_images\/about-3-mobile.png",
             "layout": "triptych"
           }
-        },
+        }
       },
       "block_order": [
         "split_section_title_giUTra",
-        "images_disposition_BLaqzk",
+        "images_disposition_BLaqzk"
       ],
       "settings": {
         "cover": "shopify:\/\/shop_images\/about-cover.jpg"
       }
     },
-    "text_only": {
+    "text_only_PTWC7G": {
       "type": "text-only",
       "settings": {
-        "text": "<p>Notre mission est de revaloriser les combinaisons de surf usagées en leur donnant une seconde vie. Nous les transformons en lunettes de soleil uniques, fabriquées artisanalement sur le Bassin d'Arcachon.<\/p><p>Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.<\/p>",
+        "text": "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.<\/p><p>Notre secret réside dans l'association du broyât de combinaison avec une résine biosourcée à base d’huile de pin. Cette combinaison permet de conserver les caractéristiques physiques du néoprène tout en continuant de travailler avec des produits durables et naturels.<\/p>",
         "text_position": "left",
-        "text_align": "center",
+        "text_align": "left",
+        "max_width": 500
       }
-    },
-    "what_is": {
-      "type": "what-is",
-      "settings": {
-        "text": "<p>Notre mission est de revaloriser les combinaisons de surf usagées en leur donnant une seconde vie. Nous les transformons en lunettes de soleil uniques, fabriquées artisanalement sur le Bassin d'Arcachon.<\/p><p>Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable.<\/p>",
-        "bg_color": "#F8F4EF",
-      }
-    },
+    }
   },
   "order": [
     "main",
-    "text_only",
-    "what_is",
+    "text_only_PTWC7G"
   ]
 }
