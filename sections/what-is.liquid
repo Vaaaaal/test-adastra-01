@@ -29,12 +29,12 @@
   style="background-color: {{ section.settings.bg_color }}"
 >
   <div class="container">
-    <div class="flex flex-col items-center justify-center gap-y-8">
+    <div class="flex flex-col items-center justify-center gap-y-12">
       <div>
         {% if section.settings.logo.id %}
-          {{ section.settings.logo | image_url: width: 500 | image_tag: class: "max-w-[500px]" }}
+          {{ section.settings.logo | image_url: width: 500 | image_tag: class: "max-w-[400px]" }}
         {% else %}
-          <img src="{{ section.settings.logo | asset_url }}" class="max-w-[500px] w-full" />
+          <img src="{{ section.settings.logo | asset_url }}" class="max-w-[400px] w-full" />
         {% endif %}
       </div>
 
