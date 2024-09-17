@@ -32,8 +32,20 @@
                     image_3_mobile: block.settings.image_3_mobile
                     layout: 'triptych'
                 %}
+            {%- when "text-only" -%}
+                {% render 'text-only',
+                    text: '<p>Lorem ipsum dolor sit amet</p>',
+                    text_position: 'right',
+                    text_align: 'center',
+                    max_width: '500'
+                %}
         {% endcase %}
     {% endfor %}
+
+    {% render 'text-only',
+        text: "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.</p><p>Notre secret réside dans l'association du broyât de combinaison avec une résine biosourcée à base d’huile de pin. Cette combinaison permet de conserver les caractéristiques physiques du néoprène tout en continuant de travailler avec des produits durables et naturels.</p>"
+        max_width: '890'
+    %}
 </div>
 
 {% schema %}
@@ -147,6 +159,69 @@
                             "label": "En grille"
                         }
                     ]
+                },
+            ]
+        },
+        {
+            "name": "Section - Texte seul",
+            "type": "text-only",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Contenu"
+                },
+                {
+                    "type": "select",
+                    "id": "text_position",
+                    "label": "Position du texte",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Gauche"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Droite"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Centre"
+                        }
+                    ]
+                },
+                {
+                    "type": "select",
+                    "id": "text_align",
+                    "label": "Alignement du texte",
+                    "options": [
+                        {
+                            "value": "left",
+                            "label": "Gauche"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Droite"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Centre"
+                        },
+                        {
+                            "value": "justify",
+                            "label": "Justifié"
+                        }
+                    ]
+                },
+                {
+                    "type": "range",
+                    "id": "max_width",
+                    "label": "Largeur maximale du texte",
+                    "min": 0,
+                    "max": 1400,
+                    "step": 50,
+                    "unit": "px",
+                    "default": 500
                 },
             ]
         },
