@@ -33,11 +33,21 @@
             "image_3_mobile": "shopify:\/\/shop_images\/about-3-mobile.png",
             "layout": "triptych"
           }
+        },
+        "text_only_T4FcFm": {
+          "type": "text-only",
+          "settings": {
+            "text": "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.<\/p><p>Notre secret réside dans l'association du broyât de combinaison avec une résine biosourcée à base d’huile de pin. Cette combinaison permet de conserver les caractéristiques physiques du néoprène tout en continuant de travailler avec des produits durables et naturels.<\/p>",
+            "text_position": "center",
+            "text_align": "justify",
+            "max_width": 850
+          }
         }
       },
       "block_order": [
         "split_section_title_giUTra",
-        "images_disposition_BLaqzk"
+        "images_disposition_BLaqzk",
+        "text_only_T4FcFm"
       ],
       "settings": {
         "cover": "shopify:\/\/shop_images\/about-cover.jpg"
