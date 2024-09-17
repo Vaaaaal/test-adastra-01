@@ -39,6 +39,12 @@
                     text_align: block.settings.text_align
                     max_width: block.settings.max_width
                 %}
+            {%- when "what-is" -%}
+                {% render 'what-is',
+                    text: block.settings.text
+                    logo: block.settings.logo
+                    bg_color: block.settings.bg_color
+                %}
         {% endcase %}
     {% endfor %}
 </div>
@@ -154,69 +160,6 @@
                             "label": "En grille"
                         }
                     ]
-                },
-            ]
-        },
-        {
-            "name": "Section - Texte seul",
-            "type": "text-only",
-            "settings": [
-                {
-                    "type": "richtext",
-                    "id": "text",
-                    "label": "Contenu"
-                },
-                {
-                    "type": "select",
-                    "id": "text_position",
-                    "label": "Position du texte",
-                    "options": [
-                        {
-                            "value": "left",
-                            "label": "Gauche"
-                        },
-                        {
-                            "value": "right",
-                            "label": "Droite"
-                        },
-                        {
-                            "value": "center",
-                            "label": "Centre"
-                        }
-                    ]
-                },
-                {
-                    "type": "select",
-                    "id": "text_align",
-                    "label": "Alignement du texte",
-                    "options": [
-                        {
-                            "value": "left",
-                            "label": "Gauche"
-                        },
-                        {
-                            "value": "right",
-                            "label": "Droite"
-                        },
-                        {
-                            "value": "center",
-                            "label": "Centre"
-                        },
-                        {
-                            "value": "justify",
-                            "label": "Justifié"
-                        }
-                    ]
-                },
-                {
-                    "type": "range",
-                    "id": "max_width",
-                    "label": "Largeur maximale du texte",
-                    "min": 0,
-                    "max": 1400,
-                    "step": 50,
-                    "unit": "px",
-                    "default": 500
                 },
             ]
         },

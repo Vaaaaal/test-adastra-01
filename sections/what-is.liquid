@@ -1,0 +1,69 @@
+{% comment %}
+  Renders a text section who explain "Oceneo".
+
+  Accepts:
+    - text: {richtext} Texte explicatif (required)
+    - logo: {image} Logo (optional)
+    - bg_color: {string} Couleur de fond (optional)
+
+  Usage:
+    {% render 'what-is',
+      text: '
+          <p>Oceneo c’est l’association des mots “océan” et “néo”.</p>
+          <p>
+              “Océan” car il est notre inspiration, notre terrain de jeu.
+              Le surf fait parti intégrante de l’âme de notre marque : passionnés par celui-ci, nous occupons la majorité de notre temps libre à surfer les vagues de notre belle région.
+              En choisissant d’insérer une partie de ce mot, nous cherchons à rendre hommage à notre précieux environnement et espérons promouvoir sa préservation.
+          </p>
+          <p>
+              Et “néo”, en référence à notre matière première, celle que nous “upcyclons” : les combinaisons en néoprène que nous revalorisons à 100% pour créer de nouveaux accessoires innovants et durable. C’est l’incarnation de l’idée du renouveau. Nous croyons en la possibilité de donner une seconde vie à des produits initialement destinés à la décharge et une seconde chance aux personnes qui en ont besoin (personnes en situation de handicap, etc...)
+          </p>
+      ',
+      logo: 'logo-oceneo-black.png',
+      bg_color: '#F8F4EF',
+    %}
+{% endcomment %}
+
+<section
+  class="pt-16 pb-20"
+  style="background-color: {{ section.settings.bg_color }}"
+>
+  <div class="container">
+    <div class="flex flex-col items-center justify-center gap-y-12">
+      <div>
+        {% if section.settings.logo.id %}
+          {{ section.settings.logo | image_url: width: 500 | image_tag: class: "max-w-[400px]" }}
+        {% else %}
+          <img src="{{ section.settings.logo | asset_url }}" class="max-w-[400px] w-full" />
+        {% endif %}
+      </div>
+
+      <div class="custom-richtext max-w-[660px] w-full">
+        {{ section.settings.text }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "What is",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur de fond"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,115 @@
+{% comment %}
+  Renders a text only section.
+
+  Accepts:
+    - text: {string} text (required)
+
+  Usage:
+    {% render 'split-section',
+      text: 'Lorem ipsum dolor sit amet',
+      text_position: 'left',
+      text_align: 'left',
+      max_width: '500'
+    %}
+{% endcomment %}
+
+<div class="container">
+  <section
+    class="pt-6 pb-20 flex"
+    style="
+      {% if section.settings.text_position == 'center' %}
+        justify-content: center;
+      {% elsif section.settings.text_position == 'right' %}
+        justify-content: end;
+      {% else %}
+        justify-content: start;
+      {% endif %}
+
+      {% if section.settings.text_align == 'center' %}
+        text-align: center;
+      {% elsif section.settings.text_align == 'right' %}
+        text-align: right;
+      {% elsif section.settings.text_align == 'justify' %}
+        text-align: justify;
+      {% else %}
+        text-align: left;
+      {% endif %}
+    "
+  >
+    <div
+      class="custom-richtext"
+      style="
+        max-width: {{ section.settings.max_width }}px;
+      "
+    >
+      {{ section.settings.text }}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Text only",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Position du texte",
+      "options": [
+        {
+          "value": "left",
+          "label": "Gauche"
+        },
+        {
+          "value": "right",
+          "label": "Droite"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alignement du texte",
+      "options": [
+        {
+          "value": "left",
+          "label": "Gauche"
+        },
+        {
+          "value": "right",
+          "label": "Droite"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        },
+        {
+          "value": "justify",
+          "label": "Justifié"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale du texte",
+      "min": 0,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 500
+    }
+  ]
+}
+{% endschema %}
