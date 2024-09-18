@@ -11,8 +11,9 @@
   "sections": {
     "main": {
       "type": "main-wrapper",
-      "settings": {}
-    },
+      "settings": {
+      }
+    }
   },
   "order": [
     "main"
