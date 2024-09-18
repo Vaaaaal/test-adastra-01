@@ -4,12 +4,6 @@
 {% endcomment %}
 
 <div>
-  {% if section.settings.cover %}
-    {% render 'header.template' cover:  section.settings.cover, title: page.title %}
-  {% else %}
-    {% render 'header.template' cover: "faq-cover.jpg" title: page.title %}
-  {% endif %}
-
   <div class="container max-w-4xl pb-24">
     <div class="flex flex-col gap-x-2 md:gap-y-3">
       {% for block in section.blocks %}
@@ -33,13 +27,7 @@
 {% schema %}
 {
   "name": "Page FAQ",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "cover",
-      "label": "Choisir une image de couverture"
-    },
-  ],
+  "settings": [],
   "blocks": [
     {
       "name": "Accordion",
