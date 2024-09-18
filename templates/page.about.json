@@ -9,6 +9,14 @@
 */
 {
   "sections": {
+    "header_template_A8jJtd": {
+      "type": "header-template",
+      "settings": {
+        "cover": "shopify:\/\/shop_images\/about-cover.jpg",
+        "title": "Notre histoire",
+        "alignment": "left"
+      }
+    },
     "main": {
       "type": "about-page",
       "blocks": {
@@ -40,7 +48,6 @@
         "images_disposition_BLaqzk"
       ],
       "settings": {
-        "cover": "shopify:\/\/shop_images\/about-cover.jpg"
       }
     },
     "text_only_PTWC7G": {
@@ -71,6 +78,7 @@
     }
   },
   "order": [
+    "header_template_A8jJtd",
     "main",
     "text_only_PTWC7G",
     "what_is_DPYyAh",
