@@ -9,6 +9,14 @@
 */
 {
   "sections": {
+    "header_template_LqGQPV": {
+      "type": "header-template",
+      "settings": {
+        "cover": "shopify:\/\/shop_images\/DSC05557.jpg",
+        "title": "Contact",
+        "alignment": "center"
+      }
+    },
     "main": {
       "type": "contact-page",
       "settings": {
@@ -17,6 +25,7 @@
     }
   },
   "order": [
+    "header_template_LqGQPV",
     "main"
   ]
 }
