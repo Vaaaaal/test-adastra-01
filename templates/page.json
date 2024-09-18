@@ -9,14 +9,16 @@
 */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "header_template_KDJ6q6": {
+      "type": "header-template",
       "settings": {
-        "cover": "shopify:\/\/shop_images\/DSC04972.jpg"
+        "cover": "shopify:\/\/shop_images\/contact-cover.jpg",
+        "title": "Conditions générales de vente",
+        "alignment": "center"
       }
     }
   },
   "order": [
-    "main"
+    "header_template_KDJ6q6"
   ]
 }
