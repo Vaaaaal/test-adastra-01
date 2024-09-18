@@ -9,10 +9,17 @@
 */
 {
   "sections": {
-    "main": {
-      "type": "cart-page",
+    "header_template_kPcjja": {
+      "type": "header-template",
       "settings": {
-        "cover": "shopify:\/\/shop_images\/DSC04613.jpg"
+        "cover": "shopify:\/\/shop_images\/cart-cover.jpg",
+        "title": "Mon panier",
+        "alignment": "center"
+      }
+    },
+    "cart_element_QYgDTq": {
+      "type": "cart-element",
+      "settings": {
       }
     },
     "warranty_banner_9aVnFj": {
@@ -53,7 +60,8 @@
     }
   },
   "order": [
-    "main",
+    "header_template_kPcjja",
+    "cart_element_QYgDTq",
     "warranty_banner_9aVnFj"
   ]
 }
