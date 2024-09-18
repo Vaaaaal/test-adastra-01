@@ -9,12 +9,21 @@
 */
 {
   "sections": {
+    "header_template_KDJ6q6": {
+      "type": "header-template",
+      "settings": {
+        "cover": "shopify:\/\/shop_images\/contact-cover.jpg",
+        "title": "Conditions générales de vente",
+        "alignment": "center"
+      }
+    },
     "main": {
       "type": "main-wrapper",
       "settings": {}
-    }
+    },
   },
   "order": [
+    "header_template_KDJ6q6",
     "main"
   ]
 }
