@@ -4,12 +4,6 @@
 {% endcomment %}
  
 <div>
-    {% if section.settings.cover %}
-        {% render 'header.template', cover:  section.settings.cover, title: "Notre histoire", alignment: "left" %}
-    {% else %}
-        {% render 'header.template', cover: "about-cover.jpg", title: "Notre histoire", alignment: "left" %}
-    {% endif %}
-
     {% for block in section.blocks %}
         {%- case block.type -%}
             {%- when "intro-section" -%}
@@ -52,13 +46,7 @@
 {% schema %}
 {
     "name": "About Page",
-    "settings": [
-        {
-            "type": "image_picker",
-            "id": "cover",
-            "label": "Choisir une image de couverture",
-        },
-    ],
+    "settings": [],
     "blocks": [
         {
             "name": "Section - Intro",

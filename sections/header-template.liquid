@@ -1,0 +1,81 @@
+{% comment %}
+  Renders a header for template page (lambda).
+  
+{% endcomment %}
+
+<section>
+  {% if section.settings.cover.id %}
+    <div class="h-full max-h-[65vh] overflow-hidden relative">
+      {{ section.settings.cover | image_url: width: 2400 | image_tag: class: 'max-h-[65vh] w-full object-cover object-center' }}
+
+      <div class="absolute bottom-0 left-0 right-0 h-[25%] bg-gradient-to-t from-[#161616]"></div>
+      <div class="absolute bottom-0 left-0 right-0 bg-white rounded-tl-[50px] rounded-tr-[50px] h-8"></div>
+    </div>
+  {% endif %}
+
+  <div class="container pb-8 sm:pb-10 md:pb-14">
+    {% if section.settings.title or section.settings.title != empty %}
+      <h1
+        class="
+          {% if section.settings.alignment == 'left' %}
+            text-left
+          {% elsif section.settings.alignment == 'center' %}
+            text-center
+          {% elsif section.settings.alignment == 'right' %}
+            text-right
+          {% else %}
+            text-center
+          {% endif %}
+          text-3xl sm:text-5xl lg:text-[82px] text-balance leading-0
+        "
+      >
+        {{ section.settings.title }}
+      </h1>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Header Template",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cover",
+      "label": "Choisir une image de couverture",
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Titre de la page"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignement",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Gauche"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        },
+        {
+          "value": "right",
+          "label": "Droite"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Template",
+      "category": "Page",
+    }
+  ]
+}
+{% endschema %}
