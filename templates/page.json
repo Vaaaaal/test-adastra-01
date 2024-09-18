@@ -9,6 +9,14 @@
 */
 {
   "sections": {
+    "header_template_JAVyjm": {
+      "type": "header-template",
+      "settings": {
+        "cover": "shopify:\/\/shop_images\/contact-cover.jpg",
+        "title": "Conditions générales de vente",
+        "alignment": "center"
+      }
+    },
     "main": {
       "type": "main-wrapper",
       "settings": {
@@ -16,6 +24,7 @@
     }
   },
   "order": [
+    "header_template_JAVyjm",
     "main"
   ]
 }
