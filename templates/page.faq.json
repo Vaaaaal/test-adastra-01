@@ -9,6 +9,14 @@
 */
 {
   "sections": {
+    "header_template_aAdwag": {
+      "type": "header-template",
+      "settings": {
+        "cover": "shopify:\/\/shop_images\/DSC04613.jpg",
+        "title": "Foire aux questions",
+        "alignment": "center"
+      }
+    },
     "main": {
       "type": "faq-page",
       "blocks": {
@@ -156,6 +164,7 @@
     }
   },
   "order": [
+    "header_template_aAdwag",
     "main"
   ]
 }
