@@ -68,11 +68,21 @@
             "content": "<p>C’est l’âme créative d’Oceneo. Entre deux sessions de surf et quelques clichés, Antonin s'est naturellement tourné vers Oceneo pour allier ses passions du surf et de l'image. En tant que photographe-vidéaste, il capte l'âme de l'océan et l'infuse dans chaque aspect de notre communication.<\/p><p>Pour ce qui est des lunettes, Antonin les a mises à rude épreuve ! De la chaleur du bush Australien aux vagues Indonésiennes, il a testé nos prototypes aux quatre coins du globe. Certains disent qu'il voyage autant pour vérifier leur solidité…, mais nous, on pense que c'est juste une excuse pour partir !<\/p>",
             "cover": "shopify:\/\/shop_images\/Antonin.jpg"
           }
+        },
+        "accordion_crew_QUrrwt": {
+          "type": "accordion-crew",
+          "settings": {
+            "name": "Théo",
+            "job": "Directeur commercial",
+            "content": "<p>Pilote de ligne et ingénieur commercial, Théo incarne parfaitement l’esprit d’innovation et de précision d’Oceneo. Conscient de l'ironie de travailler dans un métier polluant, il contrebalance son impact en s'investissant à fond dans Oceneo. Entre deux vols, il met toute son énergie à développer des solutions plus durables, prouvant qu'il est possible de rêver d'un monde plus vert.<\/p>",
+            "cover": "shopify:\/\/shop_images\/Theo.png"
+          }
         }
       },
       "block_order": [
         "accordion_crew_bCzVJQ",
-        "accordion_crew_4TFzzr"
+        "accordion_crew_4TFzzr",
+        "accordion_crew_QUrrwt"
       ],
       "settings": {
         "title": "Le crew",
