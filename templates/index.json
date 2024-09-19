@@ -9,6 +9,28 @@
 */
 {
   "sections": {
+    "main": {
+      "type": "home-page",
+      "settings": {
+        "hero_image": "shopify:\/\/shop_images\/hero-cover.png",
+        "hero_mobile_image": "shopify:\/\/shop_images\/hero-cover-mobile.png"
+      }
+    },
+    "text_intro_8JRgmQ": {
+      "type": "text-intro",
+      "settings": {
+        "text": "Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et une résine naturelle à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable."
+      }
+    },
+    "home_lifestyle_mJB3wg": {
+      "type": "home-lifestyle",
+      "settings": {
+        "image_1": "shopify:\/\/shop_images\/home-lifestyle-1-V2.jpg",
+        "image_2": "shopify:\/\/shop_images\/home-lifestyle-2-V2.jpg",
+        "image_3": "shopify:\/\/shop_images\/home-lifestyle-3-V2.jpg",
+        "image_4": "shopify:\/\/shop_images\/home-lifestyle-4-V2.jpg"
+      }
+    },
     "home_plus_RABgfH": {
       "type": "home-plus",
       "settings": {
@@ -27,6 +49,8 @@
   },
   "order": [
     "main",
+    "text_intro_8JRgmQ",
+    "home_lifestyle_mJB3wg",
     "home_plus_RABgfH",
     "ecology_card_UQQbRC"
   ]
