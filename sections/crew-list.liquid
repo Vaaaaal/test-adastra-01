@@ -3,28 +3,46 @@
 
 {% endcomment %}
 
-<div class="container pt-12 pb-20 relative">
-  <div class="w-2/3">
-    <div class="pt-16 flex flex-col gap-y-4 max-w-xl">
-      <div>
-        <h2>{{ section.settings.title }}</h2>
-        <p>{{ section.settings.job }}</p>
+<div class="container pt-12 pb-20">
+  <div class="relative flex items-start gap-x-12">
+    <div class="w-3/5">
+      <div class="pt-12 flex flex-col gap-y-4 max-w-xl">
+        <div>
+          <h2>{{ section.settings.title }}</h2>
+          <p>{{ section.settings.job }}</p>
+        </div>
+        <div class="text-balance">
+          {{ section.settings.content }}
+        </div>
       </div>
-      <div class="text-balance">
-        {{ section.settings.content }}
+  
+      <div class="flex flex-col gap-x-2 md:gap-y-3">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'accordion-crew' %}
+              {% render 'accordion-crew'
+                  name: block.settings.name
+                  job: block.settings.job
+                  content: block.settings.content
+              %}
+          {% endcase %}
+        {% endfor %}
       </div>
     </div>
 
-    <div class="flex flex-col gap-x-2 md:gap-y-3">
-      {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'accordion-crew' %}
-            {% render 'accordion-crew'
-                name: block.settings.name
-                content: block.settings.content
-            %}
-        {% endcase %}
-      {% endfor %}
+    <div class="w-2/5 sticky top-[120px] h-auto">
+      <div class="accordions-cover-list aspect-[4/5] overflow-hidden">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'accordion-crew' %}
+              {% if block.settings.cover.id %}
+                <div class="accordion-cover relative" data-accordion-cover="{{ block.settings.name }}">
+                  {{ block.settings.cover | image_url: width: 1200 | image_tag: class: 'absolute aspect-[4/5] object-cover' }}
+                </div>
+              {% endif %}
+          {% endcase %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>

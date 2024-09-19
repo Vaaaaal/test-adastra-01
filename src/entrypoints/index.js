@@ -34,14 +34,82 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Accordion
     const accordionItems = document.querySelectorAll('.accordion-item');
+    const accordionCovers = document.querySelectorAll('.accordion-cover');
+    accordionCovers.forEach(cover => {
+        gsap.set(cover.querySelector('img'), {
+            xPercent: 101,
+        });
+    });
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
         const body = item.querySelector('.accordion-body');
         header.addEventListener('click', () => {
-            item.classList.toggle('active');
-            body.style.maxHeight = item.classList.contains('active') ? body.scrollHeight + 'px' : 0;
+            if(item.classList.contains('active')) {
+                item.classList.remove('active');
+
+                gsap.to(body, {
+                    duration: 0.2,
+                    maxHeight: 0,
+                })
+
+                accordionCovers.forEach(cover => {
+                    if(cover.dataset.accordionCover === item.dataset.accordionItem) {
+                        gsap.to(cover.querySelector('img'), {
+                            duration: 0.3,
+                            xPercent: -100.1,
+                            onComplete: () => {
+                                gsap.set(cover.querySelector('img'), {
+                                    xPercent: 100.1,
+                                });
+                            }
+                        })
+                    }
+                });
+            } else {
+                accordionCovers.forEach(cover => {
+                    if(document.querySelector(".accordion-item.active") && cover.dataset.accordionCover === document.querySelector(".accordion-item.active").dataset.accordionItem) {
+                        gsap.to(cover.querySelector('img'), {
+                            duration: 0.3,
+                            xPercent: -100.1,
+                            onComplete: () => {
+                                gsap.set(cover.querySelector('img'), {
+                                    xPercent: 100.1,
+                                });
+                            }
+                        });
+                    }
+                });
+
+                if(item.classList.contains('is-crew')) {
+                    const crewItems = document.querySelectorAll('.accordion-item.is-crew');
+                    crewItems.forEach(crewItem => {
+                        crewItem.classList.remove('active');
+
+                        gsap.to(crewItem.querySelector('.accordion-body'), {
+                            duration: 0.2,
+                            maxHeight: 0,
+                        })
+                    });
+                }
+                item.classList.add('active');
+
+                gsap.to(body, {
+                    duration: 0.2,
+                    maxHeight: body.scrollHeight,
+                })
+
+                accordionCovers.forEach(cover => {
+                    if(cover.dataset.accordionCover === item.dataset.accordionItem) {
+                        gsap.to(cover.querySelector('img'), {
+                            duration: 0.3,
+                            xPercent: 0,
+                        });
+                    }
+                });
+            }
         });
     });
+
 
     const announcementBar = document.querySelector('#announcementBar');
     if(announcementBar) {
