@@ -1,0 +1,62 @@
+{% comment %}
+  Renders the lifestyle section for home page.
+
+{% endcomment %}
+
+<div class="container">
+    <section class="pb-20 sm:pb-24 grid grid-cols-1 items-center gap-5 lg:grid-cols-2">
+        <div class="flex flex-col items-start gap-y-5 lg:gap-y-10 lg:pt-40">
+            {% if section.settings.image_1.id %}
+                {{ section.settings.image_1 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% endif %}
+            
+            {% if section.settings.image_3.id %}
+                {{ section.settings.image_3 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% endif %}
+        </div>
+        
+        <div class="flex flex-col items-start gap-y-5 lg:gap-y-10">
+            {% if section.settings.image_2.id %}
+                {{ section.settings.image_2 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% endif %}
+            
+            {% if section.settings.image_4.id %}
+                {{ section.settings.image_4 | image_url: width: 700 | image_tag: class: 'w-full rounded-md shadow-md aspect-[3/3.7] object-cover' }}
+            {% endif %}
+        </div>
+    </section>
+</div>
+
+{% schema %}
+{
+    "name": "Lifestyle Images",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image_1",
+            "label": "Image 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_2",
+            "label": "Image 2"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_3",
+            "label": "Image 3"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_4",
+            "label": "Image 4"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Lifestyle Images",
+            "category": "Images"
+        }
+    ]
+}
+{% endschema %}

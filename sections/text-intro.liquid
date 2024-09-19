@@ -1,0 +1,32 @@
+{% comment %}
+  Renders a text for intro section.
+
+{% endcomment %}
+
+<div class="container">
+  <section class="py-20">
+      <p class="max-w-3xl mx-auto font-normal text-xl sm:text-2xl leading-snug indent-16 text-justify">
+          {{ section.settings.text }}
+      </p>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Text intro",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text intro",
+      "category": "Text",
+    }
+  ]
+}
+{% endschema %}

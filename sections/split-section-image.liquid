@@ -1,0 +1,91 @@
+{% comment %}
+  Renders a split section.
+
+{% endcomment %}
+
+{% if section.settings.text != blank and section.settings.content_image != blank %}
+    <div class="container">
+        <section class="pb-24 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-16">
+            {% if section.settings.image_position == "left" %}
+                {% if section.settings.content_image.id %}
+                    {{ section.settings.content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
+                {% else %}
+                    <img class="rounded-md shadow-md" src="{{ section.settings.content_image | asset_url }}" />
+                {% endif %}
+            {% endif %}
+        
+            <div class="flex flex-col items-start gap-y-6 md:gap-y-8">
+                {% if section.settings.title != blank %}
+                    <h2>{{ section.settings.title }}</h2>
+                {% endif %}
+                
+                <div class="custom-richtext">
+                    {{ section.settings.text }}
+                </div>
+        
+                {% if section.settings.link_to != blank %}
+                    <a href="{{ section.settings.link_to }}" class="button-primary">
+                        {{ section.settings.link_text }}
+                    </a>
+                {% endif %}
+            </div>
+
+            {% if section.settings.image_position == "right" %}
+                {% if section.settings.content_image.id %}
+                    {{ section.settings.content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
+                {% else %}
+                    <img class="rounded-md shadow-md" src="{{ section.settings.content_image | asset_url }}" />
+                {% endif %}
+            {% endif %}
+        </section>
+    </div>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Split Section Image",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Titre"
+        },
+        {
+            "type": "image_picker",
+            "id": "content_image",
+            "label": "Image"
+        },
+        {
+            "type": "select",
+            "id": "image_position",
+            "label": "Position de l'image",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Gauche"
+                },
+                {
+                    "value": "right",
+                    "label": "Droite"
+                }
+            ],
+            "default": "left"
+        },
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Texte"
+        },
+        {
+            "type": "url",
+            "id": "link_to",
+            "label": "Lien vers"
+        },
+        {
+            "type": "text",
+            "id": "link_text",
+            "label": "Texte du lien"
+        }
+    ]
+}
+{% endschema %}

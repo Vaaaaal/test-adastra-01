@@ -1,0 +1,157 @@
+{% comment %}
+  Renders a split section.
+
+{% endcomment %}
+
+{% if section.settings.image_1 != blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
+    <div class="container">
+      <div class="pt-6 pb-16">
+        {% if section.settings.layout == "triptych" or section.settings.layout != blank %}
+          <section class="hidden md:flex md:flex-row justify-center md:justify-start items-center gap-3">
+            <div class="w-full md:w-2/5 min-w-[300px]">
+              {% if section.settings.image_1.id %}
+                {{ section.settings.image_1 | image_url: width: 1000 | image_tag: class: "w-full h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ section.settings.image_1 | asset_url }}" class="w-full h-auto rounded shadow-md" />
+              {% endif %}
+            </div>
+  
+            <div class="flex w-full md:w-3/5 flex-col gap-3">
+              {% if section.settings.image_2.id %}
+                {{ section.settings.image_2 | image_url: width: 1000 | image_tag: class: "w-full max-w-[500px] h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ section.settings.image_2 | asset_url }}" class="w-full max-w-[500px] h-auto rounded shadow-md" />
+              {% endif %}
+    
+              {% if section.settings.image_3.id %}
+                {{ section.settings.image_3 | image_url: width: 1000 | image_tag: class: "w-full h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ section.settings.image_3 | asset_url }}" class="w-full h-auto rounded shadow-md" />
+              {% endif %}
+            </div>
+          </section>
+        {% elsif section.settings.layout == "grid" %}
+          <section class="hidden md:grid grid-columns-3 items-center">
+            <div>
+              {% if section.settings.image_1.id %}
+                {{ section.settings.image_1 | image_url: width: 1000 | image_tag: class: "w-full h-auto rounded shadow-md" }}
+              {% else %}
+                <img src="{{ section.settings.image_1 | asset_url }}" class="w-full h-auto rounded shadow-md" />
+              {% endif %}
+            </div>
+  
+            <div>
+              {% if section.settings.image_2.id %}
+                {{ section.settings.image_2 | image_url: width: 1000 | image_tag: class: "w-full h-auto" }}
+              {% else %}
+                <img src="{{ section.settings.image_2 | asset_url }}" class="w-full h-auto" />
+              {% endif %}
+            </div>
+  
+            <div>
+              {% if section.settings.image_3.id %}
+                {{ section.settings.image_3 | image_url: width: 1000 | image_tag: class: "w-full h-auto" }}
+              {% else %}
+                <img src="{{ section.settings.image_3 | asset_url }}" class="w-full h-auto" />
+              {% endif %}
+            </div>
+          </section>
+        {% endif %}
+
+        <section class="md:hidden">
+          <div class="w-full">
+            <div 
+              id="aboutSlider"
+              class="swiper max-w-96"
+              data-effect="cards"
+              data-loop
+            >
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  {% if section.settings.image_1_mobile.id %}
+                    {{ section.settings.image_1_mobile | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
+                  {% else %}
+                    <img src="{{ section.settings.image_1_mobile | asset_url }}" class="h-full w-full object-contain rounded shadow-md" />
+                  {% endif %}
+                </div>
+  
+                <div class="swiper-slide">{% if section.settings.image_2_mobile.id %}
+                    {{ section.settings.image_2_mobile | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
+                  {% else %}
+                    <img src="{{ section.settings.image_2_mobile | asset_url }}" class="h-full w-full object-contain rounded shadow-md" />
+                  {% endif %}
+                </div>
+                
+                <div class="swiper-slide">{% if section.settings.image_3_mobile.id %}
+                    {{ section.settings.image_3_mobile | image_url: width: 1000 | image_tag: class: "h-full w-full object-contain rounded shadow-md" }}
+                  {% else %}
+                    <img src="{{ section.settings.image_3_mobile | asset_url }}" class="h-full w-full object-contain rounded shadow-md" />
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Images Layout",
+  "settings": [
+      {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image 1 (desktop)",
+      },
+      {
+          "type": "image_picker",
+          "id": "image_1_mobile",
+          "label": "Image 1 (mobile)",
+      },
+      {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2 (desktop)"
+      },
+      {
+          "type": "image_picker",
+          "id": "image_2_mobile",
+          "label": "Image 2 (mobile)",
+      },
+      {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Image 3 (desktop)"
+      },
+      {
+          "type": "image_picker",
+          "id": "image_3_mobile",
+          "label": "Image 3 (mobile)",
+      },
+      {
+          "type": "select",
+          "id": "layout",
+          "label": "Disposition des images",
+          "options": [
+              {
+                  "value": "triptych",
+                  "label": "En tryptique"
+              },
+              {
+                  "value": "grid",
+                  "label": "En grille"
+              }
+          ],
+          "default": "triptych"
+      },
+  ],
+  "presets": [
+      {
+          "name": "Images Layout",
+          "category": "Images",
+      }
+  ]
+}
+{% endschema %}

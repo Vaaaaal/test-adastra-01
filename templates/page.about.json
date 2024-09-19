@@ -17,39 +17,6 @@
         "alignment": "left"
       }
     },
-    "main": {
-      "type": "about-page",
-      "blocks": {
-        "split_section_title_giUTra": {
-          "type": "split-section-title",
-          "settings": {
-            "title": "Nos origines",
-            "title_position": "left",
-            "text": "<p>C’est lors d’une session de surf sur la côte Est Australienne en 2018 que Marco se rend compte du manque de moyens mis en œuvre pour recycler les combinaisons néoprènes.<\/p><p>Après seulement une session, sa combinaison de surf se déchire au niveau de l’entre-jambes. Il se rend alors dans le magasin où il l’a acheté la veille pour procéder à une réparation et c’est lorsque le vendeur lui indique que celle-ci sera jetée et non pas réparée qu’il tombe des nues.<\/p><p>Il décide alors de trouver une alternative pour revaloriser les quelque 32 tonnes de combinaisons jetées et brûlées chaque année (dont la sienne).<\/p><p><\/p><p><strong>C’est à ce moment-là qu’Oceneo est né.<\/strong><\/p>",
-            "link_text": "",
-            "link_to": ""
-          }
-        },
-        "images_disposition_BLaqzk": {
-          "type": "images-disposition",
-          "settings": {
-            "image_1": "shopify:\/\/shop_images\/about-1.png",
-            "image_1_mobile": "shopify:\/\/shop_images\/about-1-mobile.png",
-            "image_2": "shopify:\/\/shop_images\/about-2.png",
-            "image_2_mobile": "shopify:\/\/shop_images\/about-2-mobile.png",
-            "image_3": "shopify:\/\/shop_images\/about-3.png",
-            "image_3_mobile": "shopify:\/\/shop_images\/about-3-mobile.png",
-            "layout": "triptych"
-          }
-        }
-      },
-      "block_order": [
-        "split_section_title_giUTra",
-        "images_disposition_BLaqzk"
-      ],
-      "settings": {
-      }
-    },
     "text_only_PTWC7G": {
       "type": "text-only",
       "settings": {
@@ -79,7 +46,6 @@
   },
   "order": [
     "header_template_A8jJtd",
-    "main",
     "text_only_PTWC7G",
     "what_is_DPYyAh",
     "ecology_card_NkfDmq"
