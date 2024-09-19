@@ -5,7 +5,7 @@
 
 <div class="container pt-12 pb-20">
   <div class="relative flex items-start gap-x-12">
-    <div class="w-3/5">
+    <div class="w-3/5 flex flex-col gap-y-10">
       <div class="pt-12 flex flex-col gap-y-4 max-w-xl">
         <div>
           <h2>{{ section.settings.title }}</h2>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="w-2/5 sticky top-[120px] h-auto">
-      <div class="accordions-cover-list aspect-[4/5] overflow-hidden">
+      <div class="accordions-cover-list aspect-[4/5] rounded-md overflow-hidden">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'accordion-crew' %}

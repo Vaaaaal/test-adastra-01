@@ -215,6 +215,14 @@
   .accordion-richtext:last-child {
     margin-bottom: 0;
   }
+
+  .accordion-item svg {
+    transition: all 0.3s ease;
+  }
+
+  .accordion-item.active svg {
+    transform: rotate(135deg);
+  }
 }
 
 .custom-richtext h2,
