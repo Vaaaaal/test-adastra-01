@@ -27,6 +27,18 @@
         "link_to": ""
       }
     },
+    "images_disposition_PNngd6": {
+      "type": "images-disposition",
+      "settings": {
+        "image_1": "shopify:\/\/shop_images\/about-1.png",
+        "image_1_mobile": "shopify:\/\/shop_images\/about-1-mobile.png",
+        "image_2": "shopify:\/\/shop_images\/about-2.png",
+        "image_2_mobile": "shopify:\/\/shop_images\/about-2-mobile.png",
+        "image_3": "shopify:\/\/shop_images\/about-3.png",
+        "image_3_mobile": "shopify:\/\/shop_images\/about-3-mobile.png",
+        "layout": "triptych"
+      }
+    },
     "text_only_PTWC7G": {
       "type": "text-only",
       "settings": {
@@ -57,6 +69,7 @@
   "order": [
     "header_template_A8jJtd",
     "split_section_title_7KUFhj",
+    "images_disposition_PNngd6",
     "text_only_PTWC7G",
     "what_is_DPYyAh",
     "ecology_card_NkfDmq"
