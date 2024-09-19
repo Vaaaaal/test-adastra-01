@@ -5,7 +5,7 @@
 
 {% if section.settings.text != blank and section.settings.content_image != blank %}
     <div class="container">
-        <section class="pb-24 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-16">
+        <section class="pt-10 pb-14 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 md:gap-16">
             {% if section.settings.image_position == "left" %}
                 {% if section.settings.content_image.id %}
                     {{ section.settings.content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
