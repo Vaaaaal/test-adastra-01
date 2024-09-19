@@ -9,8 +9,6 @@
             {% if section.settings.image_position == "left" %}
                 {% if section.settings.content_image.id %}
                     {{ section.settings.content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
-                {% else %}
-                    <img class="rounded-md shadow-md" src="{{ section.settings.content_image | asset_url }}" />
                 {% endif %}
             {% endif %}
         
@@ -33,8 +31,6 @@
             {% if section.settings.image_position == "right" %}
                 {% if section.settings.content_image.id %}
                     {{ section.settings.content_image | image_url: width: 700 | image_tag: class: 'rounded-md shadow-md' }}
-                {% else %}
-                    <img class="rounded-md shadow-md" src="{{ section.settings.content_image | asset_url }}" />
                 {% endif %}
             {% endif %}
         </section>
