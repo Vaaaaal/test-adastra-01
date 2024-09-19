@@ -48,6 +48,14 @@
         "max_width": 850
       }
     },
+    "crew_list_qPe9Ci": {
+      "type": "crew-list",
+      "settings": {
+        "title": "Le crew",
+        "job": "",
+        "content": "<p>Aujourd'hui, une équipe de cinq personnes développe quotidiennement Oceneo, couvrant tous les aspects : production, commercialisation, industrialisation, marketing et communication.<\/p>"
+      }
+    },
     "what_is_DPYyAh": {
       "type": "what-is",
       "settings": {
@@ -71,6 +79,7 @@
     "split_section_title_7KUFhj",
     "images_disposition_PNngd6",
     "text_only_PTWC7G",
+    "crew_list_qPe9Ci",
     "what_is_DPYyAh",
     "ecology_card_NkfDmq"
   ]
