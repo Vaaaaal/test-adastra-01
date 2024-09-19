@@ -1,0 +1,32 @@
+{% comment %}
+  Renders an accordion item.
+
+  Accepts:
+    - name: {string} Title (required)
+    - content: {string} Content (required)
+    - cover: {image} Cover (optional)
+
+  Usage:
+    {% render 'accordion-crew' title: 'Lorem' content: 'Lorem' cover: 'lorem.png' %}
+{% endcomment %}
+
+
+{% if name and content and name != blank and content != blank %}
+  <div class="accordion-item is-crew">
+    <button class="accordion-header w-full rounded-none shadow-none hover:shadow-none text-left flex justify-between gap-x-2 md:gap-x-4 p-0 pt-4 pb-3 md:pt-5 md:pb-4 border-b border-[#C4C4C4]">
+      <p class="uppercase font-display text-3xl">{{ name }}</p>
+
+      <svg class="w-8 origin-center" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667L15 17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003L24.6667 15.0003C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z" fill="#161616"/>
+      </svg>        
+    </button>
+    
+    <div class="accordion-body max-h-0 overflow-hidden transition-all">
+      <div class="py-4 accordion-richtext">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  {{ cover | image_url: width: 500 | image_tag: class: 'sticky top-0 right-0 w-1/3 h-full object-cover' }}
+{% endif %}

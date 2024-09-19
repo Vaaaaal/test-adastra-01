@@ -1,0 +1,81 @@
+{% comment %}
+  Section utilisé pour afficher la liste des membres de l'équipe
+
+{% endcomment %}
+
+<div class="container pt-12 pb-20 relative">
+  <div class="w-2/3">
+    <div class="pt-16 flex flex-col gap-y-4 max-w-xl">
+      <div>
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.job }}</p>
+      </div>
+      <div class="text-balance">
+        {{ section.settings.content }}
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-x-2 md:gap-y-3">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'accordion-crew' %}
+            {% render 'accordion-crew'
+                name: block.settings.name
+                content: block.settings.content
+            %}
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Crew List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre"
+    },
+    {
+      "type": "text",
+      "id": "job",
+      "label": "Poste"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Contenu"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Accordion Crew",
+      "type": "accordion-crew",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nom & Prénom"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Contenu"
+        },
+        {
+          "type": "image_picker",
+          "id": "cover",
+          "label": "Photo de profil"
+        },
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "Crew List"
+    }
+  ]
+}
+{% endschema %}
