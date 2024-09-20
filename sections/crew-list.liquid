@@ -6,7 +6,7 @@
 <div class="container pt-12 pb-20">
   <div class="relative flex items-start gap-x-12">
     <div class="w-3/5 flex flex-col gap-y-10">
-      <div class="pt-12 flex flex-col gap-y-4 max-w-xl">
+      <div class="pt-10 flex flex-col gap-y-4 max-w-xl">
         <div>
           <h2>{{ section.settings.title }}</h2>
           <p>{{ section.settings.job }}</p>
@@ -19,7 +19,8 @@
       <div class="flex flex-col gap-x-2 md:gap-y-3">
         {% for block in section.blocks %}
           {% case block.type %}
-            {% when 'accordion-crew' %}
+            {% when 'crew-member' %}
+              test
               {% render 'accordion-crew'
                   name: block.settings.name
                   job: block.settings.job
@@ -34,7 +35,7 @@
       <div class="accordions-cover-list aspect-[4/5] rounded-md overflow-hidden">
         {% for block in section.blocks %}
           {% case block.type %}
-            {% when 'accordion-crew' %}
+            {% when 'crew-member' %}
               {% if block.settings.cover.id %}
                 <div class="accordion-cover relative" data-accordion-cover="{{ block.settings.name }}">
                   {{ block.settings.cover | image_url: width: 1200 | image_tag: class: 'absolute aspect-[4/5] object-cover' }}
@@ -64,8 +65,8 @@
   ],
   "blocks": [
     {
-      "name": "Accordion Crew",
-      "type": "accordion-crew",
+      "name": "Crew Member",
+      "type": "crew-member",
       "settings": [
         {
           "type": "text",
