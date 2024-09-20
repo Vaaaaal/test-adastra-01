@@ -117,6 +117,11 @@
         "bg_color": "#f8f4ef"
       }
     },
+    "process_8fdyDA": {
+      "type": "process",
+      "settings": {
+      }
+    },
     "ecology_card_NkfDmq": {
       "type": "ecology-card",
       "settings": {
@@ -134,6 +139,7 @@
     "text_only_PTWC7G",
     "crew_list_qPe9Ci",
     "what_is_DPYyAh",
+    "process_8fdyDA",
     "ecology_card_NkfDmq"
   ]
 }
