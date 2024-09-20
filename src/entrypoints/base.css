@@ -46,7 +46,7 @@
   }
   
   .button-secondary {
-    @apply button border border-black focus:border-transparent text-black hover:bg-black hover:text-white transition-all;
+    @apply button border border-black text-black hover:bg-black hover:text-white transition-all;
   }
 
   .button-primary.is-heading-font {

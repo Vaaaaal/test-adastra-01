@@ -110,7 +110,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Tabs
+    document.querySelectorAll('[data-tab-id]').forEach(button => {
+        button.addEventListener('click', toggleTab);
+    });
+    function toggleTab() {
+        const element = document.querySelector(`[data-tab-content="${this.dataset.tabId}"`);
+        const elementToHide = document.querySelector(`[data-tab-content="${document.querySelector('.tab-button.active').dataset.tabId}"`);
+        document.querySelectorAll('.tab-button.active').forEach(button => {
+            button.classList.remove('active');
+        });
+        this.classList.add('active');
 
+        const tl = gsap.timeline();
+        tl.to(elementToHide, {
+            duration: 0.2,
+            opacity: 0,
+        }).to(element, {
+            duration: 0.2,
+            opacity: 1,
+            onComplete: () => {
+                this.classList.add('active');
+            }
+        });
+    }
+
+    // Announcement bar
     const announcementBar = document.querySelector('#announcementBar');
     if(announcementBar) {
         const announcementBarElements = announcementBar.querySelectorAll('.announcement-bar-element');
@@ -125,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Swiper sliders
     const swiperSliders = document.querySelectorAll('.swiper');
     if(swiperSliders.length > 0) {
         initSliders(swiperSliders);
