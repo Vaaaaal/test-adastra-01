@@ -64,7 +64,7 @@
           "type": "crew-member",
           "settings": {
             "name": "Antonin",
-            "job": "Directeur marketing & communication",
+            "job": "Directeur Marketing & Communication",
             "content": "<p>C’est l’âme créative d’Oceneo. Entre deux sessions de surf et quelques clichés, Antonin s'est naturellement tourné vers Oceneo pour allier ses passions du surf et de l'image. En tant que photographe-vidéaste, il capte l'âme de l'océan et l'infuse dans chaque aspect de notre communication.<\/p><p>Pour ce qui est des lunettes, Antonin les a mises à rude épreuve ! De la chaleur du bush Australien aux vagues Indonésiennes, il a testé nos prototypes aux quatre coins du globe. Certains disent qu'il voyage autant pour vérifier leur solidité…, mais nous, on pense que c'est juste une excuse pour partir !<\/p>",
             "cover": "shopify:\/\/shop_images\/Antonin.jpg"
           }
@@ -73,7 +73,7 @@
           "type": "crew-member",
           "settings": {
             "name": "Théo",
-            "job": "Directeur commercial",
+            "job": "Directeur Commercial",
             "content": "<p>Pilote de ligne et ingénieur commercial, Théo incarne parfaitement l’esprit d’innovation et de précision d’Oceneo. Conscient de l'ironie de travailler dans un métier polluant, il contrebalance son impact en s'investissant à fond dans Oceneo. Entre deux vols, il met toute son énergie à développer des solutions plus durables, prouvant qu'il est possible de rêver d'un monde plus vert.<\/p>",
             "cover": "shopify:\/\/shop_images\/Theo.png"
           }
@@ -82,7 +82,7 @@
           "type": "crew-member",
           "settings": {
             "name": "Pierre",
-            "job": "Consultant en stratégie",
+            "job": "Consultant en Stratégie",
             "content": "<p>Véritable passionné de nautisme, Pierre est le pilier stratégique d’Oceneo. Entre ses navigations en mer et ses moments de réflexion stratégique, il a trouvé sa vocation en rejoignant Oceneo, où il met à profit son expertise pour optimiser chaque aspect de notre production.<\/p>",
             "cover": "shopify:\/\/shop_images\/Pierre.jpg"
           }
@@ -91,7 +91,7 @@
           "type": "crew-member",
           "settings": {
             "name": "Kevan",
-            "job": "Prestataire ouvrier de production",
+            "job": "Ouvrier de production",
             "content": "<p>Passionné de bodyboard, Kevan est le cœur battant de notre atelier de production. Entre ses sessions de bodyboard et ses journées de travail, il apporte une énergie et un savoir-faire inégalés à chaque étape de la fabrication.<\/p><p>Il est le maître artisan qui transforme chaque combinaison en une paire de lunettes unique. Avec Kévan sur le terrain, nous garantissons que chaque produit est réalisé avec la précision et la passion qui font la réputation d’Oceneo.<\/p>",
             "cover": "shopify:\/\/shop_images\/Kevan.jpg"
           }
