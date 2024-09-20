@@ -20,7 +20,6 @@
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'crew-member' %}
-              test
               {% render 'accordion-crew'
                   name: block.settings.name
                   job: block.settings.job
