@@ -12,14 +12,15 @@
     "header_template_LqGQPV": {
       "type": "header-template",
       "settings": {
-        "cover": "shopify:\/\/shop_images\/DSC05557.jpg",
-        "title": "Contact",
+        "cover": "shopify://shop_images/DSC05557.jpg",
+        "title": "Espace Pro",
         "alignment": "center"
       }
     },
     "main": {
       "type": "contact-pro",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
