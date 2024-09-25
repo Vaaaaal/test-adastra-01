@@ -4,8 +4,7 @@
 {% endcomment %}
  
 <div class="container pt-16 pb-20">
-    {% comment %} <div class="grid grid-cols-1 lg:grid-cols-9 gap-x-16"> {% endcomment %}
-    <div class="flex flex-col md:flex-row items-start gap-x-20 gap-y-6">
+    <div class="flex flex-col md:flex-row items-start gap-x-16 lg:gap-x-20 gap-y-6">
         {% if section.blocks.size > 0 %}
             <div class="static md:sticky top-[120px] mx-auto max-w-[350px] w-full md:w-2/5">
                 <div 
@@ -29,17 +28,22 @@
         {% endif %}
 
         <div>
-            <h2>{{ section.settings.title }}</h2>
+            <h2
+                class="text-7xl sm:text-8xl lg:text-9xl max-w-96"
+                style="line-height: 0.8;"
+            >
+                {{ section.settings.title }}
+            </h2>
 
-            <div class="mt-10 flex flex-col">
+            <div class="mt-14 flex flex-col">
                 {% for block in section.blocks %}
                     {% case block.type %}
                         {% when 'process-step' %}
                             <div
-                                class="pb-8 {% if forloop.last %}pb-0{% endif %}"
+                                class="pb-12 {% if forloop.last %}pb-0{% endif %}"
                             >
                                 {% comment %} <h3 class="apply-h4">{{ block.settings.title }}</h3> {% endcomment %}
-                                <h3>{{ block.settings.title }}</h3>
+                                <h3 class="mb-2">{{ block.settings.title }}</h3>
                                 <p>{{ block.settings.content }}</p>
                             </div>
                     {% endcase %}
