@@ -242,7 +242,6 @@
         },
         "media_item_UHYgBG": {
           "type": "media-item",
-          "disabled": true,
           "settings": {
             "image_content": "shopify://shop_images/sud-ouest.png",
             "link_to": "https://www.sudouest.fr/economie/innovation/sur-le-bassin-d-arcachon-oceneo-recycle-les-combinaisons-de-surf-en-lunettes-de-soleil-19415636.php"
@@ -250,7 +249,6 @@
         },
         "media_item_4kCqXp": {
           "type": "media-item",
-          "disabled": true,
           "settings": {
             "image_content": "shopify://shop_images/bassin.png",
             "link_to": ""
