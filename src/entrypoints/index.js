@@ -254,6 +254,11 @@ function initSliders(sliders) {
             options.loop = true;
         }
 
+        // Checked if rewind is apply
+        if(params.rewind) {
+            options.rewind = true;
+        }
+
         // Check if autoplay is apply
         if(params.autoplay) {
             if(!options.modules) {
