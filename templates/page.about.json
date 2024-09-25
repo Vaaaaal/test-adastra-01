@@ -267,6 +267,13 @@
             "image_content": "shopify://shop_images/tvba.png",
             "link_to": "https://www.facebook.com/tvba.fr/videos/quand-des-combinaisons-de-surf-se-transforment-en-lunettes-de-soleil-marco-un-je/1051500073010205/"
           }
+        },
+        "media_item_HMi6aA": {
+          "type": "media-item",
+          "settings": {
+            "image_content": "shopify://shop_images/depeche.png",
+            "link_to": "https://www.ladepechedubassin.fr/actualite-3518-gujan-mestras-oceneo-quand-l-ecologie-et-le-surf-font-la-paire"
+          }
         }
       },
       "block_order": [
@@ -275,7 +282,8 @@
         "media_item_UHYgBG",
         "media_item_xmfMzT",
         "media_item_4kCqXp",
-        "media_item_gp9wCh"
+        "media_item_gp9wCh",
+        "media_item_HMi6aA"
       ],
       "settings": {
         "title": "Il parlent de nous",
