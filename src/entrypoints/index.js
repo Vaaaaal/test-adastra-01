@@ -4,7 +4,7 @@ import videojs from 'video.js';
 import 'video.js/dist/video-js.min.css';
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectCards } from 'swiper/modules';
+import { Navigation, Pagination, EffectCards, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -247,7 +247,24 @@ function initSliders(sliders) {
 
         const options = {
             slidesPerView: 1,
-            // loop: !!params.loop
+        }
+
+        // Check if loop is apply
+        if(params.loop) {
+            options.loop = true;
+        }
+
+        // Check if autoplay is apply
+        if(params.autoplay) {
+            if(!options.modules) {
+                options.modules = [Autoplay];
+            } else {
+                options.modules = [...options.modules, Autoplay];
+            }
+
+            options.autoplay = {
+                delay: params.autoplay,
+            }
         }
 
         // Check if slidesPerView has multiple values
@@ -304,6 +321,9 @@ function initSliders(sliders) {
 
         // Check if effect is apply
         if(params.effect) {
+            console.log(params.perslideoffset)
+            console.log(params.persliderotate)
+
             if(params.effect === 'cards') {
                 if(!options.modules) {
                     options.modules = [EffectCards];
@@ -314,8 +334,8 @@ function initSliders(sliders) {
                 options.effect = "cards";
                 options.grabCursor = true;
                 options.cardsEffect = {
-                    perSlideOffset: 8,
-                    perSlideRotate: 1.25,
+                    perSlideOffset: params.perslideoffset | 8,
+                    perSlideRotate: params.persliderotate | 1.5,
                 }
             }
         }
