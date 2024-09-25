@@ -247,6 +247,13 @@
             "link_to": "https://www.sudouest.fr/economie/innovation/sur-le-bassin-d-arcachon-oceneo-recycle-les-combinaisons-de-surf-en-lunettes-de-soleil-19415636.php"
           }
         },
+        "media_item_xmfMzT": {
+          "type": "media-item",
+          "settings": {
+            "image_content": "shopify://shop_images/fashion.png",
+            "link_to": "https://fr.fashionnetwork.com/news/Quiksilver-lance-des-lunettes-de-soleil-concues-a-partir-de-combinaisons-de-surf-usagees,1644975.html"
+          }
+        },
         "media_item_4kCqXp": {
           "type": "media-item",
           "settings": {
@@ -260,22 +267,15 @@
             "image_content": "shopify://shop_images/tvba.png",
             "link_to": "https://www.facebook.com/tvba.fr/videos/quand-des-combinaisons-de-surf-se-transforment-en-lunettes-de-soleil-marco-un-je/1051500073010205/"
           }
-        },
-        "media_item_xmfMzT": {
-          "type": "media-item",
-          "settings": {
-            "image_content": "shopify://shop_images/fashion.png",
-            "link_to": "https://fr.fashionnetwork.com/news/Quiksilver-lance-des-lunettes-de-soleil-concues-a-partir-de-combinaisons-de-surf-usagees,1644975.html"
-          }
         }
       },
       "block_order": [
         "media_item_EnRntz",
         "media_item_XMqPPK",
         "media_item_UHYgBG",
+        "media_item_xmfMzT",
         "media_item_4kCqXp",
-        "media_item_gp9wCh",
-        "media_item_xmfMzT"
+        "media_item_gp9wCh"
       ],
       "settings": {
         "title": "Il parlent de nous",
