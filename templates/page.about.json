@@ -263,7 +263,6 @@
         },
         "media_item_xmfMzT": {
           "type": "media-item",
-          "disabled": true,
           "settings": {
             "image_content": "shopify://shop_images/fashion.png",
             "link_to": "https://fr.fashionnetwork.com/news/Quiksilver-lance-des-lunettes-de-soleil-concues-a-partir-de-combinaisons-de-surf-usagees,1644975.html"
