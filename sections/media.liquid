@@ -9,16 +9,24 @@
     style="background-color: {{ section.settings.bg_color }}"
   >
     <div class="container">
-      <h2 class="mb-4">{{ section.settings.title }}</h2>
+      <h2 class="mb-6">{{ section.settings.title }}</h2>
     </div>
 
-    <div class="media-item-wrapper flex justify-center flex-nowrap" data-time="{{ section.settings.marquee_time }}">
-      {% for i in (1..3) %}
-        <div class="media-item-element flex justify-center gap-x-10 shrink-0 pr-10 min-w-full">
+    <div class="media-item-wrapper flex pr-5 md:pr-10 justify-start flex-nowrap" data-time="{{ section.settings.marquee_time }}">
+      {% for i in (1..2) %}
+        <div class="media-item-element flex flex-nowrap justify-start gap-x-5 md:gap-x-10 shrink-0 opacity-50">
           {% for block in section.blocks %}
             {% case block.type %}
               {% when 'media-item' %}
-                {{ block.settings.image_content | image_url: width: 600 | image_tag: class: 'max-w-[250px] max-h-[130px]' }}
+                {% if block.settings.link_to != blank %}
+                  <a target="_blank" href="{{ block.settings.link_to }}" class="max-w-[180px] md:max-w-[250px] max-h-[90px] md:max-h-[130px]">
+                    {{ block.settings.image_content | image_url: height: 260 | image_tag: class: 'w-full h-full object-contain' }}
+                  </a>
+                {% else %}
+                  <div class="max-w-[180px] md:max-w-[250px] max-h-[90px] md:max-h-[130px]">
+                    {{ block.settings.image_content | image_url: height: 260 | image_tag: class: 'w-full h-full object-contain' }}
+                  </div>
+                {% endif %}
               {% endcase %}
             {% endfor %}
           </div>
