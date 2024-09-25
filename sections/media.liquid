@@ -1,0 +1,78 @@
+{% comment %}
+  Renders a text section for media talking about Oceneo.
+  
+{% endcomment %}
+
+{% if section.blocks.size > 0 %}
+  <section
+    class="pt-16 pb-20 overflow-clip"
+    style="background-color: {{ section.settings.bg_color }}"
+  >
+    <div class="container">
+      <h2 class="mb-4">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="media-item-wrapper flex justify-center flex-nowrap" data-time="{{ section.settings.marquee_time }}">
+      {% for i in (1..3) %}
+        <div class="media-item-element flex justify-center gap-x-10 shrink-0 pr-10 min-w-full">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'media-item' %}
+                {{ block.settings.image_content | image_url: width: 600 | image_tag: class: 'max-w-[250px] max-h-[130px]' }}
+              {% endcase %}
+            {% endfor %}
+          </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Media",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur de fond"
+    },
+    {
+      "type": "range",
+      "id": "marquee_time",
+      "label": "Temps de défilement",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "default": 40
+  }
+  ],
+  "blocks": [
+    {
+      "type": "media-item",
+      "name": "Media Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_content",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link_to",
+          "label": "Lien associé"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media",
+    }
+  ]
+}
+{% endschema %}

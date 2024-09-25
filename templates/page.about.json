@@ -223,6 +223,13 @@
         "title": "Notre process"
       }
     },
+    "media" : {
+      "type": "media",
+      "settings": {
+        "title": "Il parlent de nous",
+        "bg_color": "#f8f4ef",
+      },
+    },
     "ecology_card_NkfDmq": {
       "type": "ecology-card",
       "settings": {
@@ -241,6 +248,7 @@
     "crew_list_qPe9Ci",
     "what_is_DPYyAh",
     "process_8fdyDA",
+    "media",
     "ecology_card_NkfDmq"
   ]
 }

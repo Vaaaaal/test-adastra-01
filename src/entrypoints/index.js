@@ -149,6 +149,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Media Item
+    const mediaItemWrapper = document.querySelectorAll('.media-item-wrapper');
+    if(mediaItemWrapper.length > 0) {
+        mediaItemWrapper.forEach(wrapper => {
+            const mediaItemElement = wrapper.querySelectorAll('.media-item-element');
+            console.log(wrapper.dataset.time)
+            const marqueeTiming = wrapper.dataset.time;
+
+            gsap.to(mediaItemElement, { 
+                duration: marqueeTiming, 
+                xPercent: -100,
+                repeat: -1,
+                ease: 'none',
+                onComplete: () => {
+                    gsap.set(mediaItemElement, { clearProps: 'all' });
+                }
+            });
+        });
+    }
 
     // Swiper sliders
     const swiperSliders = document.querySelectorAll('.swiper');
@@ -326,9 +346,6 @@ function initSliders(sliders) {
 
         // Check if effect is apply
         if(params.effect) {
-            console.log(params.perslideoffset)
-            console.log(params.persliderotate)
-
             if(params.effect === 'cards') {
                 if(!options.modules) {
                     options.modules = [EffectCards];
