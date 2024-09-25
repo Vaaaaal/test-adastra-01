@@ -12,7 +12,7 @@
     "header_template_A8jJtd": {
       "type": "header-template",
       "settings": {
-        "cover": "shopify:\/\/shop_images\/about-cover.jpg",
+        "cover": "shopify://shop_images/about-cover.jpg",
         "title": "Notre histoire",
         "alignment": "left"
       }
@@ -22,7 +22,7 @@
       "settings": {
         "title": "Nos origines",
         "title_position": "left",
-        "text": "<p>C’est lors d’une session de surf sur la côte Est Australienne en 2018 que Marco se rend compte du manque de moyens mis en œuvre pour recycler les combinaisons néoprènes.<\/p><p>Après seulement une session, sa combinaison de surf se déchire au niveau de l’entre-jambes. Il se rend alors dans le magasin où il l’a acheté la veille pour procéder à une réparation et c’est lorsque le vendeur lui indique que celle-ci sera jetée et non pas réparée qu’il tombe des nues.<\/p><p>Il décide alors de trouver une alternative pour revaloriser les quelque 32 tonnes de combinaisons jetées et brûlées chaque année (dont la sienne).<\/p><p><\/p><p><strong>C’est à ce moment-là qu’Oceneo est né.<\/strong><\/p>",
+        "text": "<p>C’est lors d’une session de surf sur la côte Est Australienne en 2018 que Marco se rend compte du manque de moyens mis en œuvre pour recycler les combinaisons néoprènes.</p><p>Après seulement une session, sa combinaison de surf se déchire au niveau de l’entre-jambes. Il se rend alors dans le magasin où il l’a acheté la veille pour procéder à une réparation et c’est lorsque le vendeur lui indique que celle-ci sera jetée et non pas réparée qu’il tombe des nues.</p><p>Il décide alors de trouver une alternative pour revaloriser les quelque 32 tonnes de combinaisons jetées et brûlées chaque année (dont la sienne).</p><p></p><p><strong>C’est à ce moment-là qu’Oceneo est né.</strong></p>",
         "link_text": "",
         "link_to": ""
       }
@@ -30,19 +30,19 @@
     "images_disposition_PNngd6": {
       "type": "images-disposition",
       "settings": {
-        "image_1": "shopify:\/\/shop_images\/about-1.png",
-        "image_1_mobile": "shopify:\/\/shop_images\/about-1-mobile.png",
-        "image_2": "shopify:\/\/shop_images\/about-2.png",
-        "image_2_mobile": "shopify:\/\/shop_images\/about-2-mobile.png",
-        "image_3": "shopify:\/\/shop_images\/about-3.png",
-        "image_3_mobile": "shopify:\/\/shop_images\/about-3-mobile.png",
+        "image_1": "shopify://shop_images/about-1.png",
+        "image_1_mobile": "shopify://shop_images/about-1-mobile.png",
+        "image_2": "shopify://shop_images/about-2.png",
+        "image_2_mobile": "shopify://shop_images/about-2-mobile.png",
+        "image_3": "shopify://shop_images/about-3.png",
+        "image_3_mobile": "shopify://shop_images/about-3-mobile.png",
         "layout": "triptych"
       }
     },
     "text_only_PTWC7G": {
       "type": "text-only",
       "settings": {
-        "text": "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.<\/p><p>Notre secret réside dans l'association du broyât de combinaison avec une résine biosourcée à base d’huile de pin. Cette combinaison permet de conserver les caractéristiques physiques du néoprène tout en continuant de travailler avec des produits durables et naturels.<\/p>",
+        "text": "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.</p><p>Notre secret réside dans l'association du broyât de combinaison avec une résine biosourcée à base d’huile de pin. Cette combinaison permet de conserver les caractéristiques physiques du néoprène tout en continuant de travailler avec des produits durables et naturels.</p>",
         "text_position": "left",
         "text_align": "left",
         "max_width": 850
@@ -56,8 +56,8 @@
           "settings": {
             "name": "Marco",
             "job": "Fondateur & Directeur Général",
-            "content": "<p>Visionnaire et passionné, Marco est l'essence même d'Oceneo. Son amour pour l'océan s'est forgé au fil des vagues, planche de surf sous les pieds. C'est lors d'une session en Australie, où sa combinaison s'est déchirée, que l'idée d'Oceneo a germé : il a décidé de créer une marque éco-responsable qui allierait sa passion pour le surf et son engagement pour la protection des océans. Entre deux sessions de surf et des moments de réflexion au bord de l'eau, Marco impulse chaque projet de l'entreprise avec son énergie débordante et sa détermination, guidé par sa vision durable.<\/p>",
-            "cover": "shopify:\/\/shop_images\/Marco.jpg"
+            "content": "<p>Visionnaire et passionné, Marco est l'essence même d'Oceneo. Son amour pour l'océan s'est forgé au fil des vagues, planche de surf sous les pieds. C'est lors d'une session en Australie, où sa combinaison s'est déchirée, que l'idée d'Oceneo a germé : il a décidé de créer une marque éco-responsable qui allierait sa passion pour le surf et son engagement pour la protection des océans. Entre deux sessions de surf et des moments de réflexion au bord de l'eau, Marco impulse chaque projet de l'entreprise avec son énergie débordante et sa détermination, guidé par sa vision durable.</p>",
+            "cover": "shopify://shop_images/Marco.jpg"
           }
         },
         "crew_member_Yp7xCf": {
@@ -65,8 +65,8 @@
           "settings": {
             "name": "Antonin",
             "job": "Directeur Marketing & Communication",
-            "content": "<p>C’est l’âme créative d’Oceneo. Entre deux sessions de surf et quelques clichés, Antonin s'est naturellement tourné vers Oceneo pour allier ses passions du surf et de l'image. En tant que photographe-vidéaste, il capte l'âme de l'océan et l'infuse dans chaque aspect de notre communication.<\/p><p>Pour ce qui est des lunettes, Antonin les a mises à rude épreuve ! De la chaleur du bush Australien aux vagues Indonésiennes, il a testé nos prototypes aux quatre coins du globe. Certains disent qu'il voyage autant pour vérifier leur solidité…, mais nous, on pense que c'est juste une excuse pour partir !<\/p>",
-            "cover": "shopify:\/\/shop_images\/Antonin.jpg"
+            "content": "<p>C’est l’âme créative d’Oceneo. Entre deux sessions de surf et quelques clichés, Antonin s'est naturellement tourné vers Oceneo pour allier ses passions du surf et de l'image. En tant que photographe-vidéaste, il capte l'âme de l'océan et l'infuse dans chaque aspect de notre communication.</p><p>Pour ce qui est des lunettes, Antonin les a mises à rude épreuve ! De la chaleur du bush Australien aux vagues Indonésiennes, il a testé nos prototypes aux quatre coins du globe. Certains disent qu'il voyage autant pour vérifier leur solidité…, mais nous, on pense que c'est juste une excuse pour partir !</p>",
+            "cover": "shopify://shop_images/Antonin.jpg"
           }
         },
         "crew_member_Tq9x3r": {
@@ -74,8 +74,8 @@
           "settings": {
             "name": "Théo",
             "job": "Directeur Commercial",
-            "content": "<p>Pilote de ligne et ingénieur commercial, Théo incarne parfaitement l’esprit d’innovation et de précision d’Oceneo. Conscient de l'ironie de travailler dans un métier polluant, il contrebalance son impact en s'investissant à fond dans Oceneo. Entre deux vols, il met toute son énergie à développer des solutions plus durables, prouvant qu'il est possible de rêver d'un monde plus vert.<\/p>",
-            "cover": "shopify:\/\/shop_images\/Theo.png"
+            "content": "<p>Pilote de ligne et ingénieur commercial, Théo incarne parfaitement l’esprit d’innovation et de précision d’Oceneo. Conscient de l'ironie de travailler dans un métier polluant, il contrebalance son impact en s'investissant à fond dans Oceneo. Entre deux vols, il met toute son énergie à développer des solutions plus durables, prouvant qu'il est possible de rêver d'un monde plus vert.</p>",
+            "cover": "shopify://shop_images/Theo.png"
           }
         },
         "crew_member_pmgJp8": {
@@ -83,8 +83,8 @@
           "settings": {
             "name": "Pierre",
             "job": "Consultant en Stratégie",
-            "content": "<p>Véritable passionné de nautisme, Pierre est le pilier stratégique d’Oceneo. Entre ses navigations en mer et ses moments de réflexion stratégique, il a trouvé sa vocation en rejoignant Oceneo, où il met à profit son expertise pour optimiser chaque aspect de notre production.<\/p>",
-            "cover": "shopify:\/\/shop_images\/Pierre.jpg"
+            "content": "<p>Véritable passionné de nautisme, Pierre est le pilier stratégique d’Oceneo. Entre ses navigations en mer et ses moments de réflexion stratégique, il a trouvé sa vocation en rejoignant Oceneo, où il met à profit son expertise pour optimiser chaque aspect de notre production.</p>",
+            "cover": "shopify://shop_images/Pierre.jpg"
           }
         },
         "crew_member_TLDpKd": {
@@ -92,8 +92,8 @@
           "settings": {
             "name": "Kevan",
             "job": "Ouvrier de production",
-            "content": "<p>Passionné de bodyboard, Kevan est le cœur battant de notre atelier de production. Entre ses sessions de bodyboard et ses journées de travail, il apporte une énergie et un savoir-faire inégalés à chaque étape de la fabrication.<\/p><p>Il est le maître artisan qui transforme chaque combinaison en une paire de lunettes unique. Avec Kévan sur le terrain, nous garantissons que chaque produit est réalisé avec la précision et la passion qui font la réputation d’Oceneo.<\/p>",
-            "cover": "shopify:\/\/shop_images\/Kevan.jpg"
+            "content": "<p>Passionné de bodyboard, Kevan est le cœur battant de notre atelier de production. Entre ses sessions de bodyboard et ses journées de travail, il apporte une énergie et un savoir-faire inégalés à chaque étape de la fabrication.</p><p>Il est le maître artisan qui transforme chaque combinaison en une paire de lunettes unique. Avec Kévan sur le terrain, nous garantissons que chaque produit est réalisé avec la précision et la passion qui font la réputation d’Oceneo.</p>",
+            "cover": "shopify://shop_images/Kevan.jpg"
           }
         }
       },
@@ -106,14 +106,14 @@
       ],
       "settings": {
         "title": "Le crew",
-        "content": "<p>Aujourd'hui, une équipe de cinq personnes développe quotidiennement Oceneo, couvrant tous les aspects : production & industrialisation, commercialisation, marketing et communication.<\/p>"
+        "content": "<p>Aujourd'hui, une équipe de cinq personnes développe quotidiennement Oceneo, couvrant tous les aspects : production & industrialisation, commercialisation, marketing et communication.</p>"
       }
     },
     "what_is_DPYyAh": {
       "type": "what-is",
       "settings": {
-        "text": "<p>Oceneo c’est l’association des mots “océan” et “néo”.“<br\/>Océan” car il est notre inspiration, notre terrain de jeu.<\/p><p>Le surf fait partie intégrante de l’âme de notre marque : passionnés par celui-ci, nous occupons la majorité de notre temps libre à surfer les vagues de notre belle région.<br\/>En choisissant d’insérer une partie de ce mot, nous cherchons à rendre hommage à notre précieux environnement et espérons promouvoir sa préservation.<\/p><p>Et “néo”, en référence à notre matière première, celle que nous “upcyclons” : les combinaisons en néoprène que nous revalorisons à 100% pour créer de nouveaux accessoires innovants et durables. C’est l’incarnation de l’idée du renouveau. Nous croyons en la possibilité de donner une seconde vie à des produits initialement destinés à la décharge et une seconde chance aux personnes qui en ont besoin (personnes en situation de handicap, etc...)<\/p>",
-        "logo": "shopify:\/\/shop_images\/logo-oceneo-black.png",
+        "text": "<p>Oceneo c’est l’association des mots “océan” et “néo”.“<br/>Océan” car il est notre inspiration, notre terrain de jeu.</p><p>Le surf fait partie intégrante de l’âme de notre marque : passionnés par celui-ci, nous occupons la majorité de notre temps libre à surfer les vagues de notre belle région.<br/>En choisissant d’insérer une partie de ce mot, nous cherchons à rendre hommage à notre précieux environnement et espérons promouvoir sa préservation.</p><p>Et “néo”, en référence à notre matière première, celle que nous “upcyclons” : les combinaisons en néoprène que nous revalorisons à 100% pour créer de nouveaux accessoires innovants et durables. C’est l’incarnation de l’idée du renouveau. Nous croyons en la possibilité de donner une seconde vie à des produits initialement destinés à la décharge et une seconde chance aux personnes qui en ont besoin (personnes en situation de handicap, etc...)</p>",
+        "logo": "shopify://shop_images/logo-oceneo-black.png",
         "bg_color": "#f8f4ef"
       }
     },
@@ -124,35 +124,83 @@
           "type": "process-step",
           "settings": {
             "title": "Récupération des combinaisons néoprène",
-            "content": "<p>Chez Oceneo, le recyclage des combinaisons néoprène en fin de vie va bien au-delà d'une simple initiative écologique. En collaboration avec des écoles de surf, de voile, de plongée, ainsi que des particuliers, nous collectons ces combinaisons pour leur offrir une nouvelle vie. Chaque combinaison, riche en histoires et en souvenirs, commence un nouveau chapitre passionnant entre nos mains. Vous pouvez même transformer votre propre combinaison en une paire de lunettes unique, personnalisée selon vos envies juste ici.Vous souhaitez contribuer et nous envoyer vos combinaisons ? Cliquez ici pour participer à l’aventure Oceneo.<\/p>"
+            "content": "<p>Chez Oceneo, le recyclage des combinaisons néoprène en fin de vie va bien au-delà d'une simple initiative écologique. En collaboration avec des écoles de surf, de voile, de plongée, ainsi que des particuliers, nous collectons ces combinaisons pour leur offrir une nouvelle vie. Chaque combinaison, riche en histoires et en souvenirs, commence un nouveau chapitre passionnant entre nos mains. Vous pouvez même transformer votre propre combinaison en une paire de lunettes unique, personnalisée selon vos envies juste ici.Vous souhaitez contribuer et nous envoyer vos combinaisons ? Cliquez ici pour participer à l’aventure Oceneo.</p>"
           }
         },
         "process_step_Y7QxtJ": {
           "type": "process-step",
           "settings": {
             "title": "Lavage, Tri, Découpe",
-            "content": "<p>La transformation des combinaisons néoprène en lunettes de soleil et accessoires éco-responsables commence par un tri soigneux des combinaisons en fin de vie. Chaque pièce est lavée, désinfectée, puis découpée avec précision pour maximiser l’utilisation de chaque fragment. Rien n'est gaspillé : chaque étape contribue à la création de produits durables, uniques et respectueux de l'environnement.<\/p>"
+            "content": "<p>La transformation des combinaisons néoprène en lunettes de soleil et accessoires éco-responsables commence par un tri soigneux des combinaisons en fin de vie. Chaque pièce est lavée, désinfectée, puis découpée avec précision pour maximiser l’utilisation de chaque fragment. Rien n'est gaspillé : chaque étape contribue à la création de produits durables, uniques et respectueux de l'environnement.</p>"
           }
         },
         "process_step_WKjhPA": {
           "type": "process-step",
           "settings": {
             "title": "Broyage de la matière",
-            "content": "<p>Le broyage joue un rôle essentiel dans notre processus de revalorisation des combinaisons néoprène. Après un tri minutieux, suivi du lavage, de la désinfection, et de la découpe des combinaisons, les morceaux en meilleur état sont broyés en particules fines. Les coutures et parties plus endommagées sont, quant à elles, transformées par Neobriiks, une filiale d'Oceneo dédiée à la création de blocs publicitaires. Cette méthode optimise l'utilisation du néoprène tout en réduisant significativement les déchets textiles, assurant ainsi une production plus durable et respectueuse de l'environnement.<\/p>"
+            "content": "<p>Le broyage joue un rôle essentiel dans notre processus de revalorisation des combinaisons néoprène. Après un tri minutieux, suivi du lavage, de la désinfection, et de la découpe des combinaisons, les morceaux en meilleur état sont broyés en particules fines. Les coutures et parties plus endommagées sont, quant à elles, transformées par Neobriiks, une filiale d'Oceneo dédiée à la création de blocs publicitaires. Cette méthode optimise l'utilisation du néoprène tout en réduisant significativement les déchets textiles, assurant ainsi une production plus durable et respectueuse de l'environnement.</p>"
           }
         },
         "process_step_dJ4JG9": {
           "type": "process-step",
           "settings": {
             "title": "Mise sous plaque",
-            "content": "<p>Dans notre processus de revalorisation des combinaisons néoprène, une étape clé consiste à transformer les particules broyées en une plaque solide et durable. Après le broyage, nous les mélangeons avec un produit naturel à base d’huile de pin, créant ainsi un matériau robuste et écologique. Cette association renforce la résistance du matériau tout en minimisant son impact environnemental. La plaque solide obtenue sert de base pour la fabrication de nos lunettes de soleil. Cette méthode maximise l'utilisation des matériaux recyclés, tout en produisant des articles de qualité, éco-responsables, et alignés avec notre engagement pour la planète.<\/p>"
+            "content": "<p>Dans notre processus de revalorisation des combinaisons néoprène, une étape clé consiste à transformer les particules broyées en une plaque solide et durable. Après le broyage, nous les mélangeons avec un produit naturel à base d’huile de pin, créant ainsi un matériau robuste et écologique. Cette association renforce la résistance du matériau tout en minimisant son impact environnemental. La plaque solide obtenue sert de base pour la fabrication de nos lunettes de soleil. Cette méthode maximise l'utilisation des matériaux recyclés, tout en produisant des articles de qualité, éco-responsables, et alignés avec notre engagement pour la planète.</p>"
           }
         },
         "process_step_tCPqiV": {
           "type": "process-step",
           "settings": {
             "title": "Fabrication des lunettes",
-            "content": "<p>Notre processus de fabrication de lunettes de soleil et d’accessoires éco-responsables se distingue par un artisanat méticuleux à chaque étape. Après avoir transformé les particules de combinaisons néoprène et d’huile de pin en plaques solides, nous entamons un processus de fabrication précis. Chaque composant est découpé avec une extrême précision grâce à un usinage CNC de haute technologie. Nous effectuons ensuite un ponçage manuel minutieux pour garantir une surface lisse et agréable au toucher. Pour compléter le tout, nous intégrons des verres certifiés offrant une protection élevée (CAT 3 UV 400, avec une option polarisée disponible). L’artisanat est au cœur de notre démarche, garantissant que chaque paire de lunettes est unique, alliant style et durabilité. Fabriqués avec passion dans le Sud-Ouest de la France, près du Bassin d’Arcachon, nos produits éco-responsables reflètent notre engagement envers la qualité et l’environnement.<\/p>"
+            "content": "<p>Notre processus de fabrication de lunettes de soleil et d’accessoires éco-responsables se distingue par un artisanat méticuleux à chaque étape. Après avoir transformé les particules de combinaisons néoprène et d’huile de pin en plaques solides, nous entamons un processus de fabrication précis. Chaque composant est découpé avec une extrême précision grâce à un usinage CNC de haute technologie. Nous effectuons ensuite un ponçage manuel minutieux pour garantir une surface lisse et agréable au toucher. Pour compléter le tout, nous intégrons des verres certifiés offrant une protection élevée (CAT 3 UV 400, avec une option polarisée disponible). L’artisanat est au cœur de notre démarche, garantissant que chaque paire de lunettes est unique, alliant style et durabilité. Fabriqués avec passion dans le Sud-Ouest de la France, près du Bassin d’Arcachon, nos produits éco-responsables reflètent notre engagement envers la qualité et l’environnement.</p>"
+          }
+        },
+        "process_image_6XjNKE": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/1.Matiere_premiere.png"
+          }
+        },
+        "process_image_hLzANL": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/2._Decoupage-Tri.png"
+          }
+        },
+        "process_image_PGBbpr": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/3._Broyage.png"
+          }
+        },
+        "process_image_WnUwbG": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/4-Mise_sous_plaque.png"
+          }
+        },
+        "process_image_arPX6h": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/5-Usinage.png"
+          }
+        },
+        "process_image_EKLiT3": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/6._Travail_manuel_de_finition.png"
+          }
+        },
+        "process_image_zQXRaE": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/7._Assemblage_de_la_lunette.png"
+          }
+        },
+        "process_image_KQgbQi": {
+          "type": "process-image",
+          "settings": {
+            "image_content": "shopify://shop_images/8._Produit_fini.png"
           }
         }
       },
@@ -161,18 +209,18 @@
         "process_step_Y7QxtJ",
         "process_step_WKjhPA",
         "process_step_dJ4JG9",
-        "process_step_tCPqiV"
+        "process_step_tCPqiV",
+        "process_image_6XjNKE",
+        "process_image_hLzANL",
+        "process_image_PGBbpr",
+        "process_image_WnUwbG",
+        "process_image_arPX6h",
+        "process_image_EKLiT3",
+        "process_image_zQXRaE",
+        "process_image_KQgbQi"
       ],
       "settings": {
-        "title": "Notre process",
-        "image_1": "shopify:\/\/shop_images\/1.Matiere_premiere.png",
-        "image_2": "shopify:\/\/shop_images\/2._Decoupage-Tri.png",
-        "image_3": "shopify:\/\/shop_images\/3._Broyage.png",
-        "image_4": "shopify:\/\/shop_images\/4-Mise_sous_plaque.png",
-        "image_5": "shopify:\/\/shop_images\/5-Usinage.png",
-        "image_6": "shopify:\/\/shop_images\/6._Travail_manuel_de_finition.png",
-        "image_7": "shopify:\/\/shop_images\/7._Assemblage_de_la_lunette.png",
-        "image_8": "shopify:\/\/shop_images\/8._Produit_fini.png"
+        "title": "Notre process"
       }
     },
     "ecology_card_NkfDmq": {
