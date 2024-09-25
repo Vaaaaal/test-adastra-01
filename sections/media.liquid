@@ -12,20 +12,18 @@
       <h2 class="mb-6">{{ section.settings.title }}</h2>
     </div>
 
-    <div class="media-item-wrapper flex pr-5 md:pr-10 justify-start flex-nowrap" data-time="{{ section.settings.marquee_time }}">
+    <div class="media-item-wrapper flex justify-start flex-nowrap" data-time="{{ section.settings.marquee_time }}">
       {% for i in (1..2) %}
-        <div class="media-item-element flex flex-nowrap justify-start gap-x-5 md:gap-x-10 shrink-0 opacity-50">
+        <div class="media-item-element flex flex-nowrap justify-start shrink-0 opacity-50">
           {% for block in section.blocks %}
             {% case block.type %}
               {% when 'media-item' %}
                 {% if block.settings.link_to != blank %}
-                  <a target="_blank" href="{{ block.settings.link_to }}" class="max-w-[180px] md:max-w-[250px] max-h-[90px] md:max-h-[130px]">
-                    {{ block.settings.image_content | image_url: height: 260 | image_tag: class: 'w-full h-full object-contain' }}
+                  <a target="_blank" href="{{ block.settings.link_to }}" class="pr-5 md:pr-10">
+                    {{ block.settings.image_content | image_url: height: 260 | image_tag: class: "max-w-[180px] md:max-w-[250px] max-h-[90px] md:max-h-[130px] w-full h-full object-contain" }}
                   </a>
                 {% else %}
-                  <div class="max-w-[180px] md:max-w-[250px] max-h-[90px] md:max-h-[130px]">
-                    {{ block.settings.image_content | image_url: height: 260 | image_tag: class: 'w-full h-full object-contain' }}
-                  </div>
+                  {{ block.settings.image_content | image_url: height: 260 | image_tag: class: "max-w-[180px] md:max-w-[250px] max-h-[90px] md:max-h-[130px] pr-5 md:pr-10 w-full h-full object-contain" }}
                 {% endif %}
               {% endcase %}
             {% endfor %}
