@@ -9,13 +9,11 @@
 */
 {
   "sections": {
-    "main": {
-      "type": "wip-page",
-      "settings": {
-      }
+    "blog_featured": {
+      "type": "blog_featured",
     }
   },
   "order": [
-    "main"
+    "blog_featured"
   ]
 }
