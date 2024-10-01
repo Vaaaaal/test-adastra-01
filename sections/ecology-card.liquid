@@ -7,8 +7,6 @@
   id="ecology_wrapper"
   {% if section.settings.cover_image %}
     style="background: url('{{ section.settings.cover_image | image_url: width: 2400 }}') no-repeat center center / cover;"
-  {% else %}
-    style="background: url('{{ 'bg-ecology.jpg' | asset_url }}') no-repeat center center / cover;"
   {% endif %}
 >
     <div id="ecology_overlay" class="absolute top-0 bottom-0 left-0 right-0"></div>
