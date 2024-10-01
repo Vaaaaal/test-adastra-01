@@ -9,11 +9,15 @@
 */
 {
   "sections": {
-    "blog_featured": {
-      "type": "blog_featured",
-    }
+    "tag_linkslist": {
+      "type": "tag_linkslist",
+    },
+    "articles_list": {
+      "type": "articles_list",
+    },
   },
   "order": [
-    "blog_featured"
+    "tag_linkslist",
+    "articles_list",
   ]
 }

@@ -371,3 +371,32 @@
 .video-js .vjs-play-progress span {
   fill: #FC9E4F !important;
 }
+
+/* ------------------------------------------- BLOG FEATURED SLIDER - Swiper pagination ------------------------------------------- */
+.swiper-pagination.is-blog-featured {
+  bottom: 0 !important;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 24px 32px !important;
+}
+
+.swiper-pagination.is-blog-featured .swiper-pagination-bullet {
+  width: 20px;
+  height: 6px;
+  opacity: 1;
+  border-radius: 50vh;
+  background: #ffffff;
+  transition: all 0.3s ease-out;
+}
+
+.swiper-pagination.is-blog-featured .swiper-pagination-bullet-active {
+  background: #FC9E4F;
+  width: 40px;
+}
+
+@media screen and (max-width: 640px) {
+  .swiper-pagination.is-blog-featured {
+    padding: 16px !important;
+  }
+}

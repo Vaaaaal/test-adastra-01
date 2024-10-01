@@ -4,7 +4,8 @@ import videojs from 'video.js';
 import 'video.js/dist/video-js.min.css';
 import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectCards, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, EffectCards, Autoplay, EffectFade } from 'swiper/modules';
+import _ from 'lodash';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -24,6 +25,26 @@ const menuBurgerIcon = menu.querySelector('#menu-burger-icon');
 const menuBurgerExit = menu.querySelector('#menu-burger-exit');
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Lodash Function
+    // Get the current hash to determine the active tab
+    const tagsTitle = document.querySelectorAll('.tag-title');
+    if(tagsTitle.length > 0) {
+        const hash = window.location.pathname.split('/').pop();
+        tagsTitle.forEach(tagTitle => {
+            if (_.kebabCase(tagTitle.textContent) === hash) {
+                tagTitle.classList.add('bg-[#F1F1F1]');
+                tagTitle.classList.add('active');
+                tagTitle.disabled = true;
+                tagTitle.href = 'javascript:void(0)';
+
+                document.querySelector(".tag-title-default").classList.remove('bg-[#F1F1F1]');
+                document.querySelector(".tag-title-default").classList.remove('active');
+                document.querySelector(".tag-title-default").disabled = false;
+                document.querySelector(".page-title").textContent = tagTitle.textContent;
+            }
+        });
+    }
+
     // Burger menu
     menuToggle.addEventListener('click', () => {
         toggleMenu();
@@ -357,6 +378,19 @@ function initSliders(sliders) {
                 options.cardsEffect = {
                     perSlideOffset: params.perslideoffset | 8,
                     perSlideRotate: params.persliderotate | 1.5,
+                }
+            }
+
+            if(params.effect === 'fade') {
+                if(!options.modules) {
+                    options.modules = [EffectFade];
+                } else {
+                    options.modules = [...options.modules, EffectFade];
+                }
+                
+                options.effect = "fade";
+                options.fadeEffect = {
+                    crossFade: true
                 }
             }
         }

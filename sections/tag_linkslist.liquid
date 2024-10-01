@@ -1,0 +1,53 @@
+{% comment %}
+    Section permettant de montrer toutes les catégories de tag actifs
+
+{% endcomment %}
+ 
+<div class="container pt-[120px]">
+  <h1 class="mb-2 text-5xl sm:text-6xl md:text-8xl page-title leading-[0.9]">Tous nos articles</h1>
+  
+  <div class="flex flex-wrap gap-x-2 gap-y-1">
+    <a 
+      href="{{ blog.url }}"
+      class="tag-title-default active shrink-0 rounded-md bg-transparent px-3 py-2 sm:px-4 sm:py-2 font-medium hover:bg-[#F1F1F1]"
+    >
+      <p>Tous nos articles</p>
+    </a>
+
+    {% for tag in blog.all_tags %}
+      <a 
+        href="{{ blog.url }}/tagged/{{ tag | handle }}"
+        class="tag-title shrink-0 rounded-md bg-transparent px-3 py-2 sm:px-4 sm:py-2 font-medium hover:bg-[#F1F1F1]"
+      >
+        <p>
+          {{ tag.title | capitalize }}
+        </p>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .tag-title,
+  .tag-title-default {
+    transition: background-color 0.4s;
+  }
+
+  .tag-title.active,
+  .tag-title-default.active {
+    background-color: #F1F1F1;
+    cursor: not-allowed;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Blog Tag - Links List",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Tag Links List",
+    }
+  ]
+}
+{% endschema %}

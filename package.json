@@ -27,6 +27,7 @@
   "prettier": "adastra-prettier-config",
   "dependencies": {
     "gsap": "file:gsap-bonus.tgz",
+    "lodash": "^4.17.21",
     "swiper": "^11.1.14"
   }
 }

@@ -1,0 +1,42 @@
+{% comment %}
+  Renders an blog featured section
+
+  Accepts:
+    - blog: {object} Blog (required)
+
+  Usage:
+    {% render 'blog-featured' blog: blog %}
+{% endcomment %}
+ 
+
+<div id="featuredBlog" class="hidden pt-10">
+  <div class="swiper is-featured rounded-md shadow-md" data-loop="true" data-autoplay="5000">
+    <div class="swiper-wrapper">
+      {% for article in blog.articles %}
+        {% if article.metafields.custom.featured %}
+          <div class="swiper-slide">
+            <a href="{{ article.url }}" class="relative aspect-[1/1.4] sm:aspect-square md:aspect-[16/10] lg:aspect-[2/1] px-4 pt-4 pb-14 sm:px-8 sm:pt-6 flex justify-start items-end">
+              {{ article.image | image_url: width: 2000 | image_tag: class: 'w-full h-full object-cover object-center absolute top-0 left-0 right-0 bottom-0 -z-10' }}
+              <div class="absolute top-0 bottom-0 left-0 right-0 w-full h-full bg-gradient-to-bl from-transparent from-30% via-[#000000ab] via-70% to-black"></div>
+  
+              <div class="max-w-[600px] text-white relative z-10">
+                <div class="flex flex-wrap gap-x-2 gap-y-1">
+                  {% for tag in article.tags %}
+                    <p class="shrink-0 rounded-md px-3 py-2 sm:px-4 sm:py-2 font-medium bg-black text-white mb-3 border border-white border-opacity-20">
+                      {{ tag | capitalize }}
+                    </p>
+                  {% endfor %}
+                </div>
+
+                <h3 class="text-white leading-none mb-4">{{ article.title }}</h3>
+                <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="swiper-pagination is-blog-featured"></div>
+  </div>
+</div>
