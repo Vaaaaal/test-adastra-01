@@ -1,0 +1,55 @@
+{% comment %}
+    Contenu de la section qui permet d'afficher les articles de blog
+
+{% endcomment %}
+ 
+<div class="container">
+  <div class="pb-16">
+    <h2 class="mb-4">Dans le même genre</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 md:gap-y-12">
+      {% assign related = blog.articles | where: 'tags', article.tags %}
+      {% for related_article in related %}
+        <div>
+          <a href="{{ related_article.url }}">
+            {{ related_article.image | image_url: width: 1000 | image_tag: class: 'w-full aspect-[16/10] object-cover object-center rounded-md mb-3 shadow' }}
+          </a>
+
+          <div>
+            <a href="{{ related_article.url }}">
+              {% assign publish_date = related_article.published_at | date: '%d %B %Y' %}
+              <p class="font-semibold mb-2">{% render 'date-translate', dateString: publish_date, language: 'French' %}</p>
+              <h3 class="mb-2">{{ related_article.title | strip_html | truncatewords: 14 }}</h3>
+              <p>{{ related_article.content | strip_html | truncatewords: 20 }}</p>
+            </a>
+
+            <div class="mt-4 flex flex-wrap gap-x-2 gap-y-1">
+              {% for tag in related_article.tags %}
+                <a 
+                  href="{{ blog.url }}/tagged/{{ tag | handle }}"
+                  class="shrink-0 rounded-md px-3 py-2 sm:px-4 sm:py-2 font-medium bg-[#F1F1F1]"
+                >
+                  <p>
+                    {{ tag.title | capitalize }}
+                  </p>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Articles Recommandation",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Articles Recommandation",
+    }
+  ]
+}
+{% endschema %}
