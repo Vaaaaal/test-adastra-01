@@ -1,0 +1,135 @@
+{% comment %}
+    Section qui affiche le contenu d'un article de blog
+
+{% endcomment %}
+ 
+<div class="container">
+  <div class="pt-10 pb-16">
+    <div class="flex flex-col md:flex-row justify-between items-center md:items-stretch gap-x-14 gap-y-10">
+      <div class="max-w-[800px] w-full">
+        <div class="flex flex-col items-center justify-center md:hidden gap-y-3 mb-8 max-w-xs mx-auto">
+          <div class="flex flex-wrap gap-x-2 gap-y-1">
+            {% for tag in article.tags %}
+              <a 
+                href="{{ blog.url }}/tagged/{{ tag | handle }}"
+                class="shrink-0 rounded-md px-3 py-2 sm:px-4 sm:py-2 font-medium bg-[#F1F1F1]"
+              >
+                <p>
+                  {{ tag.title | capitalize }}
+                </p>
+              </a>
+            {% endfor %}
+          </div>
+  
+          <div class="text-center">
+            {% assign publish_date = article.published_at | date: '%d %B %Y' %}
+            <p>Publié le {% render 'date-translate', dateString: publish_date, language: 'French' %}</p>
+            <p>Par {{ article.author }}</p>
+          </div>
+        </div>
+
+        <div class="richtext-custom">
+          {{ article.content }}
+        </div>
+      </div>
+      
+      <div class="max-w-[350px] md:max-w-[280px] lg:max-w-[350px] w-full flex flex-col items-end gap-y-6">
+        <div class="hidden md:flex flex-col items-end gap-y-3">
+          <div class="flex flex-wrap gap-x-2 gap-y-1">
+            {% for tag in article.tags %}
+              <a 
+                href="{{ blog.url }}/tagged/{{ tag | handle }}"
+                class="shrink-0 rounded-md px-3 py-2 sm:px-4 sm:py-2 font-medium bg-[#F1F1F1]"
+              >
+                <p>
+                  {{ tag.title | capitalize }}
+                </p>
+              </a>
+            {% endfor %}
+          </div>
+  
+          <div class="text-right">
+            {% assign publish_date = article.published_at | date: '%d %B %Y' %}
+            <p>Publié le {% render 'date-translate', dateString: publish_date, language: 'French' %}</p>
+            <p>Par {{ article.author }}</p>
+          </div>
+        </div>
+
+        <div class="sticky top-[120px] mt-8 md:mt-0">
+          {% assign related_product = article.metafields.custom.featured_product.value %}
+          {% if related_product %}
+            {% render 'product-card', product: related_product %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+.richtext-custom h2,
+.richtext-custom h3,
+.richtext-custom h4,
+.richtext-custom h5,
+.richtext-custom h6 {
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.richtext-custom p,
+.richtext-custom ul,
+.richtext-custom ol {
+  margin-bottom: 0.5rem;
+}
+
+/* Remove tailwind no-style for this element */
+.richtext-custom ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  font-size: inherit;
+}
+
+/* Remove tailwind no-style for this element */
+.richtext-custom ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+  font-size: inherit;
+}
+
+/* Remove tailwind no-style for this element */
+.richtext-custom a {
+  text-decoration: underline;
+}
+
+.richtext-custom p:nth-child(2),
+.richtext-custom h1:nth-child(2),
+.richtext-custom h2:nth-child(2),
+.richtext-custom h3:nth-child(2),
+.richtext-custom h4:nth-child(2),
+.richtext-custom h5:nth-child(2),
+.richtext-custom h6:nth-child(2) {
+  margin-top: 0;
+}
+
+.richtext-custom p:last-child,
+.richtext-custom h1:last-child,
+.richtext-custom h2:last-child,
+.richtext-custom h3:last-child,
+.richtext-custom h4:last-child,
+.richtext-custom h5:last-child,
+.richtext-custom h6:last-child {
+  margin-bottom: 0;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Article Body",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Article Body",
+    }
+  ]
+}
+{% endschema %}

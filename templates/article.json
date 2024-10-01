@@ -1,8 +1,16 @@
 {
   "sections": {
-    "main": {
-      "type": "wip-page",
-    }
+    "header_template": {
+      "type": "header-template",
+      "settings": {}
+    },
+    "article_body": {
+      "type": "article-body",
+      "settings": {}
+    },
   },
-  "order": ["main"]
+  "order": [
+    "header_template",
+    "article_body",
+  ]
 }
