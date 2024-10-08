@@ -53,6 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleMenu();
     });
 
+    // Try On btn style
+    const tryOnBtn = document.querySelectorAll('.glasson-btn');
+    tryOnBtn.forEach(btn => {
+        btn.classList.add('button-secondary');
+        btn.classList.add('font-display');
+        btn.classList.add('uppercase');
+        btn.classList.add('w-full');
+        btn.classList.add('max-w-xs');
+        btn.classList.add('lg:max-w-full');
+
+        btn.querySelector('svg').remove();
+        const svgIcon = document.querySelector('.svg-tryon');
+        btn.prepend(svgIcon.cloneNode(true));
+        btn.querySelector('.svg-tryon').classList.remove('hidden');
+    });
+
     // Accordion
     const accordionItems = document.querySelectorAll('.accordion-item');
     const accordionCovers = document.querySelectorAll('.accordion-cover');

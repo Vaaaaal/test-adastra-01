@@ -52,6 +52,7 @@
   .button-primary.is-heading-font {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 700;
+    font-size: 20px;
     text-transform: uppercase;
     line-height: 110%;
     padding: 12px 24px;
@@ -404,9 +405,18 @@
 
 /* ------------------------------------------- CUSTOM BUTTON - Glass-On Try Out ------------------------------------------- */
 .glasson-wrap {
-  margin: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-.glasson-wrap .glasson-button:nth-child(1) {
-  display: none;
+.glasson-wrap .glasson-btn:nth-child(2) {
+  display: none !important;
+}
+
+.glasson-wrap .glasson-btn > svg {
+  width: 24px !important;
+}
+.glasson-wrap .glasson-btn > span {
+  font-size: 20px !important;
+  padding-left: 4px !important;
 }
