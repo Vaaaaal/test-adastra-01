@@ -58,19 +58,6 @@
     padding: 12px 24px;
   }
 
-  .input-wrapper {
-    @apply flex flex-col gap-y-2;
-  }
-  .input-wrapper label {
-    @apply text-black font-semibold;
-  }
-  .input-wrapper label.no-style {
-    @apply font-normal;
-  }
-  .input-wrapper .input-element {
-    @apply rounded-md px-2 py-1 border border-gray-300 focus:border-transparent focus:outline focus:outline-orange-500;
-  }
-
   h1,
   h2,
   h3,
@@ -224,6 +211,23 @@
   .accordion-item.active svg {
     transform: rotate(135deg);
   }
+}
+
+.input-wrapper {
+  display: flex !important;
+  @apply flex-col gap-y-2;
+}
+.input-wrapper label {
+  @apply text-black font-semibold;
+}
+.input-wrapper label.no-style {
+  @apply font-normal;
+}
+.input-wrapper .input-element {
+  @apply rounded-md px-2 py-1 border border-gray-300 focus:border-transparent focus:outline focus:outline-orange-500;
+}
+.input-wrapper::after {
+  display: none !important;
 }
 
 .custom-richtext h2,
