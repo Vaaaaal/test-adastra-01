@@ -30,12 +30,12 @@
     "images_disposition_PNngd6": {
       "type": "images-disposition",
       "settings": {
-        "image_1": "shopify://shop_images/about-1.png",
-        "image_1_mobile": "shopify://shop_images/about-1-mobile.png",
-        "image_2": "shopify://shop_images/about-2.png",
-        "image_2_mobile": "shopify://shop_images/about-2-mobile.png",
-        "image_3": "shopify://shop_images/about-3.png",
-        "image_3_mobile": "shopify://shop_images/about-3-mobile.png",
+        "image_1": "shopify://shop_images/IMG_6859.png",
+        "image_1_mobile": "shopify://shop_images/IMG_6859.png",
+        "image_2": "shopify://shop_images/Screenshot_2024-10-08_at_10.52.52.png",
+        "image_2_mobile": "shopify://shop_images/Screenshot_2024-10-08_at_10.52.52.png",
+        "image_3": "shopify://shop_images/IMG_6858.png",
+        "image_3_mobile": "shopify://shop_images/IMG_6858.png",
         "layout": "triptych"
       }
     },
