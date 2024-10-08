@@ -400,3 +400,13 @@
     padding: 16px !important;
   }
 }
+
+
+/* ------------------------------------------- CUSTOM BUTTON - Glass-On Try Out ------------------------------------------- */
+.glasson-wrap {
+  margin: 0;
+}
+
+.glasson-wrap .glasson-button:nth-child(1) {
+  display: none;
+}
