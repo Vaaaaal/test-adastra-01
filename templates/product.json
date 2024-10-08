@@ -52,6 +52,16 @@
             "image_1": "{{ product.metafields.custom.product_plus_image_1.value }}",
             "image_2": "{{ product.metafields.custom.product_plus_image_2.value }}"
           }
+        },
+        "glasson_app_block_both_xyV8c4": {
+          "type": "shopify://apps/glasson/blocks/app-block-both/0a836efa-448b-4ab0-a9e4-df105b0d9627",
+          "settings": {
+            "colour": "#000000",
+            "backgroundColor": "#ffffff",
+            "alignment": "start",
+            "tryonLabel": "Essayer",
+            "view360Label": ""
+          }
         }
       },
       "block_order": [
@@ -59,7 +69,8 @@
         "accordion_block_VnACKX",
         "accordion_block_wt3VCJ",
         "accordion_block_WYFTUp",
-        "product_plus_block_3zHUQw"
+        "product_plus_block_3zHUQw",
+        "glasson_app_block_both_xyV8c4"
       ],
       "settings": {
       }
@@ -70,7 +81,7 @@
         "warranty_block_hMqUN4": {
           "type": "warranty-block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/truck.svg",
+            "icon": "shopify://shop_images/truck.svg",
             "title": "Livraison gratuite*",
             "content": "*pour toute commande supérieure à 200€"
           }
@@ -78,7 +89,7 @@
         "warranty_block_N74RNW": {
           "type": "warranty-block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/credit-card.svg",
+            "icon": "shopify://shop_images/credit-card.svg",
             "title": "Paiement 100% sécurisé",
             "content": "Visa, Mastercard, American Express,Apple Pay, Google Pay, PayPal…"
           }
@@ -86,7 +97,7 @@
         "warranty_block_WJheip": {
           "type": "warranty-block",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/headphones.svg",
+            "icon": "shopify://shop_images/headphones.svg",
             "title": "Besoin d’aide ?",
             "content": "Consultez nos FAQs ou contactez nous via le formulaire pour obtenir une réponse"
           }
