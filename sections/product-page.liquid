@@ -61,10 +61,12 @@
                 {% form 'product', product %}
                     <!-- form content -->
                     <div class="flex flex-col gap-y-3 sm:gap-y-6">
-                        <h2 class="text-3xl sm:text-[42px]">{{ current.price | money }}</h2>
+                        <h2 data-spark="b2c-only" class="text-3xl sm:text-[42px]">{{ current.price | money }}</h2>
+
+                  <spark-pdp parent-id="{{ product.id }}"></spark-pdp>
     
                         {% if product.has_only_default_variant == false %}
-                            <div class="flex flex-col gap-y-4">
+                            <div  data-spark="b2c-only" class="flex flex-col gap-y-4">
     
                                 {% for option in product.options_with_values %}
                                     <div class="flex flex-col gap-y-2">
@@ -105,7 +107,7 @@
                         {% endif %}
     
                         
-                        <div class="pt-4 flex flex-col gap-y-3">
+                        <div data-spark="b2c-only"  class="pt-4 flex flex-col gap-y-3">
                             <input type="hidden" name="quantity" value="1">
 
                             <div>
@@ -128,9 +130,9 @@
                             </div>
 
                             {% if product.available %}
-                                <button type="submit" class="button-primary lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static">Ajouter au panier</button>
+                                <button data-spark="b2c-only" type="submit" class="button-primary lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static">Ajouter au panier</button>
                             {% else %}
-                                <button class="button-primary opacity-90 cursor-not-allowed lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static" disabled>En rupture de stock</button>
+                                <button data-spark="b2c-only" class="button-primary opacity-90 cursor-not-allowed lg:is-heading-font w-full rounded-none lg:rounded border-0 border-t border-[#ffffff55] lg:border-0 fixed bottom-0 left-0 right-0 lg:static" disabled>En rupture de stock</button>
                             {% endif %}
 
                             <small class="hidden lg:block text-xs text-center">Livraison gratuite pour les commandes supérieures à 200€</small>
