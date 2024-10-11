@@ -50,8 +50,10 @@
         <span class="text-xs text-gray-500 leading-none">(plusieurs options disponibles)</span>
       {% endif %}
     </div>
-    
-    <div class="shrink-0">
+
+
+    <spark-product-card parent-id="{{ product.id }}"></spark-product-card>
+    <div data-spark="b2c-only" class="shrink-0">
       <span class="font-semibold text-[#FC9E4F] text-sm">
         {% if product.price_varies %}
           Dès 
