@@ -38,7 +38,6 @@
             <div class="row-start-2 row-end-3 mt-8 lg:mt-0 lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-8 flex flex-col gap-y-8">
                 <div class="flex flex-col gap-y-7">
                     <h1 class="text-4xl sm:text-5xl md:text-[82px] text-balance leading-[0.9]">{{ product.title }}</h1>
-                    <spark-pdp parent-id="{{ product.id }}"></spark-pdp>
 
                     <div>
                         {{ product.description }}
@@ -59,10 +58,12 @@
             </div>
     
             <div class="row-start-1 row-end-2 lg:col-start-9 lg:col-end-13 lg:sticky lg:top-28">
+                <spark-pdp parent-id="{{ product.id }}"></spark-pdp>
+
                 {% form 'product', product %}
                     <!-- form content -->
-                    <div class="flex flex-col gap-y-3 sm:gap-y-6">
-                        <h2 data-spark="b2c-only" class="text-3xl sm:text-[42px]">{{ current.price | money }}</h2>
+                    <div data-spark="b2c-only" class="flex flex-col gap-y-3 sm:gap-y-6">
+                        <h2 class="text-3xl sm:text-[42px]">{{ current.price | money }}</h2>
     
                         {% if product.has_only_default_variant == false %}
                             <div data-spark="b2c-only" class="flex flex-col gap-y-4">
