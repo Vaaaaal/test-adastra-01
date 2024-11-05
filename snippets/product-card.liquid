@@ -51,8 +51,6 @@
       {% endif %}
     </div>
 
-
-    <spark-product-card parent-id="{{ product.id }}"></spark-product-card>
     <div data-spark="b2c-only" class="shrink-0">
       <span class="font-semibold text-[#FC9E4F] text-sm">
         {% if product.price_varies %}
@@ -61,4 +59,6 @@
         {{ product.price_min | money }}</span>
     </div>
   </div>
+
+  <spark-product-card parent-id="{{ product.id }}"></spark-product-card>
 </a>
