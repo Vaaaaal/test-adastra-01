@@ -35,9 +35,11 @@
                 style="padding-top: 120px;"
             {% endif %}
         >
-            <div class="row-start-2 row-end-3 mt-8 lg:mt-0 lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-8 flex flex-col gap-y-8">
+            <div class="mt-0 row-start-1 row-end-2 col-span-1 lg:col-span-12">
                 <spark-pdp mode-all-variants parent-id="{{ product.id }}"></spark-pdp>
+            </div>
 
+            <div class="row-start-3 row-end-4 mt-8 lg:mt-0 lg:row-start-2 lg:row-end-3 lg:col-start-1 lg:col-end-8 flex flex-col gap-y-8">
                 <div class="flex flex-col gap-y-7">
                     <h1 class="text-4xl sm:text-5xl md:text-[82px] text-balance leading-[0.9]">{{ product.title }}</h1>
 
@@ -59,7 +61,7 @@
                 </div>
             </div>
     
-            <div data-spark="b2c-only" class="row-start-1 row-end-2 lg:col-start-9 lg:col-end-13 lg:sticky lg:top-28">
+            <div data-spark="b2c-only" class="row-start-2 row-end-3 lg:row-start-2 lg:row-end-3 lg:col-start-9 lg:col-end-13 lg:sticky lg:top-28">
                 {% form 'product', product %}
                     <!-- form content -->
                     <div class="flex flex-col gap-y-3 sm:gap-y-6">
