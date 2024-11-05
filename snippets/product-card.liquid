@@ -9,11 +9,8 @@
 {% endcomment %}
 
 
-<a
-  href="{{ product.url }}"
-  class="flex flex-col gap-y-2"
->
-  <div class="relative">
+<div class="flex flex-col gap-y-2">
+  <a href="{{ product.url }}" class="relative">
     {% if product.available == false %}
       <div class="absolute z-10 w-full top-0 left-0 flex justify-center pt-3">
         <span class="text-xs rounded-full text-white bg-black px-3 py-2">En rupture de stock</span>
@@ -41,9 +38,9 @@
         <img class="w-2/3" src="{{ 'logo-oceneo-black.png' | asset_url }}" />
       </div>
     {% endif %}
-  </div>
+  </a>
   
-  <div class="flex justify-between items-start gap-x-4 w-full">
+  <a href="{{ product.url }}" class="flex justify-between items-start gap-x-4 w-full">
     <div>
       <h2 class="apply-h4 leading-[0.8] mt-1">{{ product.title }}</h2>
       {% if product.has_only_default_variant == false %}
@@ -58,7 +55,7 @@
         {% endif %}
         {{ product.price_min | money }}</span>
     </div>
-  </div>
+  </a>
 
   <spark-product-card parent-id="{{ product.id }}"></spark-product-card>
-</a>
+</div>
