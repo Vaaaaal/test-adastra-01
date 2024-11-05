@@ -1,8 +1,10 @@
 {
   "sections": {
     "main": {
-      "type": "hello-world"
+      "type": "main-addresses"
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }

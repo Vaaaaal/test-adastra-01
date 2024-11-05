@@ -1,8 +1,10 @@
 {
   "sections": {
     "main": {
-      "type": "hello-world"
+      "type": "main-activate-account"
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
