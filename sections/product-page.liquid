@@ -17,10 +17,16 @@
             {% for image in product.images %}
                 {% if image.id != current.featured_image.id %}
                     {% comment %} Allow to filter image by alt tag for variants {% endcomment %}
-                    {% if image.alt == current.featured_image.alt or image.alt == product.title %}
+                    {% if customer %}
                         <div class="w-auto shrink-0 h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
                             {{ image | image_url: height: 700 | image_tag: class: 'h-full w-auto' }}
                         </div>
+                    {% else %}
+                        {% if image.alt == current.featured_image.alt or image.alt == product.title %}
+                            <div class="w-auto shrink-0 h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
+                                {{ image | image_url: height: 700 | image_tag: class: 'h-full w-auto' }}
+                            </div>
+                        {% endif %}
                     {% endif %}
                 {% endif %}
             {% endfor %}
