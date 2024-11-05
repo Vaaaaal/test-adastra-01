@@ -38,6 +38,7 @@
             <div class="row-start-2 row-end-3 mt-8 lg:mt-0 lg:row-start-1 lg:row-end-2 lg:col-start-1 lg:col-end-8 flex flex-col gap-y-8">
                 <div class="flex flex-col gap-y-7">
                     <h1 class="text-4xl sm:text-5xl md:text-[82px] text-balance leading-[0.9]">{{ product.title }}</h1>
+                    <spark-pdp parent-id="{{ product.id }}"></spark-pdp>
 
                     <div>
                         {{ product.description }}
@@ -64,48 +65,43 @@
                         <h2 data-spark="b2c-only" class="text-3xl sm:text-[42px]">{{ current.price | money }}</h2>
     
                         {% if product.has_only_default_variant == false %}
-                            <div>
-                                <spark-product-matrix parent-id="{{ product.id }}"></spark-product-matrix>
-
-                                <div data-spark="b2c-only" class="flex flex-col gap-y-4">
-                                    {% for option in product.options_with_values %}
-                                        <div class="flex flex-col gap-y-2">
-                                            <p class="font-semibold">{{ option.name }}</p>
-        
-                                            <div class="w-full flex flex-wrap gap-x-2 gap-y-1">
-                                                {% for value in option.values %}
-                                                    {% if value.available %}
-                                                        <a 
-                                                            class="
-                                                                {% comment %} {% if value.variant.selected %} {% endcomment %}
-                                                                {% if value.variant.id == current.id %}
-                                                                    bg-black text-white
-                                                                {% else %}
-                                                                    text-black
-                                                                {% endif %}
-                                                                border border-black px-2 py-1 rounded
-                                                            "
-                                                            href="{{ value.variant.url }}"
-                                                        >
-                                                            {{ value.name }}
-                                                        </a>
-                                                    {% else %}
-                                                        <span class="border border-black text-black opacity-25 px-2 py-1 rounded">{{ value.name }}</span>
-                                                    {% endif %}
+                            <div data-spark="b2c-only" class="flex flex-col gap-y-4">
+                                {% for option in product.options_with_values %}
+                                    <div class="flex flex-col gap-y-2">
+                                        <p class="font-semibold">{{ option.name }}</p>
     
-                                                    {% if value.variant.id == current.id %}
-                                                        {% comment %} {% if value.variant.selected %} {% endcomment %}
-                                                        <input type="hidden" name="id" value="{{ value.variant.id }}" />
-                                                    {% endif %}
-                                                {% endfor %}
-                                            </div>
+                                        <div class="w-full flex flex-wrap gap-x-2 gap-y-1">
+                                            {% for value in option.values %}
+                                                {% if value.available %}
+                                                    <a 
+                                                        class="
+                                                            {% comment %} {% if value.variant.selected %} {% endcomment %}
+                                                            {% if value.variant.id == current.id %}
+                                                                bg-black text-white
+                                                            {% else %}
+                                                                text-black
+                                                            {% endif %}
+                                                            border border-black px-2 py-1 rounded
+                                                        "
+                                                        href="{{ value.variant.url }}"
+                                                    >
+                                                        {{ value.name }}
+                                                    </a>
+                                                {% else %}
+                                                    <span class="border border-black text-black opacity-25 px-2 py-1 rounded">{{ value.name }}</span>
+                                                {% endif %}
+
+                                                {% if value.variant.id == current.id %}
+                                                    {% comment %} {% if value.variant.selected %} {% endcomment %}
+                                                    <input type="hidden" name="id" value="{{ value.variant.id }}" />
+                                                {% endif %}
+                                            {% endfor %}
                                         </div>
-                                    {% endfor %}
-                                </div>
+                                    </div>
+                                {% endfor %}
                             </div>
                         {% else %}
-                            <spark-pdp mode-all-variants parent-id="{{ product.id }}"></spark-pdp>
-                            <input data-spark="b2c-only" type="hidden" name="id" value="{{ product.variants.first.id }}" />
+                            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
                         {% endif %}
     
                         
