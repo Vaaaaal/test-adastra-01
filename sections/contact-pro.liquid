@@ -4,68 +4,93 @@
 {% endcomment %}
 
 <div>
-  <div class="container max-w-3xl pb-24">
-    <div class="mx-auto gap-x-6">
-      {% form 'contact' %}
-        {{ form.errors | default_errors }}
+  <div class="container pb-24">
+    <div class="flex flex-col gap-y-12 items-center">
+      <div class="max-w-2xl w-full gap-x-6">
+        <h3>
+          Se connecter
+        </h3>
 
-        {% if form.posted_successfully? %}
-          <div class="bg-green-100 text-green-600 px-4 py-3 md:px-8 md:py-6 rounded border border-green-300 mb-6">
-            <p>
-              Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.
-            </p>
-          </div>
-        {% endif %}
+        <p class="mb-4">
+          Pour vous connecter à votre compte professionnel c'est par ici.
+        </p>
+
+        <a class="button-primary" href="{{ routes.account_login_url }}">Se connecter à mon espace</a>
+      </div>
+
+      <hr class="border-top border-gray-300 w-full max-w-lg" />
       
-        <div class="flex flex-col gap-y-4">
-          <div class="flex flex-col sm:flex-row gap-4">
-            <div class="input-wrapper w-full">
-              <label for="first-name">Prénom</label>
-              <input required class="input-element" type="text" name="contact[first_name]" id="first-name" />
+      <div class="max-w-2xl w-full gap-x-6">
+        {% form 'contact' %}
+          {{ form.errors | default_errors }}
+  
+          {% if form.posted_successfully? %}
+            <div class="bg-green-100 text-green-600 px-4 py-3 md:px-8 md:py-6 rounded border border-green-300 mb-6">
+              <p>
+                Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.
+              </p>
+            </div>
+          {% endif %}
+        
+          <div class="flex flex-col gap-y-4">
+            <h3>
+              Créer un compte professionnel
+            </h3>
+
+            <p class="mb-8">
+              Pour toute demande de création d'un compte pro, veuillez remplir le formulaire ci-dessous.
+              Nous prendrons le temps d'analyser votre demande et si celle-ci est acceptée, nous vous contacterons au plus vite pour vous donner accès à notre catalogue professionnel.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="input-wrapper w-full">
+                <label for="first-name">Prénom</label>
+                <input required class="input-element" type="text" name="contact[first_name]" id="first-name" />
+              </div>
+            
+              <div class="input-wrapper w-full">
+                <label for="last-name">Nom</label>
+                <input required class="input-element" type="text" name="contact[last_name]" id="last-name" />
+              </div>
             </div>
           
-            <div class="input-wrapper w-full">
-              <label for="last-name">Nom</label>
-              <input required class="input-element" type="text" name="contact[last_name]" id="last-name" />
-            </div>
-          </div>
-        
-          <div class="flex flex-col sm:flex-row gap-4">
-            <div class="input-wrapper w-full">
-              <label for="email">Email</label>
-              <input required class="input-element" type="email" name="contact[email]" id="email" />
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="input-wrapper w-full">
+                <label for="email">Email</label>
+                <input required class="input-element" type="email" name="contact[email]" id="email" />
+              </div>
+              
+              <div class="input-wrapper w-full">
+                <label for="phone">Téléphone</label>
+                <input class="input-element" type="tel" name="contact[phone]" id="phone" />
+              </div>
             </div>
             
-            <div class="input-wrapper w-full">
-              <label for="phone">Téléphone</label>
-              <input class="input-element" type="tel" name="contact[phone]" id="phone" />
+            <div class="input-wrapper">
+              <div class="input-wrapper w-full">
+                <label for="enterprise">Nom de l'entreprise</label>
+                <input class="input-element" type="text" name="contact[enterprise]" id="enterprise" />
+              </div>
             </div>
-          </div>
+  
+            {% comment %} <div class="input-wrapper">
+              <label for="order-number">Numéro de commande</label>
+              <input class="input-element" type="text" name="contact[order_number]" id="order-number" />
+            </div> {% endcomment %}
           
-          <div class="input-wrapper">
-            <div class="input-wrapper w-full">
-              <label for="enterprise">Nom de l'entreprise</label>
-              <input class="input-element" type="text" name="contact[enterprise]" id="enterprise" />
+            <div class="input-wrapper">
+              <label for="message">Adresse postale</label>
+              <textarea required class="input-element" name="contact[body]" id="message" rows="3"></textarea>
+            </div>
+  
+            <input type="hidden" name="form_type" value="contact">
+          
+            <div class="submit">
+              <input class="button-primary" type="submit" value="Envoyer" />
             </div>
           </div>
-
-          {% comment %} <div class="input-wrapper">
-            <label for="order-number">Numéro de commande</label>
-            <input class="input-element" type="text" name="contact[order_number]" id="order-number" />
-          </div> {% endcomment %}
-        
-          <div class="input-wrapper">
-            <label for="message">Message</label>
-            <textarea required class="input-element" name="contact[body]" id="message" rows="5"></textarea>
-          </div>
-
-          <input type="hidden" name="form_type" value="contact">
-        
-          <div class="submit">
-            <input class="button-primary" type="submit" value="Envoyer" />
-          </div>
-        </div>
-      {% endform %}        
+        {% endform %}        
+      </div>
     </div>
   </div>
 </div>
