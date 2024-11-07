@@ -17,11 +17,11 @@
 <div class="customer activate section-{{ section.id }}-padding">
   <h1>
     {% comment %} {{ 'customer.activate_account.title' | t }} {% endcomment %}
-    Activate your account
+     Activez votre compte
   </h1>
   <p>
     {% comment %} {{ 'customer.activate_account.subtext' | t }} {% endcomment %}
-    Please create a password to activate your account.
+    Créez un mot de passe pour activer votre compte.
   </p>
   {%- form 'activate_customer_password' -%}
     {%- if form.errors -%}
@@ -30,7 +30,7 @@
           {{- 'icon-error.svg' | inline_asset_content -}}
         </span>
         {% comment %} {{ 'templates.contact.form.error_heading' | t }} {% endcomment %}
-        There was an error
+        Il y a des erreurs dans le formulaire
       </h2>
       <ul>
         {%- for field in form.errors -%}
@@ -55,7 +55,7 @@
         id="password"
         autocomplete="new-password"
         {% comment %} placeholder="{{ 'customer.activate_account.password' | t }}" {% endcomment %}
-        placeholder="Password"
+        placeholder="••••••••"
         {% if form.errors contains 'password' %}
           aria-invalid="true"
           aria-describedby="password-error"
@@ -63,7 +63,7 @@
       >
       <label for="password">
         {% comment %} {{ 'customer.activate_account.password' | t }} {% endcomment %}
-        Password
+         Mot de passe
       </label>
       {%- if form.errors contains 'password' -%}
         <small id="password-error" class="form__message">
@@ -83,7 +83,7 @@
         id="password_confirmation"
         autocomplete="new-password"
         {% comment %} placeholder="{{ 'customer.activate_account.password_confirm' | t }}" {% endcomment %}
-        placeholder="Confirm password"
+        placeholder="••••••••"
         {% if form.errors contains 'password' %}
           aria-invalid="true"
           aria-describedby="password_confirmation-error"
@@ -91,7 +91,7 @@
       >
       <label for="password_confirmation">
         {% comment %} {{ 'customer.activate_account.password_confirm' | t }} {% endcomment %}
-        Confirm password
+        Confirmer le mot de passe
       </label>
       {%- if form.errors contains 'password_confirmation' -%}
         <small id="password_confirmation-error" class="form__message">
@@ -106,11 +106,11 @@
 
     <button>
       {% comment %} {{ 'customer.activate_account.submit' | t }} {% endcomment %}
-        Activate account
+      Activer le compte
     </button>
     <button name="decline">
       {% comment %} {{ 'customer.activate_account.cancel' | t }} {% endcomment %}
-        Cancel
+      Annuler
     </button>
   {%- endform -%}
 </div>
