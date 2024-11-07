@@ -14,105 +14,112 @@
   }
 {%- endstyle -%}
 
-<div class="customer activate section-{{ section.id }}-padding">
-  <h1>
-    {% comment %} {{ 'customer.activate_account.title' | t }} {% endcomment %}
-     Activez votre compte
-  </h1>
-  <p>
-    {% comment %} {{ 'customer.activate_account.subtext' | t }} {% endcomment %}
-    Créez un mot de passe pour activer votre compte.
-  </p>
-  {%- form 'activate_customer_password' -%}
-    {%- if form.errors -%}
-      <h2 class="form__message" tabindex="-1" autofocus>
-        <span class="svg-wrapper">
-          {{- 'icon-error.svg' | inline_asset_content -}}
-        </span>
-        {% comment %} {{ 'templates.contact.form.error_heading' | t }} {% endcomment %}
-        Il y a des erreurs dans le formulaire
-      </h2>
-      <ul>
-        {%- for field in form.errors -%}
-          <li>
-            {%- if field == 'form' -%}
-              {{ form.errors.messages[field] }}
-            {%- else -%}
-              <a href="#{{ field }}">
-                {{ form.errors.translated_fields[field] | capitalize }}
-                {{ form.errors.messages[field] }}
-              </a>
+<div class="customer activate pt-40 pb-32 h-full flex justify-center items-center">
+  <div class="container max-w-xl pb-24">
+    <div class="flex flex-col">
+      <h1 tabindex="-1" class="text-4xl mb-4">
+        Activez votre compte
+      </h1>
+
+      <p class="mb-4">
+        {% comment %} {{ 'customer.activate_account.subtext' | t }} {% endcomment %}
+        Créez un mot de passe pour activer votre compte.
+      </p>
+  
+      <div>
+        {%- form 'activate_customer_password' -%}
+          {%- if form.errors -%}
+            <h2 class="form__message" tabindex="-1" autofocus>
+              <span class="svg-wrapper">
+                {{- 'icon-error.svg' | inline_asset_content -}}
+              </span>
+              {% comment %} {{ 'templates.contact.form.error_heading' | t }} {% endcomment %}
+              Il y a des erreurs dans le formulaire
+            </h2>
+            <ul>
+              {%- for field in form.errors -%}
+                <li>
+                  {%- if field == 'form' -%}
+                    {{ form.errors.messages[field] }}
+                  {%- else -%}
+                    <a href="#{{ field }}">
+                      {{ form.errors.translated_fields[field] | capitalize }}
+                      {{ form.errors.messages[field] }}
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+      
+          <div class="input-wrapper w-full mb-2">
+            <label for="password">Mot de passe</label>
+            <input 
+              type="password"
+              name="customer[password]"
+              id="password"
+              autocomplete="new-password"
+              {% comment %} placeholder="{{ 'customer.activate_account.password' | t }}" {% endcomment %}
+              placeholder="••••••••"
+              {% if form.errors contains 'password' %}
+                aria-invalid="true"
+                aria-describedby="password-error"
+              {% endif %}
+              class="input-element"
+            />
+
+            {%- if form.errors contains 'password' -%}
+              <small id="password-error" class="form__message">
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                {{ form.errors.translated_fields.password | capitalize }}
+                {{ form.errors.messages.password }}
+              </small>
             {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
+          </div>
+      
+          <div class="input-wrapper w-full">
+            <label for="password_confirmation">Confirmer le mot de passe</label>
+            <input 
+              type="password"
+              name="customer[password_confirmation]"
+              id="password_confirmation"
+              autocomplete="new-password"
+              {% comment %} placeholder="{{ 'customer.activate_account.password_confirm' | t }}" {% endcomment %}
+              placeholder="••••••••"
+              {% if form.errors contains 'password' %}
+                aria-invalid="true"
+                aria-describedby="password_confirmation-error"
+              {% endif %}
+              class="input-element"
+            />
+            {%- if form.errors contains 'password_confirmation' -%}
+              <small id="password_confirmation-error" class="form__message">
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                {{ form.errors.translated_fields.password_confirmation | capitalize }}
+                {{ form.errors.messages.password_confirmation }}
+              </small>
+            {%- endif -%}
+          </div>
 
-    <div class="field">
-      <input
-        type="password"
-        name="customer[password]"
-        id="password"
-        autocomplete="new-password"
-        {% comment %} placeholder="{{ 'customer.activate_account.password' | t }}" {% endcomment %}
-        placeholder="••••••••"
-        {% if form.errors contains 'password' %}
-          aria-invalid="true"
-          aria-describedby="password-error"
-        {% endif %}
-      >
-      <label for="password">
-        {% comment %} {{ 'customer.activate_account.password' | t }} {% endcomment %}
-         Mot de passe
-      </label>
-      {%- if form.errors contains 'password' -%}
-        <small id="password-error" class="form__message">
-          <span class="svg-wrapper">
-            {{- 'icon-error.svg' | inline_asset_content -}}
-          </span>
-          {{ form.errors.translated_fields.password | capitalize }}
-          {{ form.errors.messages.password }}
-        </small>
-      {%- endif -%}
+          <div class="mt-4 flex gap-1 items-center">
+            <button class="button-primary">
+              {% comment %} {{ 'customer.login_page.sign_in' | t }} {% endcomment %}
+               Activer le compte
+            </button>
+
+            <button name="decline">
+              {% comment %} {{ 'customer.activate_account.cancel' | t }} {% endcomment %}
+              Annuler
+            </button>
+          </div>
+        {%- endform -%}
+      </div>
     </div>
-
-    <div class="field">
-      <input
-        type="password"
-        name="customer[password_confirmation]"
-        id="password_confirmation"
-        autocomplete="new-password"
-        {% comment %} placeholder="{{ 'customer.activate_account.password_confirm' | t }}" {% endcomment %}
-        placeholder="••••••••"
-        {% if form.errors contains 'password' %}
-          aria-invalid="true"
-          aria-describedby="password_confirmation-error"
-        {% endif %}
-      >
-      <label for="password_confirmation">
-        {% comment %} {{ 'customer.activate_account.password_confirm' | t }} {% endcomment %}
-        Confirmer le mot de passe
-      </label>
-      {%- if form.errors contains 'password_confirmation' -%}
-        <small id="password_confirmation-error" class="form__message">
-          <span class="svg-wrapper">
-            {{- 'icon-error.svg' | inline_asset_content -}}
-          </span>
-          {{ form.errors.translated_fields.password_confirmation | capitalize }}
-          {{ form.errors.messages.password_confirmation }}
-        </small>
-      {%- endif -%}
-    </div>
-
-    <button>
-      {% comment %} {{ 'customer.activate_account.submit' | t }} {% endcomment %}
-      Activer le compte
-    </button>
-    <button name="decline">
-      {% comment %} {{ 'customer.activate_account.cancel' | t }} {% endcomment %}
-      Annuler
-    </button>
-  {%- endform -%}
+  </div>
 </div>
 
 {% schema %}
