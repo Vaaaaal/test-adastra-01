@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header_template_A8jJtd": {
@@ -34,8 +34,6 @@
         "image_1_mobile": "shopify://shop_images/IMG_6859.png",
         "image_2": "shopify://shop_images/Screenshot_2024-10-08_at_10.52.52.png",
         "image_2_mobile": "shopify://shop_images/Screenshot_2024-10-08_at_10.52.52.png",
-        "image_3": "shopify://shop_images/IMG_6858.png",
-        "image_3_mobile": "shopify://shop_images/IMG_6858.png",
         "layout": "triptych"
       }
     },
@@ -66,7 +64,7 @@
             "name": "Antonin",
             "job": "Directeur Marketing & Communication",
             "content": "<p>C’est l’âme créative d’Oceneo. Entre deux sessions de surf et quelques clichés, Antonin s'est naturellement tourné vers Oceneo pour allier ses passions du surf et de l'image. En tant que photographe-vidéaste, il capte l'âme de l'océan et l'infuse dans chaque aspect de notre communication.</p><p>Pour ce qui est des lunettes, Antonin les a mises à rude épreuve ! De la chaleur du bush Australien aux vagues Indonésiennes, il a testé nos prototypes aux quatre coins du globe. Certains disent qu'il voyage autant pour vérifier leur solidité…, mais nous, on pense que c'est juste une excuse pour partir !</p>",
-            "cover": "shopify://shop_images/Antonin.jpg"
+            "cover": "shopify://shop_images/53659800241_dd26d1a2e1_o_1.jpg"
           }
         },
         "crew_member_Tq9x3r": {
@@ -86,23 +84,13 @@
             "content": "<p>Véritable passionné de nautisme, Pierre est le pilier stratégique d’Oceneo. Entre ses navigations en mer et ses moments de réflexion stratégique, il a trouvé sa vocation en rejoignant Oceneo, où il met à profit son expertise pour optimiser chaque aspect de notre production.</p>",
             "cover": "shopify://shop_images/Pierre.jpg"
           }
-        },
-        "crew_member_TLDpKd": {
-          "type": "crew-member",
-          "settings": {
-            "name": "Kevan",
-            "job": "Ouvrier de production",
-            "content": "<p>Passionné de bodyboard, Kevan est le cœur battant de notre atelier de production. Entre ses sessions de bodyboard et ses journées de travail, il apporte une énergie et un savoir-faire inégalés à chaque étape de la fabrication.</p><p>Il est le maître artisan qui transforme chaque combinaison en une paire de lunettes unique. Avec Kévan sur le terrain, nous garantissons que chaque produit est réalisé avec la précision et la passion qui font la réputation d’Oceneo.</p>",
-            "cover": "shopify://shop_images/Kevan.jpg"
-          }
         }
       },
       "block_order": [
         "crew_member_m78Dzz",
         "crew_member_Yp7xCf",
         "crew_member_Tq9x3r",
-        "crew_member_pmgJp8",
-        "crew_member_TLDpKd"
+        "crew_member_pmgJp8"
       ],
       "settings": {
         "title": "Le crew",
