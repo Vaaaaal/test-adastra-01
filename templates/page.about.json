@@ -86,13 +86,22 @@
             "content": "<p>Véritable passionné de nautisme, Pierre est le pilier stratégique d’Oceneo. Entre ses navigations en mer et ses moments de réflexion stratégique, il a trouvé sa vocation en rejoignant Oceneo, où il met à profit son expertise pour optimiser chaque aspect de notre production.</p>",
             "cover": "shopify://shop_images/Pierre.jpg"
           }
+        },
+        "crew_member_9NQLAD": {
+          "type": "crew-member",
+          "settings": {
+            "name": "Solène",
+            "job": "Chargée de Communication",
+            "content": ""
+          }
         }
       },
       "block_order": [
         "crew_member_m78Dzz",
         "crew_member_Yp7xCf",
         "crew_member_Tq9x3r",
-        "crew_member_pmgJp8"
+        "crew_member_pmgJp8",
+        "crew_member_9NQLAD"
       ],
       "settings": {
         "title": "Le crew",
