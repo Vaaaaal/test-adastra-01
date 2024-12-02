@@ -92,7 +92,17 @@
           "settings": {
             "name": "Solène",
             "job": "Chargée de Communication",
-            "content": "<p>Toujours souriante et pleine d'énergie, Solène a rejoint Oceneo comme alternante en communication marketing. Elle travaille aux côtés d’Antonin pour faire vivre nos projets et partager nos valeurs avec le plus grand nombre. Avec sa bonne humeur contagieuse et son humour, elle apporte une touche d’enthousiasme à chaque journée.</p><p>Mais Solène n’est pas seule dans cette aventure : Nalu, son fidèle berger australien et désormais mascotte d’Oceneo, l’accompagne au quotidien. Ensemble, ils apportent à l’équipe un souffle de fraîcheur et de convivialité, tout en contribuant à notre mission de protéger les océans avec passion et détermination.</p>"
+            "content": "<p>Toujours souriante et débordante d’énergie, Solène est un véritable rayon de soleil au sein d’Oceneo. En tant qu’alternante en communication marketing, elle joue un rôle clé dans la mise en valeur de nos projets et la diffusion de nos valeurs. Créative et pleine d’idées, elle collabore étroitement avec Antonin pour développer des campagnes originales et percutantes qui reflètent notre engagement pour l’environnement.</p><p>Sa bonne humeur est communicative, et son humour fait mouche à chaque occasion, créant une ambiance chaleureuse et motivante au sein de l’équipe. Curieuse et passionnée, Solène n’hésite pas à sortir des sentiers battus pour apporter un vent de fraîcheur à tout ce qu’elle entreprend. Grâce à son dynamisme et son esprit d’initiative, elle est une alliée précieuse dans notre quête pour un monde plus durable.</p>",
+            "cover": "shopify://shop_images/PHOTO-2024-12-02-15-38-31_1.jpg"
+          }
+        },
+        "crew_member_tDU7KJ": {
+          "type": "crew-member",
+          "settings": {
+            "name": "Nalu",
+            "job": "Mascotte",
+            "content": "<p>Nalu, notre berger australien, est l’ambassadeur à quatre pattes d’Oceneo ! Toujours prêt à partager sa bonne humeur, il a conquis toute l’équipe avec son énergie et sa douceur. Entre siestes ensoleillées et moments de jeu, Nalu est un rappel vivant de l’importance de protéger ce qui nous entoure, avec joie et simplicité.</p>",
+            "cover": "shopify://shop_images/PHOTO-2024-12-02-15-38-31.jpg"
           }
         }
       },
@@ -101,7 +111,8 @@
         "crew_member_Yp7xCf",
         "crew_member_Tq9x3r",
         "crew_member_pmgJp8",
-        "crew_member_9NQLAD"
+        "crew_member_9NQLAD",
+        "crew_member_tDU7KJ"
       ],
       "settings": {
         "title": "Le crew",
