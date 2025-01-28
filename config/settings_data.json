@@ -41,6 +41,11 @@
         "type": "shopify://apps/seoant-ai-seo/blocks/seoant-core/8e57283b-dcb0-4f7b-a947-fb5c57a0d59d",
         "disabled": false,
         "settings": {}
+      },
+      "15710897563947040993": {
+        "type": "shopify://apps/avada-boost-sales-trust-badge/blocks/app-embed/45454b7f-f6a7-4852-b770-8e0c3992a226",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
