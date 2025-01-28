@@ -12,13 +12,6 @@
     "main": {
       "type": "product-page",
       "blocks": {
-        "essential_trust_badges_app_block_gYNiB3": {
-          "type": "shopify://apps/essential-trust-badges/blocks/app-block/0ff65b25-07e1-408e-950f-f54dd3d1751b",
-          "settings": {
-            "banner_display": "all",
-            "banner_id": "deb65636-3c43-4a86-b96f-ca52e3530a47"
-          }
-        },
         "accordion_block_p6M3Jm": {
           "type": "accordion-block",
           "settings": {
@@ -72,7 +65,6 @@
         }
       },
       "block_order": [
-        "essential_trust_badges_app_block_gYNiB3",
         "accordion_block_p6M3Jm",
         "accordion_block_VnACKX",
         "accordion_block_wt3VCJ",
