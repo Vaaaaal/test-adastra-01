@@ -19,7 +19,7 @@
       "navbar": {
         "type": "navbar",
         "settings": {
-          "bar_content": "SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%   SOLDES -15%",
+          "bar_content": "",
           "bar_link_to": ""
         }
       },
@@ -44,7 +44,7 @@
       },
       "5460033060862993441": {
         "type": "shopify://apps/essential-announcement/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       }
     }
