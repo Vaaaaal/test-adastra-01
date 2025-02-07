@@ -42,12 +42,10 @@
         "disabled": false,
         "settings": {}
       },
-      "1530068250781986104": {
-        "type": "shopify://apps/fbp-fast-bundle/blocks/fast_bundle/9e87fbe2-9041-4c23-acf5-322413994cef",
+      "5460033060862993441": {
+        "type": "shopify://apps/essential-announcement/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
         "disabled": false,
-        "settings": {
-          "home": true
-        }
+        "settings": {}
       }
     }
   },
