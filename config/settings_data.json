@@ -42,10 +42,34 @@
         "disabled": false,
         "settings": {}
       },
-      "5460033060862993441": {
-        "type": "shopify://apps/essential-announcement/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
-        "disabled": true,
+      "14826766009936288847": {
+        "type": "shopify://apps/discounty/blocks/sdk/d65eb522-0d94-499f-9831-d4b3301f5340",
+        "disabled": false,
         "settings": {}
+      },
+      "9474939235389752620": {
+        "type": "shopify://apps/discounty/blocks/product-app-embed-block/d65eb522-0d94-499f-9831-d4b3301f5340",
+        "disabled": false,
+        "settings": {
+          "buy_wording": "Buy",
+          "get_wording": "get",
+          "off_wording": "off",
+          "total_wording": "total",
+          "peritem_wording": "per item",
+          "oneach_wording": "on each",
+          "items_wording": "items",
+          "get_each_item_for_wording": "get each item for"
+        }
+      },
+      "13257748480192772706": {
+        "type": "shopify://apps/discounty/blocks/app-embed/d65eb522-0d94-499f-9831-d4b3301f5340",
+        "disabled": false,
+        "settings": {
+          "totalLabel": "Total",
+          "savedLabel": "Saving",
+          "align": "end",
+          "lineThrough": true
+        }
       }
     }
   },
