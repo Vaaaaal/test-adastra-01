@@ -60,15 +60,6 @@
             "cover": "shopify://shop_images/Marco.jpg"
           }
         },
-        "crew_member_Yp7xCf": {
-          "type": "crew-member",
-          "settings": {
-            "name": "Antonin",
-            "job": "Directeur Marketing & Communication",
-            "content": "<p>C’est l’âme créative d’Oceneo. En tant que photographe-vidéaste, il capte l'âme de l'océan et l'infuse dans chaque aspect de notre communication.</p><p>Pour ce qui est des lunettes, Antonin les a mises à rude épreuve ! De la chaleur du bush Australien aux vagues Indonésiennes, il a testé nos prototypes aux quatre coins du globe. Certains disent qu'il voyage autant pour vérifier leur solidité…, mais nous, on pense que c'est juste une excuse pour partir !</p>",
-            "cover": "shopify://shop_images/IMG_7948.jpg"
-          }
-        },
         "crew_member_Tq9x3r": {
           "type": "crew-member",
           "settings": {
@@ -95,24 +86,13 @@
             "content": "<p>Toujours souriante et débordante d’énergie, Solène est un véritable rayon de soleil au sein d’Oceneo. En tant qu’alternante en communication marketing, elle joue un rôle clé dans la mise en valeur de nos projets et la diffusion de nos valeurs. Créative et pleine d’idées, elle collabore étroitement avec Antonin pour développer des campagnes originales et percutantes qui reflètent notre engagement pour l’environnement.</p><p>Sa bonne humeur est communicative, et son humour fait mouche à chaque occasion, créant une ambiance chaleureuse et motivante au sein de l’équipe. Curieuse et passionnée, Solène n’hésite pas à sortir des sentiers battus pour apporter un vent de fraîcheur à tout ce qu’elle entreprend. Grâce à son dynamisme et son esprit d’initiative, elle est une alliée précieuse dans notre quête pour un monde plus durable.</p>",
             "cover": "shopify://shop_images/PHOTO-2024-12-02-15-38-31_1.jpg"
           }
-        },
-        "crew_member_tDU7KJ": {
-          "type": "crew-member",
-          "settings": {
-            "name": "Nalu",
-            "job": "Mascotte",
-            "content": "<p>Nalu, notre berger australien, est l’ambassadeur à quatre pattes d’Oceneo ! Toujours prêt à partager sa bonne humeur, il a conquis toute l’équipe avec son énergie et sa douceur. Entre siestes ensoleillées et moments de jeu, Nalu est un rappel vivant de l’importance de protéger ce qui nous entoure, avec joie et simplicité.</p>",
-            "cover": "shopify://shop_images/PHOTO-2024-12-02-15-38-31.jpg"
-          }
         }
       },
       "block_order": [
         "crew_member_m78Dzz",
-        "crew_member_Yp7xCf",
         "crew_member_Tq9x3r",
         "crew_member_pmgJp8",
-        "crew_member_9NQLAD",
-        "crew_member_tDU7KJ"
+        "crew_member_9NQLAD"
       ],
       "settings": {
         "title": "Le crew",
