@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -19,7 +19,7 @@
     "text_intro_8JRgmQ": {
       "type": "text-intro",
       "settings": {
-        "text": "Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et une résine naturelle à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable."
+        "text": "Nos lunettes de soleil, fabriquées artisanalement sur le Bassin d'Arcachon, utilisent des combinaisons de surf recyclées et d'un liant à base d'huile de pin. Chaque paire est unique, alliant des matériaux durables pour un style écoresponsable."
       }
     },
     "split_section_image_RGjKRz": {
@@ -55,7 +55,7 @@
         "test_color": "#ffffff",
         "title_style": "display",
         "cover_image": "shopify://shop_images/bg-ecology.jpg",
-        "text": "C’est la quantité de combinaisons que nous avons déjà revalorisé depuis notre création, dont 2,3 tonnes rien qu'en 2023. Chez Oceneo, notre ambition est de réduire l'impact environnemental du surf en revalorisant les combinaisons usagées. En travaillant exclusivement en circuit court avec des ESAT et des couturiers locaux, nous garantissons l'utilisation de produits et de matériaux durables, tels que la résine française biosourcée à base d'huile de pin, des emballages en carton recyclé et des étuis en néoprène recyclé. Situés au plus près de l'océan, nous sommes déterminés à montrer qu'il existe des solutions pour recycler le néoprène, un matériau souvent jeté ou enfoui, avec près de 400 tonnes de déchets chaque année."
+        "text": "C’est la quantité de combinaisons que nous avons déjà revalorisé depuis notre création, dont 2,3 tonnes rien qu'en 2024. Chez Oceneo, notre ambition est de réduire l'impact environnemental du surf en revalorisant les combinaisons usagées. En travaillant exclusivement en circuit court avec des ESAT et des couturiers locaux, nous garantissons l'utilisation de produits et de matériaux durables, tels que la résine française biosourcée à base d'huile de pin, des emballages en carton recyclé et des étuis en néoprène recyclé. Situés au plus près de l'océan, nous sommes déterminés à montrer qu'il existe des solutions pour recycler le néoprène, un matériau souvent jeté ou enfoui, avec près de 400 tonnes de déchets chaque année."
       }
     }
   },
