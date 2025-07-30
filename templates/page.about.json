@@ -42,7 +42,7 @@
     "text_only_PTWC7G": {
       "type": "text-only",
       "settings": {
-        "text": "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.</p><p>Notre secret réside dans l'association du broyât de combinaison avec une résine biosourcée à base d’huile de pin. Cette combinaison permet de conserver les caractéristiques physiques du néoprène tout en continuant de travailler avec des produits durables et naturels.</p>",
+        "text": "<p>Il a fallu des centaines de prototypes et près de quatre ans de recherche et développement pour réussir à transformer le néoprène souple en une matière solide et flexible.</p><p>Cette matière unique, conçue à partir de néoprène recyclé, conserve les propriétés physiques de néoprène tout en s'inscrivant dans une démarche locale, artisanale et écoresponsable.</p>",
         "text_position": "left",
         "text_align": "left",
         "max_width": 850
@@ -77,32 +77,22 @@
             "content": "<p>Véritable passionné de nautisme, Pierre est le pilier stratégique d’Oceneo. Entre ses navigations en mer et ses moments de réflexion stratégique, il a trouvé sa vocation en rejoignant Oceneo, où il met à profit son expertise pour optimiser chaque aspect de notre production.</p>",
             "cover": "shopify://shop_images/Pierre.jpg"
           }
-        },
-        "crew_member_9NQLAD": {
-          "type": "crew-member",
-          "settings": {
-            "name": "Solène",
-            "job": "Chargée de Communication",
-            "content": "<p>Toujours souriante et débordante d’énergie, Solène est un véritable rayon de soleil au sein d’Oceneo. En tant qu’alternante en communication marketing, elle joue un rôle clé dans la mise en valeur de nos projets et la diffusion de nos valeurs. Créative et pleine d’idées, elle collabore étroitement avec Antonin pour développer des campagnes originales et percutantes qui reflètent notre engagement pour l’environnement.</p><p>Sa bonne humeur est communicative, et son humour fait mouche à chaque occasion, créant une ambiance chaleureuse et motivante au sein de l’équipe. Curieuse et passionnée, Solène n’hésite pas à sortir des sentiers battus pour apporter un vent de fraîcheur à tout ce qu’elle entreprend. Grâce à son dynamisme et son esprit d’initiative, elle est une alliée précieuse dans notre quête pour un monde plus durable.</p>",
-            "cover": "shopify://shop_images/PHOTO-2024-12-02-15-38-31_1.jpg"
-          }
         }
       },
       "block_order": [
         "crew_member_m78Dzz",
         "crew_member_Tq9x3r",
-        "crew_member_pmgJp8",
-        "crew_member_9NQLAD"
+        "crew_member_pmgJp8"
       ],
       "settings": {
         "title": "Le crew",
-        "content": "<p>Aujourd’hui, une équipe de six personnes fait grandir Oceneo au quotidien, en couvrant tous les aspects : production et industrialisation, commercialisation, marketing et communication.</p>"
+        "content": "<p>Aujourd’hui, une équipe de plusieurs personnes fait grandir OCENEO au quotidien, en couvrant tous les aspects : production et industrialisation, commercialisation, marketing et communication.</p>"
       }
     },
     "what_is_DPYyAh": {
       "type": "what-is",
       "settings": {
-        "text": "<p>Oceneo c’est l’association des mots “océan” et “néo”.“<br/>Océan” car il est notre inspiration, notre terrain de jeu.</p><p>Le surf fait partie intégrante de l’âme de notre marque : passionnés par celui-ci, nous occupons la majorité de notre temps libre à surfer les vagues de notre belle région.<br/>En choisissant d’insérer une partie de ce mot, nous cherchons à rendre hommage à notre précieux environnement et espérons promouvoir sa préservation.</p><p>Et “néo”, en référence à notre matière première, celle que nous “upcyclons” : les combinaisons en néoprène que nous revalorisons à 100% pour créer de nouveaux accessoires innovants et durables. C’est l’incarnation de l’idée du renouveau. Nous croyons en la possibilité de donner une seconde vie à des produits initialement destinés à la décharge et une seconde chance aux personnes qui en ont besoin (personnes en situation de handicap, etc...)</p>",
+        "text": "<p>OCENEO c’est l’association des mots “océan” et “néo”.“<br/>Océan” car il est notre inspiration, notre terrain de jeu.</p><p>Le surf fait partie intégrante de l’âme de notre marque : passionnés par celui-ci, nous occupons la majorité de notre temps libre à surfer les vagues de notre belle région.<br/>En choisissant d’insérer une partie de ce mot, nous cherchons à rendre hommage à notre précieux environnement et espérons promouvoir sa préservation.</p><p>Et “néo”, en référence à notre matière première, celle que nous “upcyclons” : les combinaisons en néoprène que nous revalorisons à 100% pour créer de nouveaux accessoires innovants et durables. C’est l’incarnation de l’idée du renouveau. Nous croyons en la possibilité de donner une seconde vie à des produits initialement destinés à la décharge et une seconde chance aux personnes qui en ont besoin (personnes en situation de handicap, etc...)</p>",
         "logo": "shopify://shop_images/logo-oceneo-black.png",
         "bg_color": "#f8f4ef"
       }
@@ -128,14 +118,14 @@
           "type": "process-step",
           "settings": {
             "title": "Broyage de la matière",
-            "content": "<p>Le broyage joue un rôle essentiel dans notre processus de revalorisation des combinaisons néoprène. Après un tri minutieux, suivi du lavage, de la désinfection, et de la découpe des combinaisons, les morceaux en meilleur état sont broyés en particules fines. Les coutures et parties plus endommagées sont, quant à elles, transformées par Neobriiks, une filiale d'Oceneo dédiée à la création de blocs publicitaires. Cette méthode optimise l'utilisation du néoprène tout en réduisant significativement les déchets textiles, assurant ainsi une production plus durable et respectueuse de l'environnement.</p>"
+            "content": "<p>Le broyage joue un rôle essentiel dans notre processus de revalorisation des combinaisons néoprène. Après un tri minutieux, suivi du lavage, de la désinfection, et de la découpe des combinaisons, les morceaux en meilleur état sont broyés en particules fines. Les coutures et parties plus endommagées sont, quant à elles, transformées par NEOPOP, une filiale d'OCENEO dédiée à la création de blocs publicitaires. Cette méthode optimise l'utilisation du néoprène tout en réduisant significativement les déchets textiles, assurant ainsi une production plus durable et respectueuse de l'environnement.</p>"
           }
         },
         "process_step_dJ4JG9": {
           "type": "process-step",
           "settings": {
             "title": "Mise sous plaque",
-            "content": "<p>Dans notre processus de revalorisation des combinaisons néoprène, une étape clé consiste à transformer les particules broyées en une plaque solide et durable. Après le broyage, nous les mélangeons avec un produit naturel à base d’huile de pin, créant ainsi un matériau robuste et écologique. Cette association renforce la résistance du matériau tout en minimisant son impact environnemental. La plaque solide obtenue sert de base pour la fabrication de nos lunettes de soleil. Cette méthode maximise l'utilisation des matériaux recyclés, tout en produisant des articles de qualité, éco-responsables, et alignés avec notre engagement pour la planète.</p>"
+            "content": "<p>Dans notre processus de revalorisation des combinaisons néoprène, une étape clé consiste à transformer les particules broyées en une plaque solide et durable. Après le broyage, nous les mélangeons avec une résine biosourcée d'origine végétale, créant ainsi un matériau robuste et écologique. Cette association renforce la résistance du matériau tout en minimisant son impact environnemental. La plaque solide obtenue sert de base pour la fabrication de nos lunettes de soleil. Cette méthode maximise l'utilisation des matériaux recyclés, tout en produisant des articles de qualité, éco-responsables, et alignés avec notre engagement pour la planète.</p>"
           }
         },
         "process_step_tCPqiV": {
@@ -288,7 +278,7 @@
         "test_color": "",
         "title_style": "display",
         "cover_image": "shopify://shop_images/bg-ecology.jpg",
-        "text": "C’est la quantité de combinaisons que nous avons déjà revalorisé depuis notre création, dont 2,3 tonnes rien qu'en 2023. Chez Oceneo, notre ambition est de réduire l'impact environnemental du surf en revalorisant les combinaisons usagées. En travaillant exclusivement en circuit court avec des ESAT et des couturiers locaux, nous garantissons l'utilisation de produits et de matériaux durables, tels que la résine française biosourcée à base d'huile de pin, des emballages en carton recyclé et des étuis en néoprène recyclé. Situés au plus près de l'océan, nous sommes déterminés à montrer qu'il existe des solutions pour recycler le néoprène, un matériau souvent jeté ou enfoui, avec près de 400 tonnes de déchets chaque année."
+        "text": "C’est la quantité de combinaisons que nous avons déjà revalorisé depuis notre création, dont 2.3 tonnes rien qu'en 2024. Chez OCENEO, notre ambition est de réduire l'impact environnemental du surf en revalorisant les combinaisons usagées. En travaillant exclusivement en circuit court avec des ESAT et des couturiers locaux, nous garantissons l'utilisation de produits et de matériaux durables, des emballages en carton recyclé et des étuis en néoprène recyclé. Situés au plus près de l'océan, nous sommes déterminés à montrer qu'il existe des solutions pour recycler le néoprène, un matériau souvent jeté ou enfoui, avec près de 400 tonnes de déchets chaque année."
       }
     }
   },
