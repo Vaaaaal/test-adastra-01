@@ -1,18 +1,18 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header_template_aAdwag": {
       "type": "header-template",
       "settings": {
-        "cover": "shopify:\/\/shop_images\/DSC04613.jpg",
+        "cover": "shopify://shop_images/DSC04613.jpg",
         "title": "Foire aux questions",
         "alignment": "center"
       }
@@ -24,7 +24,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Quels types de lunettes proposez-vous ?",
-            "content": "<p>Nous proposons un modèle de lunettes de soleil disponible en plusieurs coloris de montures et de verres. Ce modèle est également disponible en version optique chez nos opticiens partenaires.<\/p>",
+            "content": "<p>Nous proposons un modèle de lunettes de soleil disponible en plusieurs coloris de montures et de verres. Ce modèle est également disponible en version optique chez nos opticiens partenaires.</p>",
             "type": "strong"
           }
         },
@@ -32,7 +32,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Vos lunettes sont-elles adaptées pour les hommes et les femmes ?",
-            "content": "<p>Notre modèle est unisexe et convient autant aux hommes qu’aux femmes.<\/p>",
+            "content": "<p>Notre modèle est unisexe et convient autant aux hommes qu’aux femmes.</p>",
             "type": "strong"
           }
         },
@@ -40,7 +40,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Vos verres offrent-ils une protection UV ?",
-            "content": "<p>Oui, tous nos verres de lunettes de soleil sont certifiés catégorie 3, UV 400 et offrent une protection à 100% contre les rayons UV.<\/p>",
+            "content": "<p>Oui, tous nos verres de lunettes de soleil sont certifiés catégorie 3, UV 400 et offrent une protection à 100% contre les rayons UV.</p>",
             "type": "strong"
           }
         },
@@ -48,7 +48,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Proposez-vous des verres polarisés ?",
-            "content": "<p>Oui, nous proposons des verres polarisés pour réduire l'éblouissement et améliorer le confort visuel.<\/p>",
+            "content": "<p>Oui, nous proposons des verres polarisés pour réduire l'éblouissement et améliorer le confort visuel.</p>",
             "type": "strong"
           }
         },
@@ -56,7 +56,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Quels matériaux utilisez-vous pour vos montures ?",
-            "content": "<p>Nos montures sont fabriquées à partir de combinaison de surf recyclés et de résine bio-sourcée à base d’huile de pin.<\/p>",
+            "content": "<p>Nos montures sont fabriquées à partir de combinaison en néoprène recyclés et d'une résine bio-sourcée d'origine végétale.</p>",
             "type": "strong"
           }
         },
@@ -64,7 +64,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Vos lunettes sont-elles éco-responsables ?",
-            "content": "<p>Oui, nous nous engageons à utiliser des matériaux durables et des procédés de fabrication respectueux de l'environnement pour toutes nos lunettes.<\/p>",
+            "content": "<p>Oui, nous nous engageons à utiliser des matériaux durables et des procédés de fabrication respectueux de l'environnement pour toutes nos lunettes.</p>",
             "type": "strong"
           }
         },
@@ -72,7 +72,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Proposez-vous des collections saisonnières ou des éditions limitées ?",
-            "content": "<p>Oui, nous lançons régulièrement de nouvelles collections saisonnières et des éditions limitées pour offrir des designs exclusifs à nos clients.<\/p>",
+            "content": "<p>Oui, nous lançons régulièrement de nouvelles collections saisonnières et des éditions limitées pour offrir des designs exclusifs à nos clients.</p>",
             "type": "strong"
           }
         },
@@ -80,7 +80,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Puis-je personnaliser mes lunettes ?",
-            "content": "<p>Il est possible de créer votre paire de lunette à partir de votre combinaison. Ainsi, la monture sera aux couleurs du design de votre combinaison.<\/p>",
+            "content": "<p>Il est possible de créer votre paire de lunette à partir de votre combinaison. Ainsi, la monture sera aux couleurs du design de votre combinaison.</p>",
             "type": "strong"
           }
         },
@@ -88,7 +88,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Comment puis-je contacter le service client ?",
-            "content": "<p>Vous pouvez nous contacter par email à contact@oceneo.fr.<\/p>",
+            "content": "<p>Vous pouvez nous contacter par email à contact@oceneo.fr.</p>",
             "type": "strong"
           }
         },
@@ -96,7 +96,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Quels modes de paiement acceptez-vous ?",
-            "content": "<p>Nous acceptons divers modes de paiement, y compris les cartes de crédit, PayPal, et les virements bancaires.<\/p>",
+            "content": "<p>Nous acceptons divers modes de paiement, y compris les cartes de crédit, PayPal, et les virements bancaires.</p>",
             "type": "strong"
           }
         },
@@ -104,7 +104,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Quelles sont les options de livraison ?",
-            "content": "<p>Nous offrons plusieurs options de livraison, y compris la livraison standard et express. Les délais de livraison varient en fonction de votre emplacement.<\/p>",
+            "content": "<p>Nous offrons plusieurs options de livraison, y compris la livraison standard et express. Les délais de livraison varient en fonction de votre emplacement.</p>",
             "type": "strong"
           }
         },
@@ -112,7 +112,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Comment suivre ma commande ?",
-            "content": "<p>Une fois votre commande expédiée, vous recevrez un email avec un numéro de suivi pour suivre l'état de votre livraison en temps réel.<\/p>",
+            "content": "<p>Une fois votre commande expédiée, vous recevrez un email avec un numéro de suivi pour suivre l'état de votre livraison en temps réel.</p>",
             "type": "strong"
           }
         },
@@ -120,7 +120,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Comment puis-je retourner ou échanger une paire de lunettes ?",
-            "content": "<p>Vous pouvez retourner ou échanger vos lunettes dans un délai de 30 jours suivant l'achat, à condition qu'elles soient en état neuf. Consultez notre <a href=\"\/pages\/conditions-generales-de-ventes\" title=\"Conditions Générales de Vente\">politique de retour <\/a>pour plus de détails.<\/p>",
+            "content": "<p>Vous pouvez retourner ou échanger vos lunettes dans un délai de 30 jours suivant l'achat, à condition qu'elles soient en état neuf. Consultez notre <a href=\"/pages/conditions-generales-de-ventes\" title=\"Conditions Générales de Vente\">politique de retour </a>pour plus de détails.</p>",
             "type": "strong"
           }
         },
@@ -128,7 +128,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Proposez-vous une garantie sur vos produits ?",
-            "content": "<p>Oui, toutes nos lunettes sont couvertes par une garantie de un an contre les défauts de fabrication.<\/p>",
+            "content": "<p>Oui, toutes nos lunettes sont couvertes par une garantie de un an contre les défauts de fabrication.</p>",
             "type": "strong"
           }
         },
@@ -136,7 +136,7 @@
           "type": "accordion-block",
           "settings": {
             "title": "Comment entretenir mes lunettes ?",
-            "content": "<p>Pour entretenir vos lunettes, nettoyez-les régulièrement avec un chiffon doux et de l'eau savonneuse, et rangez-les dans leur étui lorsque vous ne les portez pas.<\/p>",
+            "content": "<p>Pour entretenir vos lunettes, nettoyez-les régulièrement avec un chiffon doux et de l'eau savonneuse, et rangez-les dans leur étui lorsque vous ne les portez pas.</p>",
             "type": "strong"
           }
         }
@@ -158,9 +158,7 @@
         "accordion_block_7EiJCC",
         "accordion_block_JNNgJW"
       ],
-      "settings": {
-        "cover": "shopify:\/\/shop_images\/DSC04386.jpg"
-      }
+      "settings": {}
     }
   },
   "order": [
