@@ -12,7 +12,7 @@
     "main": {
       "type": "home-page",
       "settings": {
-        "hero_image": "shopify://shop_images/hero-cover.png",
+        "hero_image": "shopify://shop_images/portrait_en_tres_grand_plan_de_deux_mannequins_un_homme_une_femme_regardant_v_1.png",
         "hero_mobile_image": "shopify://shop_images/hero-cover-mobile.png"
       }
     },
