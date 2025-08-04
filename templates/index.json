@@ -12,7 +12,7 @@
     "main": {
       "type": "home-page",
       "settings": {
-        "hero_image": "shopify://shop_images/portrait_en_tres_grand_plan_de_deux_mannequins_un_homme_une_femme_regardant_v_1.png",
+        "hero_image": "shopify://shop_images/hero-cover.png",
         "hero_mobile_image": "shopify://shop_images/hero-cover-mobile.png"
       }
     },
@@ -38,7 +38,7 @@
       "settings": {
         "image_1": "shopify://shop_images/home-lifestyle-1-V2.jpg",
         "image_2": "shopify://shop_images/home-lifestyle-2-V2.jpg",
-        "image_3": "shopify://shop_images/home-lifestyle-3-V2.jpg",
+        "image_3": "shopify://shop_images/portrait_en_tres_grand_plan_de_deux_mannequins_un_homme_une_femme_regardant_v_1_79556f6c-2655-46d4-8c21-5dd39362e49a.png",
         "image_4": "shopify://shop_images/home-lifestyle-4-V2.jpg"
       }
     },
